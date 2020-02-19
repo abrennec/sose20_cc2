@@ -120,6 +120,7 @@ Ressources -- Tyler Henry
 - **Bouncing Squares** make an array of Square objects
 - **Shapes** draw some simple stuff, use colors
 
+
 1.	Create a simple animation using a class of your own design.  You can use the Square class as a template for your code.  
 	Play with color, shape, size, movement, speed, etc.  
 	  	- the class you write should contain both an update() and a draw() function  
