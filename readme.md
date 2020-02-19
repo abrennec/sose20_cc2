@@ -17,7 +17,7 @@ Last Update:
   - [2 Build Process and ofx SDK](#2-build-process-and-ofx-sdk)
   - [3 Syntax and Cpp Programm Setup](#3-syntax-and-cpp-programm-setup)
   - [4 Object-oriented Programming I](#4-object-oriented-programming-i)
-  - [2.  Try to make an interactive app, using mouse movement or keyboard presses.  Don't worry if you get stuck, just go as far as you can.](#2-try-to-make-an-interactive-app-using-mouse-movement-or-keyboard-presses-dont-worry-if-you-get-stuck-just-go-as-far-as-you-can)
+  - [1.  Try to make an interactive app, using mouse movement or keyboard presses.  Don't worry if you get stuck, just go as far as you can.](#1-try-to-make-an-interactive-app-using-mouse-movement-or-keyboard-presses-dont-worry-if-you-get-stuck-just-go-as-far-as-you-can)
   - [5 OOP II](#5-oop-ii)
   - [6 OOP III](#6-oop-iii)
   - [7](#7)
@@ -119,13 +119,13 @@ Ressources -- Tyler Henry
 - **Bouncing Square** make a Square class
 - **Bouncing Squares** make an array of Square objects
 - **Shapes** draw some simple stuff, use colors
-- 
+
 1.	Create a simple animation using a class of your own design.  You can use the Square class as a template for your code.  
 	Play with color, shape, size, movement, speed, etc.  
 	  	- the class you write should contain both an update() and a draw() function  
 		- try to use an array
 
-2.  Try to make an interactive app, using mouse movement or keyboard presses.  Don't worry if you get stuck, just go as far as you can.
+1.  Try to make an interactive app, using mouse movement or keyboard presses.  Don't worry if you get stuck, just go as far as you can.
 ---
 
 ## 5 OOP II
