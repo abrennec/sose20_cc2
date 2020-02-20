@@ -17,14 +17,17 @@ Last Update:
   - [Organization](#organization)
   - [Course Description](#course-description)
   - [Learning Objectives](#learning-objectives)
-  - [Grading TBD](#grading-tbd)
+  - [Grading](#grading)
 - [Communication & Materials](#communication--materials)
+  - [Assignments](#assignments)
 - [Further Readings](#further-readings)
   - [Books](#books)
   - [Online Resources](#online-resources)
 - [Technical Setup](#technical-setup)
-  - [openFrameworks](#openframeworks)
   - [Integrated Development Environments](#integrated-development-environments)
+  - [openFrameworks](#openframeworks)
+    - [Additional Learning Ressources](#additional-learning-ressources)
+- [Assignments](#assignments-1)
 
 ---
 
@@ -64,18 +67,23 @@ The **final project** will be an individual piece of work that can build upon th
 - Interpreting an artistic idea as a piece of software
 
 
-## Grading TBD
+## Grading
 
 ### Breakdown <!-- omit in toc -->
 
-* 50% - Homework assignments
-* 50% - Final project + documentation
+* 10% - Participation in classroom dicussions and critiques 
+* 20% - Homework assignments
+* 20% - Presentation of an ofx example project
+* 20% - Term project + documentation
+* 30% - Final project + documentation
 
+Team work (2 persons per team) and pair programming is encouraged.
+  
 ### Grading criteria projects <!-- omit in toc -->
 
-* Concept, system design, and technical reflection
-* Engineering effort, code organization, code quality 
-* Stability of the output
+* Creativity and originality of the concept
+* Craftsmanship in terms of system design and the technical reflection of the solution
+* Engineering effort, code organization, code quality and clarity
 * Quality of the documentation
 
 ---
@@ -89,6 +97,11 @@ As a communication platform, we will use [GitHub.com](https://github.com/) to sh
 - [GitHub team (public)](https://github.com/orgs/ctechfilmuniversity/teams/sose20_cc2)
 
 The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, results of homework assignments. The team will be used for discussion, comments, notes and any important announcements.
+
+## Assignments
+
+Assignments will be given at the end of each class. If the assignments comprise written or coded homework, please create a folder named <my_last_name>, add your solutions and upload the folder to the assignments folder of the corresponding session.
+
 
 ---
 
@@ -123,14 +136,42 @@ The repository will be used to share scripts (usually as readme.md) and slides, 
 - [cplusplus](http://www.cplusplus.com/)
 - [fluentcpp](https://www.fluentcpp.com)
 - [ofBook](https://github.com/openframeworks/ofBook/tree/master/chapters)
+- [openFrameworks](https://openframeworks.cc/)
 - [openFrameworks Forum](http://forum.openframeworks.cc/)
 
 
 # Technical Setup
 
+## Integrated Development Environments
+
+To create an application with openFrameworks/C++, a dedicated development process has to be evoked. This is usually done with a platform-dependent integrated development environment (IDE) . An IDE is comprised of three fundamental components that are usually freely customizable by the developer:
+1. A text editor usually with syntax highlighting.
+2. A debugger to step through the code during runtime and in order to identify mistakes and bugs.
+3. A compiler, linker, and build environment.
+
+Nowadays IDEs feature more than that, for instance, they often support integration of tools like version control, deployment facilities, etc.
+
+In this course, XCode and Visual Studio Community will be supported. Other IDEs and platforms will work with openFrameworks as well but will require an independent setup.
+
+### Windows Users <!-- omit in toc -->
+
+If you are using a Windows machine, most prominent IDEs are:
+- MS Visual Studio Community
+- VSCode with MSYS2 
+
+### MacOSX Users <!-- omit in toc -->
+
+If you are using a MacOS machine, most prominent IDEs are:
+- XCode including the "command line tools"
+- VSCode (command line tools are also required)
+
 ## openFrameworks
 
 Go to [openFrameworks.cc/download](http://openframeworks.cc/download/) and download the right version for your platform. Check out the tutorials that cover the installation process per platform. 
+
+- Windows and Visual Studio Community: https://openframeworks.cc/setup/vs/
+- MacOSX and XCode: https://openframeworks.cc/setup/xcode/
+- Linux: https://openframeworks.cc/setup/linux-install/
 
 Once you have downloaded openFrameworks, extract the zip file to a folder from where you would like to work from. Further documentation on the technical requirements and environment setup is available in 
 
@@ -138,19 +179,21 @@ Once you have downloaded openFrameworks, extract the zip file to a folder from w
 - of\_root/INSTALL.md
 - of\_root/docs/
 
-## Integrated Development Environments
+If you have questions and problems during the installation, make use of the openFrameworks forum which contains lots of useful hints and discussions as well as serve as an independent help and learning channel:
+- https://forum.openframeworks.cc
 
-To be discussed in class.
+### Additional Learning Ressources
 
-### Windows Users <!-- omit in toc -->
+- https://openframeworks.cc/learning/
+- https://github.com/openframeworks/openFrameworks/wiki/Resources-for-Learning
+- http://codeliberation.org/CLF-slides/
 
-- MS Visual Studio Community
-- VSCode & MSYS2
-- QtCreator & MSYS2
+# Assignments
 
-### MacOS Users <!-- omit in toc -->
-
-- XCode & developer tools
-- VSCode (developer tools required)
-
+- Checkout the openFrameworks website and get familiar with the resources provided: https://openframeworks.cc
+- Download the latest version of openFrameworks and follow the setup guides in order to setup the IDE required for your platform: https://openframeworks.cc/download/
+- Checkout the ofBook and read the first chapters, in particular Foreword and philosophy as well as the introduction on the openFrameworks folder structure:
+  - https://openframeworks.cc/ofBook/chapters/foreword.html
+  - https://openframeworks.cc/ofBook/chapters/of_philosophy.html
+  - https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html
 
