@@ -27,7 +27,6 @@ Last Update:
   - [Integrated Development Environments](#integrated-development-environments)
   - [openFrameworks](#openframeworks)
     - [Additional Learning Ressources](#additional-learning-ressources)
-- [Assignments](#assignments-1)
 
 ---
 
@@ -100,7 +99,7 @@ The repository will be used to share scripts (usually as readme.md) and slides, 
 
 ## Assignments
 
-Assignments will be given at the end of each class. If the assignments comprise written or coded homework, please create a folder named <my_last_name>, add your solutions and upload the folder to the assignments folder of the corresponding session.
+Assignments will be given at the end of each class. If the assignments comprise written or coded homework, please create a folder named <my_last_name>, add your solutions and upload the folder to the assignments folder of the corresponding session. See the readme.md inside of the assignments folder for any additional info as well as the list of assignments.
 
 
 ---
@@ -187,13 +186,3 @@ If you have questions and problems during the installation, make use of the open
 - https://openframeworks.cc/learning/
 - https://github.com/openframeworks/openFrameworks/wiki/Resources-for-Learning
 - http://codeliberation.org/CLF-slides/
-
-# Assignments
-
-- Checkout the openFrameworks website and get familiar with the resources provided: https://openframeworks.cc
-- Download the latest version of openFrameworks and follow the setup guides in order to setup the IDE required for your platform: https://openframeworks.cc/download/
-- Checkout the ofBook and read the first chapters, in particular Foreword and philosophy as well as the introduction on the openFrameworks folder structure:
-  - https://openframeworks.cc/ofBook/chapters/foreword.html
-  - https://openframeworks.cc/ofBook/chapters/of_philosophy.html
-  - https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html
-
