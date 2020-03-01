@@ -59,10 +59,7 @@ Week 1 -- 6.4.
 1. compilation, linking, building vs interpreter
 2. compiler errors 
 3. linker errors
-4. statically typed vs dynamically typed languages
-5. project files
-6. project generator
-7. openframeworks folder structure
+4. openframeworks folder structure
 
 Homework: 
 - [How OF Works](http://openframeworks.cc/ofBook/chapters/how_of_works.html)
@@ -77,7 +74,7 @@ Homework:
   - (find an alternative with processing)
 
 
-## 3 Syntax and Cpp Programm Setup 
+## 3 ofApp Syntax and Cpp Programm Setup 
 
 (Week 2, Wed 15.4. (after Easter holiday))
 
@@ -92,25 +89,25 @@ Homework discussion:
 3. header vs cpp file 
 4. declaration and definition
 5. recap build process and how .h und .cpp are related
-
+6. Change variables in the examples and turn the examples into an own piece of art
 
 Homework: 
-- Change variables in the examples
 - Reading material on Cpp syntax
 - [OOPs!](http://openframeworks.cc/ofBook/chapters/OOPs!.html) << a deeper explanation of what we did in class
 - Error sheet / double check for theses errors
 
 
-## 4 Object-oriented Programming I
+## 4 Your own ofApp
 
  (Week 3, Mo 20.4.)
 
 1. your own App
-2. project generator recap
+2. project generator and project files recap
 3. variables and scope
 4. functions and scope
 5. built in types
-6. take an example and change it
+6. statically typed vs dynamically typed languages
+
 
 Homework: 
 
@@ -128,21 +125,22 @@ Ressources -- Tyler Henry
 
 -  Try to make an interactive app, using mouse movement or keyboard presses.  Don't worry if you get stuck, just go as far as you can.
 -->
----
 
-## 5 OOP II
+--- 
+
+## 5 Object-oriented Programming I
 
 Week 4: 27.4., 29.4.
 
 1. Object oriented programming
    1. theoretical concepts
 
-## 6 OOP III
+## 6 OOP II
 2. ofApp
    1. user-defined types
    2. compile time vs runtime
 
-## 7
+## 7 OOP III
 
 Week 5: 4.5., 6.5.
 
