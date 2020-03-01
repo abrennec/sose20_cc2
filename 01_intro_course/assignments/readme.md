@@ -13,10 +13,6 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 - Checkout the openFrameworks website and get familiar with the resources provided: https://openframeworks.cc
 - Download the latest version of openFrameworks and follow the setup guides in order to setup the IDE required for your platform: https://openframeworks.cc/download/
-- Checkout the ofBook and read the first chapters, in particular Foreword and philosophy as well as the introduction on the openFrameworks folder structure:
-  - https://openframeworks.cc/ofBook/chapters/foreword.html
-  - https://openframeworks.cc/ofBook/chapters/of_philosophy.html
-  - https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html
 - Checkout your own platform if you haven't before. What system are you using and what kind of drivers are installed on your system? What kind of APIs have you been using before?
 
 
