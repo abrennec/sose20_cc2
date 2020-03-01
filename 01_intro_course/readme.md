@@ -141,9 +141,12 @@ Assignments will be given at the end of each class. If the assignments comprise 
 # openFrameworks Tour
 
 openFrameworks is free, open source C++ framework that has been strongly influenced by the Processing environment. The SDK targets easy development of real-time applications and is primarily oriented for use in creative and experimental projects.
-openFrameworks takes care of creating a graphical window, listening for mouse and keyboard events, processes incoming and outgoing audio streams, etc. so developers can start with expressing their ideas fairly quickly. Additionally, openFrameworks is highly extensible using addons called *ofxAddonName*. These are usually open source and add specific or custom functionality to the SDK.  Addons are generally built and maintained by members of the openFrameworks community. This can result in outdated software versions that are no longer compatible with the latest openFrameworks version, however.
 
-openFrameworks is cross-platform and supports various platforms like OS X, Windows, Linux, iOS, Android & Linux ARM devices such as Raspberry Pi. Finally, it has a very friendly & active community and it is recommended to search the openFrameworks forum for further information or to create an account to ask questions about specific aspects of the software.
+openFrameworks takes care of creating a graphical window, listening for mouse and keyboard events, processes incoming and outgoing audio streams, etc. so developers can start with expressing their ideas fairly quickly. Additionally, openFrameworks is highly extensible using addons called *ofxAddonName*. These are usually open source and add specific or custom functionality to the SDK. Addons are generally built and maintained by members of the openFrameworks community. This can result in outdated software versions that are no longer compatible with the latest openFrameworks version, however.
+
+openFrameworks is cross-platform and supports various platforms like OS X, Windows, Linux, iOS, Android & Linux ARM devices such as Raspberry Pi. Finally, it has a very friendly & active community and it is recommended to search the openFrameworks forum for further information or to create an account to ask questions about specific aspects of the software. The following diagram illustrates how openFrameworks relates to the final application and the underlying platform-specific components:
+
+![System_overview_of](assets/diagram_system_overview_of.png)
 
 Let's check out the SDK folders and files with some examples.
 
