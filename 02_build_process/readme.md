@@ -68,25 +68,28 @@ Examples presented.
 
 ## openFrameworks Folder Structure
 
+We will review the folder structure by example and look into the following files more closely:
+
+- Makefile
 - addons.make
 - config.make
-- Makefile
-- project files in IDE
+- Project files
+- Source files 
 
 ## The ofApp
 
-### Source code
+Every ofApp is by default comprised of three files
 
-- header vs cpp files
-- functions
-- main
-- ofApp class
+- main.cpp -- This is the starting point for every C++ program!
+- ofApp.h -- The header file
+- ofApp.cpp -- The definition file (also simply called Cpp file)
+
+
+### Header and Definition Files
 
 ![header_source_01](assets/header_cpp_01.png)  
 *Source: https://www.learncpp.com/cpp-tutorial/header-files/*
 
 ![header_source_02](assets/header_cpp_02.png)  
 *Source: https://www.learncpp.com/cpp-tutorial/header-files/*
-
-### Executable
 
