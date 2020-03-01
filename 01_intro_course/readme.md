@@ -23,10 +23,10 @@ Last Update:
 - [Further Readings](#further-readings)
   - [Books](#books)
   - [Online Resources](#online-resources)
+- [openFrameworks Tour](#openframeworks-tour)
 - [Technical Setup](#technical-setup)
   - [Integrated Development Environments](#integrated-development-environments)
   - [openFrameworks](#openframeworks)
-    - [Additional Learning Ressources](#additional-learning-ressources)
 
 ---
 
@@ -138,6 +138,9 @@ Assignments will be given at the end of each class. If the assignments comprise 
 - [openFrameworks](https://openframeworks.cc/)
 - [openFrameworks Forum](http://forum.openframeworks.cc/)
 
+# openFrameworks Tour
+
+First overview of the SDK with files and folders, basic ideas and examples. Check out  the slides.
 
 # Technical Setup
 
@@ -181,7 +184,7 @@ Once you have downloaded openFrameworks, extract the zip file to a folder from w
 If you have questions and problems during the installation, make use of the openFrameworks forum which contains lots of useful hints and discussions as well as serve as an independent help and learning channel:
 - https://forum.openframeworks.cc
 
-### Additional Learning Ressources
+### Additional Learning Ressources <!-- omit in toc -->
 
 - https://openframeworks.cc/learning/
 - https://github.com/openframeworks/openFrameworks/wiki/Resources-for-Learning
