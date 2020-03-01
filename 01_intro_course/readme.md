@@ -72,7 +72,7 @@ The **final project** will be an individual piece of work that can build upon th
 
 * 10% - Participation in classroom dicussions and critiques 
 * 20% - Homework assignments
-* 20% - Presentation of an ofx example project
+* 20% - Session protocols
 * 20% - Term project + documentation
 * 30% - Final project + documentation
 
