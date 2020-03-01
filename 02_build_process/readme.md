@@ -82,9 +82,11 @@ Examples presented.
 - main
 - ofApp class
 
-![header_source_01](assets/header_cpp_01.png)
+![header_source_01](assets/header_cpp_01.png)  
+*Source: https://www.learncpp.com/cpp-tutorial/header-files/*
 
-![header_source_02](assets/header_cpp_02.png)
+![header_source_02](assets/header_cpp_02.png)  
+*Source: https://www.learncpp.com/cpp-tutorial/header-files/*
 
 ### Executable
 
