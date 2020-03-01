@@ -17,6 +17,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - https://openframeworks.cc/ofBook/chapters/foreword.html
   - https://openframeworks.cc/ofBook/chapters/of_philosophy.html
   - https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html
+- Checkout your own platform if you haven't before. What system are you using and what kind of drivers are installed on your system? What kind of APIs have you been using before?
 
 
 
