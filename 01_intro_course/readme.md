@@ -51,7 +51,7 @@ openFrameworks is comprised of a huge body of example projects as well as additi
 
 We will get to know the overarching topic of the course **interaction and interfaces** in larger and smaller projects. As an artistic starting point, we will deal with topics such as poetry, imagery or music and develop a digital representation and/or interpretation using openFrameworks.
 
-The **final project** will be an individual piece of work that can build upon the mid-term project or be a completely new piece of application. The requirements and scope of the final project will be defined at the end of the lecture series. The project can be an individual as well as a group work. 
+There will be smaller term projects as well as a **final project** which will be an individual piece of work. The requirements and scope of the final project will be defined at the end of the lecture series. The project can be an individual as well as a group work. 
 
 **Deadline for submitting the final project is September 30th, 2020.** To successfully submit your final project, upload the code, documentation, and any additional material required to a dedicated Git repository and share the link to the repository with Prof. Brennecke via email.
 
@@ -71,8 +71,7 @@ The **final project** will be an individual piece of work that can build upon th
 ### Breakdown <!-- omit in toc -->
 
 * 10% - Participation in classroom dicussions and critiques 
-* 20% - Homework assignments
-* 20% - Session protocols
+* 40% - Homework assignments
 * 20% - Term project + documentation
 * 30% - Final project + documentation
 
@@ -95,7 +94,9 @@ As a communication platform, we will use [GitHub.com](https://github.com/) to sh
 - [GitHub Wiki (public)](https://github.com/ctechfilmuniversity/sose20_cc2/wiki)
 - [GitHub team (public)](https://github.com/orgs/ctechfilmuniversity/teams/sose20_cc2)
 
-The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, results of homework assignments. The team will be used for discussion, comments, notes and any important announcements.
+The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, dos and don'ts, useful links, results of homework assignments, and so on. The team will be used for discussion, comments, notes and any important announcements.
+
+This course will start as an online course which requires everyone to work individually. You will have to work through materials and assignments on your own. There will be slots for discussions twice a week. Make sure that you are prepared when bringing your questions to those slots. Make use of the Github team as well as openFrameworks forum when you are stuck and post your questions there. We have to work together as a group and everyone is invited to help out. Also, there will be individual consultation options for everyone.
 
 ## Assignments
 
@@ -110,9 +111,9 @@ Assignments will be given at the end of each class. If the assignments comprise 
 
 ### Creative Coding <!-- omit in toc -->
 
+- Joshua Noble (2009): Programming Interactivity. A Designer’s Guide to Processing, Arduino & openFrameworks. Sebastopol, CA: O’Reilly Media Inc.
 - Ira Greenberg (2007): Processing: Creative Coding & Computational Art. Berkley, CA: Friends of ED/Apress Press.
 - Bill Manaris & Andrews R. Brown (2014): Making Music with Computers. New York, NY: Chapman & Hall / CRC Press.
-- Joshua Noble (2009): Programming Interactivity. A Designer’s Guide to Processing, Arduino & openFrameworks. Sebastopol, CA: O’Reilly Media Inc.
 
 ### C/C++  <!-- omit in toc -->
 
