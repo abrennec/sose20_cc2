@@ -38,6 +38,7 @@ Last Update:
 - Module 5 | 3 SWS | 4 ECTS
 - 18 lectures in total
 
+During the time of online lectures, we will use the lecture hours for consultation times.
 
 ## Course Description 
 
@@ -70,9 +71,9 @@ There will be smaller term projects as well as a **final project** which will be
 
 ### Breakdown <!-- omit in toc -->
 
-* 10% - Participation in classroom dicussions and critiques 
-* 40% - Homework assignments
-* 20% - Term project + documentation
+* 20% - Participation in classroom dicussions and critiques / online sessions
+* 25% - Homework assignments
+* 25% - Term projects + WIKI updates
 * 30% - Final project + documentation
 
 Team work (2 persons per team) and pair programming is encouraged.
@@ -96,7 +97,7 @@ As a communication platform, we will use [GitHub.com](https://github.com/) to sh
 
 The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, dos and don'ts, useful links, results of homework assignments, and so on. The team will be used for discussion, comments, notes and any important announcements.
 
-This course will start as an online course which requires everyone to work individually. You will have to work through materials and assignments on your own. There will be slots for discussions twice a week. Make sure that you are prepared when bringing your questions to those slots. Make use of the Github team as well as openFrameworks forum when you are stuck and post your questions there. We have to work together as a group and everyone is invited to help out. Also, there will be individual consultation options for everyone.
+This course will start as an online course which requires everyone to work individually. You will have to work through materials and assignments on your own. There will be slots for discussions twice a week. Make sure that you are prepared when bringing your questions to those slots. Make use of the Github team as well as openFrameworks forum when you are stuck and post your questions there. This term, we have to work together as a group more than usually and everyone is invited to help out. Also, there will be individual consultation options for everyone.
 
 ## Assignments
 
@@ -111,6 +112,8 @@ Assignments will be given at the end of each class. If the assignments comprise 
 
 ### Creative Coding <!-- omit in toc -->
 
+- Denis Perevalov, Igor Tatrnikov (2015): openFrameworks Essentials. Packt Publishing. Birmingham, UK.
+- Denis Perevalov (2013): Mastering openFrameworks: Creative Coding Demystified. Packt Publishing. Birmingham, UK.
 - Joshua Noble (2009): Programming Interactivity. A Designer’s Guide to Processing, Arduino & openFrameworks. Sebastopol, CA: O’Reilly Media Inc.
 - Ira Greenberg (2007): Processing: Creative Coding & Computational Art. Berkley, CA: Friends of ED/Apress Press.
 - Bill Manaris & Andrews R. Brown (2014): Making Music with Computers. New York, NY: Chapman & Hall / CRC Press.
@@ -131,13 +134,13 @@ Assignments will be given at the end of each class. If the assignments comprise 
 
 ## Online Resources
 
-- [learncpp](http://www.learncpp.com)
-- [cppreference](http://www.cppreference.com/)
-- [cplusplus](http://www.cplusplus.com/)
-- [fluentcpp](https://www.fluentcpp.com)
-- [ofBook](https://github.com/openframeworks/ofBook/tree/master/chapters)
-- [openFrameworks](https://openframeworks.cc/)
-- [openFrameworks Forum](http://forum.openframeworks.cc/)
+- [learncpp](http://www.learncpp.com) -- Very good resource for beginners and experienced developers!
+- [cplusplus](http://www.cplusplus.com/) -- Very good reference site with many examples.
+- [cppreference](http://www.cppreference.com/) -- Advanced, very good reference site.
+- [fluentcpp](https://www.fluentcpp.com) -- Very good website with a focus on programming design (advanced!).
+- [ofBook](https://github.com/openframeworks/ofBook/tree/master/chapters) -- Very good starting point for openFrameworks.
+- [openFrameworks](https://openframeworks.cc/) -- All about openFrameworks.
+- [openFrameworks Forum](http://forum.openframeworks.cc/) -- Communication tool for openFrameworks.
 
 # openFrameworks Tour
 
