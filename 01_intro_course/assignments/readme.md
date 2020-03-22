@@ -36,27 +36,6 @@ Also, checkout this video to get a first impression of how to work with openFram
 
 The openFrameworks forum provides more resources if you encounter problems.
 
-### 2.3 C++17
-
-In order to use the nearly latest C++ standard, you have to change the dedicated make file for this. On macOS Go to  
-```
-of_root_folder/libs/openFrameworksCompiled/project/osx/config.osx.default.mk line 142:
-PLATFORM_CXXFLAGS += -std=c++11
-
-change this line to
-
-PLATFORM_CXXFLAGS += -std=c++17 
-```
-On Windows go to:
-```
-of_root_folder/libs/openFrameworksCompiled/project/windows/config.windows.default.mk line 142:
-PLATFORM_CXXFLAGS += -std=c++11
-
-change this line to
-
-PLATFORM_CXXFLAGS += -std=c++17 
-```
-
 ## 3 Examples
 Once you have installed the IDE on your platform, unpack the downloaded openFrameworks SDK to a folder of your liking. You do not have to install openFrameworks. All of the files required are simply part of the openFrameworks folder and will be used during the build process that we will look into more closely soon. For now, check out the examples folder and build your first openFrameworks examples. Checkout this video for more information.
 
