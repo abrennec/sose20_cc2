@@ -40,7 +40,7 @@ The openFrameworks forum provides more resources if you encounter problems.
 
 In order to use the nearly latest C++ standard, you have to change the dedicated make file for this. On macOS Go to  
 ```
-of_root_folder/libs/openFrameworksCompiled/project/osx/config.osx.default.mk line 132:
+of_root_folder/libs/openFrameworksCompiled/project/osx/config.osx.default.mk line 142:
 PLATFORM_CXXFLAGS += -std=c++11
 
 change this line to
@@ -49,7 +49,7 @@ PLATFORM_CXXFLAGS += -std=c++17
 ```
 On Windows go to:
 ```
-of_root_folder/libs/openFrameworksCompiled/project/windows/config.windows.default.mk line 132:
+of_root_folder/libs/openFrameworksCompiled/project/windows/config.windows.default.mk line 142:
 PLATFORM_CXXFLAGS += -std=c++11
 
 change this line to
