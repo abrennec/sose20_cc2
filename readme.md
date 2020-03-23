@@ -13,37 +13,34 @@ Last Update:
 ---
 
 - [Syllabus](#syllabus)
-  - [1 Intro to Course and IDE setup](#1-intro-to-course-and-ide-setup)
-  - [2 Build Process and ofx SDK](#2-build-process-and-ofx-sdk)
-  - [3 Syntax and Cpp Programm Setup](#3-syntax-and-cpp-programm-setup)
-  - [4 Object-oriented Programming I](#4-object-oriented-programming-i)
-  - [-->](#--)
-  - [5 OOP II](#5-oop-ii)
-  - [6 OOP III](#6-oop-iii)
-  - [7](#7)
-  - [8](#8)
-  - [9](#9)
-  - [10](#10)
-  - [11](#11)
-  - [12](#12)
-  - [13](#13)
-  - [14](#14)
-  - [15](#15)
-  - [16 Final Project I](#16-final-project-i)
-  - [17 Final Project II](#17-final-project-ii)
-  - [18 Wrapup](#18-wrapup)
+  - [Week 1 - Intro and Setup -- 6.4., 8.4.](#week-1---intro-and-setup----64-84)
+    - [Intro to Course and IDE setup](#intro-to-course-and-ide-setup)
+    - [Technical setup](#technical-setup)
+    - [openFrameworks Setup](#openframeworks-setup)
+  - [Week 2 -- (Week 2, Wed 15.4. (after Easter holiday))](#week-2----week-2-wed-154-after-easter-holiday)
+    - [Build Process and ofx SDK](#build-process-and-ofx-sdk)
+  - [3 ofApp Syntax and Cpp Programm Setup](#3-ofapp-syntax-and-cpp-programm-setup)
+  - [Week 3 OOP Basics -- 20.4., 22.4.](#week-3-oop-basics----204-224)
+  - [Week 4 Object-oriented Programming II -- Inheritance](#week-4-object-oriented-programming-ii----inheritance)
+  - [Week 5 -- Pointer and Storage](#week-5----pointer-and-storage)
+  - [Week 6](#week-6)
+  - [Week 7](#week-7)
+  - [Week 8](#week-8)
+  - [Week 9](#week-9)
+  - [Week 10](#week-10)
 
 ---
 
 # Syllabus
 
-## 1 Intro to Course and IDE setup 
+## Week 1 - Intro and Setup -- 6.4., 8.4.
 
-Week 1 -- 6.4.
-
+### Intro to Course and IDE setup 
 - overview of topics
 - orga and grading
 - intro to openframeworks with example
+
+### Technical setup 
 - technical setup, not everyone will use the same ide, system, ... 
   - Xcode
   - MS Visual Studio Community
@@ -52,14 +49,11 @@ Week 1 -- 6.4.
   - git ignore 
   - create a dedicated setup file
 
-## 2 Build Process and ofx SDK 
+### openFrameworks Setup
 
- Week 1 -- 8.4.
-
-1. compilation, linking, building vs interpreter
-2. compiler errors 
-3. linker errors
-4. openframeworks folder structure
+- Intro to the folder structure
+- Example of an ofApp Example
+- first intro to c++ code
 
 Homework: 
 - [How OF Works](http://openframeworks.cc/ofBook/chapters/how_of_works.html)
@@ -73,23 +67,37 @@ Homework:
   - what makes them artistically appealing?
   - (find an alternative with processing)
 
+- make first changes to a simple example
+- Change variables in the examples and turn the examples into an own piece of art
+- check out the documentation to get familiar
 
-## 3 ofApp Syntax and Cpp Programm Setup 
+---
 
-(Week 2, Wed 15.4. (after Easter holiday))
+## Week 2 -- (Week 2, Wed 15.4. (after Easter holiday))
 
 Homework discussion: 
 - build groups of two, discuss your examples
 - pick one example that you both find interesting and would like to better understand
 - every groups presents one app they would like to better understand
 
+### Build Process and ofx SDK 
+
+1. compilation, linking, building vs interpreter
+2. compiler errors 
+3. linker errors
+
+## 3 ofApp Syntax and Cpp Programm Setup 
+
+- Intro to project generator
+- create your first app
+- create a first animation
 
 1. C++ by example of an ofApp
 2. syntax simple
 3. header vs cpp file 
 4. declaration and definition
 5. recap build process and how .h und .cpp are related
-6. Change variables in the examples and turn the examples into an own piece of art
+
 
 Homework: 
 - Reading material on Cpp syntax
@@ -97,9 +105,8 @@ Homework:
 - Error sheet / double check for theses errors
 
 
-## 4 Your own ofApp
+## Week 3 OOP Basics -- 20.4., 22.4.
 
- (Week 3, Mo 20.4.)
 
 1. your own App
 2. project generator and project files recap
@@ -128,93 +135,70 @@ Ressources -- Tyler Henry
 
 --- 
 
-## 5 Object-oriented Programming I
+## Week 4 Object-oriented Programming II -- Inheritance
 
 Week 4: 27.4., 29.4.
 
 1. Object oriented programming
    1. theoretical concepts
 
-## 6 OOP II
 2. ofApp
    1. user-defined types
    2. compile time vs runtime
 
-## 7 OOP III
+## Week 5 -- Pointer and Storage
 
 Week 5: 4.5., 6.5.
 
 1. Mesh from image
 
-## 8 
 
-2. TBD
-
-## 9
+## Week 6 
 
 Week 6: 11.5., 13.5.
 
 1. lecture
-
-## 10 
-
 2. Mid term evaluation
    1. one minute paper
 
-## 11
+## Week 7 
 
 Week 7: 18.5., 20.5.
 
 1. Sound and audio
 
-## 12 
 
-2. TBD
-
-## 13
+## Week 8
 
 Week 8: 25.5., 27.5.
 
 1. Open CV
 
-## 14
-2. TBD
 
-## 15 
+## Week 9
 
 Week 9: Wed 3.6.
 
 1. TBD
 
 
-## 16 Final Project I
+## Week 10
 
 Week 10: 8.6, 11.6.
 
 1. Final project preparation
 
-## 17 Final Project II
-
-2. Final project preparation
-
-## 18 Wrapup
-
-Week 11: Mo 15.6.
-
-1. Wrap up and final project
+2. Wrap up and final project
    1. evaluation
    2. final project 
 
-
   
 - Pointer and dynamics - realtime rendering
-- object-oriented programming and inheritance
 - extra
   - access levels
   - polymorphism
 - github branches and creation of one solid project
-- open cv
-- audio
+
 - mesh from image + mesh interaction
 - sound from image + sound / image through sound interaction
 
