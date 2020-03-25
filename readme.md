@@ -12,193 +12,148 @@ Last Update:
 
 ---
 
-- [Syllabus](#syllabus)
-  - [Week 1 - Intro and Setup -- 6.4., 8.4.](#week-1---intro-and-setup----64-84)
-    - [Intro to Course and IDE setup](#intro-to-course-and-ide-setup)
-    - [Technical setup](#technical-setup)
-    - [openFrameworks Setup](#openframeworks-setup)
-  - [Week 2 -- (Week 2, Wed 15.4. (after Easter holiday))](#week-2----week-2-wed-154-after-easter-holiday)
-    - [Build Process and ofx SDK](#build-process-and-ofx-sdk)
-  - [3 ofApp Syntax and Cpp Programm Setup](#3-ofapp-syntax-and-cpp-programm-setup)
-  - [Week 3 OOP Basics -- 20.4., 22.4.](#week-3-oop-basics----204-224)
-  - [Week 4 Object-oriented Programming II -- Inheritance](#week-4-object-oriented-programming-ii----inheritance)
-  - [Week 5 -- Pointer and Storage](#week-5----pointer-and-storage)
-  - [Week 6](#week-6)
-  - [Week 7](#week-7)
-  - [Week 8](#week-8)
-  - [Week 9](#week-9)
-  - [Week 10](#week-10)
+- [Overview of the Course](#overview-of-the-course)
+  - [Organization](#organization)
+  - [Course Description](#course-description)
+  - [Syllabus](#syllabus)
+  - [Learning Objectives](#learning-objectives)
+  - [Grading](#grading)
+- [Communication & Materials](#communication--materials)
+  - [Assignments](#assignments)
+- [Further Readings](#further-readings)
+  - [Books](#books)
+  - [Online Resources](#online-resources)
 
 ---
 
-# Syllabus
 
-## Week 1 - Intro and Setup -- 6.4., 8.4.
+# Overview of the Course
 
-### Intro to Course and IDE setup 
-- overview of topics
-- orga and grading
-- intro to openframeworks with example
+## Organization 
 
-### Technical setup 
-- technical setup, not everyone will use the same ide, system, ... 
-  - Xcode
-  - MS Visual Studio Community
-  - VS Code
-  - git setup
-  - git ignore 
-  - create a dedicated setup file
+- Mondays and Wednesdays 11:30 h - 13 h
+- Module 5 | 3 SWS | 4 ECTS
+- 10 weeks
 
-### openFrameworks Setup
+During the time of online lectures, we will use the lecture hours for consultation times.
 
-- Intro to the folder structure
-- Example of an ofApp Example
-- first intro to c++ code
+## Course Description 
 
-Homework: 
-- [How OF Works](http://openframeworks.cc/ofBook/chapters/how_of_works.html)
-- Learncpp syntax
-- play around with the ide and ofExamples. 
-- build the examples, get used to the syntax
-- note down your questions
-- pick one or two examples that you like specifically
-  - what do you like about them?
-  - what makes them technically appealing?
-  - what makes them artistically appealing?
-  - (find an alternative with processing)
+This course builds on the concepts presented in ‘Creative Coding I’ and introduces the software development toolkit [openFrameworks](http://openframeworks.cc). openFrameworks is a creative coding toolkit dedicated to realtime development written in C++. We will specifically use it
 
-- make first changes to a simple example
-- Change variables in the examples and turn the examples into an own piece of art
-- check out the documentation to get familiar
+- to introduce the C++ programming language & corresponding build processes,
+- to explore object-orientation and realtime development with C++,
+- to get familiar with software and library design.
 
----
+openFrameworks is comprised of a huge body of example projects as well as additional functionality (ofxAddons) that we will explore during the course.
 
-## Week 2 -- (Week 2, Wed 15.4. (after Easter holiday))
+We will get to know the overarching topic of the course **interaction and interfaces** in larger and smaller projects. As an artistic starting point, we will deal with topics such as poetry, imagery or music and develop a digital representation and/or interpretation using openFrameworks.
 
-Homework discussion: 
-- build groups of two, discuss your examples
-- pick one example that you both find interesting and would like to better understand
-- every groups presents one app they would like to better understand
+There will be smaller term projects as well as a **final project** which will be an individual piece of work. The requirements and scope of the final project will be defined at the end of the lecture series. The project can be an individual as well as a group work. 
 
-### Build Process and ofx SDK 
-
-1. compilation, linking, building vs interpreter
-2. compiler errors 
-3. linker errors
-
-## 3 ofApp Syntax and Cpp Programm Setup 
-
-- Intro to project generator
-- create your first app
-- create a first animation
-
-1. C++ by example of an ofApp
-2. syntax simple
-3. header vs cpp file 
-4. declaration and definition
-5. recap build process and how .h und .cpp are related
+**Deadline for submitting the final project is September 30th, 2020.** To successfully submit your final project, upload the code, documentation, and any additional material required to a dedicated Git repository and share the link to the repository with Prof. Brennecke via email.
 
 
-Homework: 
-- Reading material on Cpp syntax
-- [OOPs!](http://openframeworks.cc/ofBook/chapters/OOPs!.html) << a deeper explanation of what we did in class
-- Error sheet / double check for theses errors
+## Syllabus
+
+1. Introduction and technical setup
+2. ofApp Development 
+3. Object-oriented Programming concepts
+4. Object-oriented Programming with C++
+5. Imgs, Textures
+6. Video
+7. Sound
+8. OpenCV
+9. Final Project preparation
+10. Wrap-up
+
+AR
+Movement
+Interaction
+Pointers and memory management
+Polymorphism
 
 
-## Week 3 OOP Basics -- 20.4., 22.4.
+## Learning Objectives
+
+- Extending your programming skills towards software design
+- Object-oriented analysis and design
+- Understanding and working with a high-level programming language like C++
+- Understanding and working with a complex SDK like openFrameworks
+- Expressing your artistic ideas by the means of C++ and openFrameworks
 
 
-1. your own App
-2. project generator and project files recap
-3. variables and scope
-4. functions and scope
-5. built in types
-6. statically typed vs dynamically typed languages
+## Grading
 
+### Breakdown <!-- omit in toc -->
 
-Homework: 
+* 20% - Participation in classroom dicussions and critiques / online sessions
+* 25% - Homework assignments
+* 25% - Term projects + WIKI updates
+* 30% - Final project + documentation
 
-<!--
-Ressources -- Tyler Henry
-- **Bouncing Square** make a Square class
-- **Bouncing Squares** make an array of Square objects
-- **Shapes** draw some simple stuff, use colors
-
-
--	Create a simple animation using a class of your own design.  You can use the Square class as a template for your code.  
-	Play with color, shape, size, movement, speed, etc.  
-	  	- the class you write should contain both an update() and a draw() function  
-		- try to use an array
-
--  Try to make an interactive app, using mouse movement or keyboard presses.  Don't worry if you get stuck, just go as far as you can.
--->
-
---- 
-
-## Week 4 Object-oriented Programming II -- Inheritance
-
-Week 4: 27.4., 29.4.
-
-1. Object oriented programming
-   1. theoretical concepts
-
-2. ofApp
-   1. user-defined types
-   2. compile time vs runtime
-
-## Week 5 -- Pointer and Storage
-
-Week 5: 4.5., 6.5.
-
-1. Mesh from image
-
-
-## Week 6 
-
-Week 6: 11.5., 13.5.
-
-1. lecture
-2. Mid term evaluation
-   1. one minute paper
-
-## Week 7 
-
-Week 7: 18.5., 20.5.
-
-1. Sound and audio
-
-
-## Week 8
-
-Week 8: 25.5., 27.5.
-
-1. Open CV
-
-
-## Week 9
-
-Week 9: Wed 3.6.
-
-1. TBD
-
-
-## Week 10
-
-Week 10: 8.6, 11.6.
-
-1. Final project preparation
-
-2. Wrap up and final project
-   1. evaluation
-   2. final project 
-
+Team work (2 persons per team) and pair programming is encouraged.
   
-- Pointer and dynamics - realtime rendering
-- extra
-  - access levels
-  - polymorphism
-- github branches and creation of one solid project
+### Grading criteria projects <!-- omit in toc -->
 
-- mesh from image + mesh interaction
-- sound from image + sound / image through sound interaction
+* Creativity and originality of the concept
+* Craftsmanship in terms of system design and the technical reflection of the solution
+* Engineering effort, code organization, code quality and clarity
+* Quality of the documentation
 
+---
+
+# Communication & Materials
+
+As a communication platform, we will use [GitHub.com](https://github.com/) to share code, lecture materials, comments, and submit homework and project assignments.
+
+- [GitHub repository (public)](https://github.com/ctechfilmuniversity/sose20_cc2)
+- [GitHub Wiki (public)](https://github.com/ctechfilmuniversity/sose20_cc2/wiki)
+- [GitHub team (public)](https://github.com/orgs/ctechfilmuniversity/teams/sose20_cc2)
+
+The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, dos and don'ts, useful links, results of homework assignments, and so on. The team will be used for discussion, comments, notes and any important announcements.
+
+This course will start as an online course which requires everyone to work individually. You will have to work through materials and assignments on your own. There will be slots for discussions twice a week. Make sure that you are prepared when bringing your questions to those slots. Make use of the Github team as well as openFrameworks forum when you are stuck and post your questions there. This term, we have to work together as a group more than usually and everyone is invited to help out. Also, there will be individual consultation options for everyone.
+
+## Assignments
+
+Assignments will be given at the end of each class. If the assignments comprise written or coded homework, please create a folder named <my_last_name>, add your solutions and upload the folder to the assignments folder of the corresponding session. See the readme.md inside of the assignments folder for any additional info as well as the list of assignments.
+
+
+---
+
+# Further Readings
+
+## Books 
+
+### Creative Coding <!-- omit in toc -->
+
+- Denis Perevalov, Igor Tatrnikov (2015): openFrameworks Essentials. Packt Publishing. Birmingham, UK.
+- Denis Perevalov (2013): Mastering openFrameworks: Creative Coding Demystified. Packt Publishing. Birmingham, UK.
+- Joshua Noble (2009): Programming Interactivity. A Designer’s Guide to Processing, Arduino & openFrameworks. Sebastopol, CA: O’Reilly Media Inc.
+- Ira Greenberg (2007): Processing: Creative Coding & Computational Art. Berkley, CA: Friends of ED/Apress Press.
+- Bill Manaris & Andrews R. Brown (2014): Making Music with Computers. New York, NY: Chapman & Hall / CRC Press.
+
+### C/C++  <!-- omit in toc -->
+
+- Bjarne Stroustrup (2013): The C++ Programming Language. Upper Saddle River, NJ: Pearson Education, Inc.
+- Bjarne Stroustrup (2014): Programming. Principles & Practices Using C++. Upper Saddle River, NJ: Addison-Wesley.
+- Scott Meyers („Effective C++“ series, advanced)
+- Herb Sutter („Exceptional C++“ series, really advanced)
+
+### Software Design <!-- omit in toc -->
+
+- Grady Booch (1994): Object-oriented Analysis and Design. Addison-Wesley. NY, USA.
+- Robert C. Martin (2009): Clean Code. Prentice Hall. NY, USA.
+- Robert C. Martin (2017): Clean Architecture. Prentice Hall. NY, USA.
+
+
+## Online Resources
+
+- [learncpp](http://www.learncpp.com) -- Very good resource for beginners and experienced developers!
+- [cplusplus](http://www.cplusplus.com/) -- Very good reference site with many examples.
+- [cppreference](http://www.cppreference.com/) -- Advanced, very good reference site.
+- [fluentcpp](https://www.fluentcpp.com) -- Very good website with a focus on programming design (advanced!).
+- [ofBook](https://github.com/openframeworks/ofBook/tree/master/chapters) -- Very good starting point for openFrameworks.
+- [openFrameworks](https://openframeworks.cc/) -- All about openFrameworks.
+- [openFrameworks Forum](http://forum.openframeworks.cc/) -- Communication tool for openFrameworks.
