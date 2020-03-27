@@ -87,10 +87,8 @@ Polymorphism
 
 ### Breakdown <!-- omit in toc -->
 
-* 20% - Participation in classroom dicussions and critiques / online sessions
-* 25% - Homework assignments
-* 25% - Term projects + WIKI updates
-* 30% - Final project + documentation
+* 30% - Participation in group dicussions and critiques
+* 70% - Homework assignments
 
 Team work (2 persons per team) and pair programming is encouraged.
   
