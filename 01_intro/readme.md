@@ -22,6 +22,12 @@ Last Update:
     - [Windows and Visual Studio](#windows-and-visual-studio)
     - [More Support](#more-support)
 - [Building a First ofExample](#building-a-first-ofexample)
+- [The Build Process](#the-build-process)
+  - [Source Code and Executable](#source-code-and-executable)
+  - [Compiled vs interpreted Languages](#compiled-vs-interpreted-languages)
+  - [Components of the Build Process](#components-of-the-build-process)
+  - [Compiler and Linker Errors](#compiler-and-linker-errors)
+  - [Reading Material](#reading-material)
 - [Additional Learning Ressources](#additional-learning-ressources)
 
 ---
@@ -103,6 +109,58 @@ The IDE's **project files**, *.xcodeproject for XCode and *.sln for Windows, con
 
 Since the build system is  and will be used during the build process that we will look into more closely soon. For now, check out the examples folder and build your first openFrameworks examples. Checkout this video for more information.
 
+
+# The Build Process
+
+## Source Code and Executable
+
+The build process takes care of turning **source code** into executable software programs. 
+
+![build_process_intro](assets/build_process_intro.png)  
+*Image credit: http://www.learncpp.com | 0.2 — Introduction to programming languages*
+
+These **executables** or **binaries** are sets of instructions that tell the computer how to operate. Therefore, 
+the instructions have to be written in machine code. Machine code is a very low-level programming language with each instruction set being composed of bits, binary numbers like, for example, *10110000 01100001*. These instruction sets are different per CPU, i.e., MacOS, Windows, Linux, etc. binaries differ.
+
+Each platform's operating system comes with a small program called **loader**. When executing the binary, i.e., by double-clicking it, the loader loads the binary file into the platform's random access memory (RAM) and the platform's CPU executes the machine code instructions.
+
+
+## Compiled vs interpreted Languages
+
+Generally, the build process is a **multi-step process** whereas the interpreter abstracts these steps and appears as a **one-step-process**. 
+
+An interpreted language (e.g. Python or Processing) uses an interpreter that
+- does not compile source code in machine code 
+- is not necessarily optimized for the platform 
+- directly executes the instructions itself
+
+Nowadays interpreted language programs can compete often well with compiled languages.  are therefore generally still slower in program execution than compiled language programs that are executed directly by the CPU
+
+## Components of the Build Process
+
+The following diagram illustrates the development and build process for a compiled language like C++:
+
+![build_process_details](assets/build_process_details.png)  
+*Image credit: Richard L. Halterman (2017): Fundamentals of C++ Programming. Online print.*
+
+- Preprocessing: Generates enhanced source code
+- Compilation: Generates object files
+- Linking: links all object files and generates the executable
+
+## Compiler and Linker Errors
+
+**Compiler errors** occur during compilation usually refer to syntax errors in the code
+compiler error code is usually very helpful to identify and fix the compiler error.
+
+**Linker errors** occur during linking of the object files and are often much harder to fix
+usually refer to missing implementation details of the code   like, i.e., missing function definitions or libraries (path errors).
+
+Examples presented.
+
+## Reading Material
+
+- https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/
+- https://www.tutorialspoint.com/compiler_design/compiler_design_overview.htm
 
 
 
