@@ -61,6 +61,7 @@ Examples presented.
 
 ## Reading Material
 
+- https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/
 - https://www.tutorialspoint.com/compiler_design/compiler_design_overview.htm
 
 
