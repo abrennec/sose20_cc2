@@ -33,9 +33,11 @@ Last Update:
 
 - Mondays and Wednesdays 11:30 h - 13 h
 - Module 5 | 3 SWS | 4 ECTS
-- 10 weeks
+- 18 sessions in total
 
-During the time of online lectures, we will use the lecture hours for consultation times.
+`
+The course will be held online until further notice.  
+During the time of online lectures, we will use the lecture hours for updates, discussions and consultation times.
 
 ## Course Description 
 
@@ -49,29 +51,25 @@ openFrameworks is comprised of a huge body of example projects as well as additi
 
 We will get to know the overarching topic of the course **interaction and interfaces** in larger and smaller projects. As an artistic starting point, we will deal with topics such as poetry, imagery or music and develop a digital representation and/or interpretation using openFrameworks.
 
-There will be smaller term projects as well as a **final project** which will be an individual piece of work. The requirements and scope of the final project will be defined at the end of the lecture series. The project can be an individual as well as a group work. 
+## Method of Instruction
 
-**Deadline for submitting the final project is September 30th, 2020.** To successfully submit your final project, upload the code, documentation, and any additional material required to a dedicated Git repository and share the link to the repository with Prof. Brennecke via email.
+This course will start as an online course which requires an increased amount of personal work and participation in the development of problem solutions. You will have to work through materials and assignments on your own. There will be slots for discussions twice a week. Make sure that you are prepared when bringing your questions to those slots. Make use of the Github team as well as openFrameworks forum when you are stuck and post your questions there. This term, we have to work together as a group more than usually and everyone is invited to help out.
+
+On Mondays, new learning material and assignments will be published. We will meet online to check-in briefly and discuss open questions. On Wednesdays, we will have a check-in meeting for questions. All assignments will be given a dedicated deadline. In general, please upload any code assignments to the assignment's folder on GitHub and put your research solutions to the GitHub Wiki. You will work in groups of two. Every group has to do a little research on one artistic and on one technical topic and share it with the class in one of the meetings and on the Wiki. At the end of the lecture, a final exercise will be assigned that will be an individually chosen task.
 
 
 ## Syllabus
 
-1. Introduction and technical setup
-2. ofApp Development 
-3. Object-oriented Programming concepts
-4. Object-oriented Programming with C++
-5. Imgs, Textures
-6. Video
-7. Sound
-8. OpenCV
-9. Final Project preparation
-10. Wrap-up
-
-AR
-Movement
-Interaction
-Pointers and memory management
-Polymorphism
+1. Introduction, Technical Setup, and Build Process (2)
+2. ofApp and C++ Development Basics (1)
+3. Object-oriented Programming Concepts with C++ (2)
+4. Image Represenations (2)
+5. Memory Management (2)
+6. Interactive Sound Objects (2)
+7. OpenCV (2)
+8. Final Exercise (2)
+9. Final Exercise (1)
+10. Wrap-up (2)
 
 
 ## Learning Objectives
@@ -87,19 +85,19 @@ Polymorphism
 
 ### Breakdown <!-- omit in toc -->
 
-* 20% - Participation in classroom dicussions and critiques / online sessions
-* 25% - Homework assignments
-* 25% - Term projects + WIKI updates
-* 30% - Final project + documentation
+* 20% - Participation of group dicussions, Wiki updates and critiques 
+* 50% - Homework assignments
+* 30% - Final exercise
 
 Team work (2 persons per team) and pair programming is encouraged.
   
-### Grading criteria projects <!-- omit in toc -->
+### Grading criteria <!-- omit in toc -->
 
-* Creativity and originality of the concept
-* Craftsmanship in terms of system design and the technical reflection of the solution
-* Engineering effort, code organization, code quality and clarity
-* Quality of the documentation
+* Preparation of research topics
+* Assignment points
+* Final Exercise
+  * Craftsmanship in terms of concept and system design as well as the technical reflection of the solution
+  * Engineering effort, code organization, code quality and clarity
 
 ---
 
@@ -113,11 +111,10 @@ As a communication platform, we will use [GitHub.com](https://github.com/) to sh
 
 The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, dos and don'ts, useful links, results of homework assignments, and so on. The team will be used for discussion, comments, notes and any important announcements.
 
-This course will start as an online course which requires everyone to work individually. You will have to work through materials and assignments on your own. There will be slots for discussions twice a week. Make sure that you are prepared when bringing your questions to those slots. Make use of the Github team as well as openFrameworks forum when you are stuck and post your questions there. This term, we have to work together as a group more than usually and everyone is invited to help out. Also, there will be individual consultation options for everyone.
 
 ## Assignments
 
-Assignments will be given at the end of each class. If the assignments comprise written or coded homework, please create a folder named <my_last_name>, add your solutions and upload the folder to the assignments folder of the corresponding session. See the readme.md inside of the assignments folder for any additional info as well as the list of assignments.
+If the assignments comprise written or coded homework, please create a folder named <my_last_name>, add your solutions and upload the folder to the assignments folder of the corresponding session. 
 
 
 ---
