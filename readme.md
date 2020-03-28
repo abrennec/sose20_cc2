@@ -86,8 +86,8 @@ On Mondays, new learning material and assignments will be published. We will mee
 
 ### Breakdown <!-- omit in toc -->
 
-* 20% - Participation in group dicussions, Wiki updates and critiques 
-* 50% - Homework assignments
+* 20% - Participation in group discussions, Wiki updates and critiques 
+* 50% - Homework assignments 
 * 30% - Final exercise
 
 Team work (2 persons per team) and pair programming is encouraged.

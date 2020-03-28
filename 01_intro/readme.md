@@ -21,7 +21,6 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Integrated Development Environment](#integrated-development-environment)
     - [macOS and XCode](#macos-and-xcode)
     - [Windows and Visual Studio](#windows-and-visual-studio)
-  - [The openFrameworks SDK](#the-openframeworks-sdk)
 - [Building a First ofExample](#building-a-first-ofexample)
 - [The Build Process](#the-build-process)
   - [Compiled vs interpreted Languages](#compiled-vs-interpreted-languages)
@@ -76,9 +75,6 @@ The following diagram illustrates the different soft- and hardware layers and th
 
 openFrameworks is also highly extensible and provides a dedicated mechanism to involve additional functionality through the use of [ofxAddons](https://ofxaddons.com/categories). These are usually open source and add specific or custom functionality to the SDK. Addons are generally built and maintained by members of the openFrameworks community. The downside here is that not all of the addons are maintained continuously. Hence, several addons are outdated and no longer compatible with the latest openFrameworks version. Once you understand how C++ and openFrameworks work, you can workaround this and update an outdated ofxAddon yourselves ;-)
 
-One source of support that might help you with this and many other openFrameworks related questions is the [openFrameworks forum](https://forum.openframeworks.cc). openFramework has a very friendly & active community and it is recommended to search the forum for further information or to create an account to ask questions about specific aspects of the software. 
-
-
 # Setup and Installation
 
 In order to build your own openFrameworks applications, you will need to download the openFrameworks SDK as well as an IDE for your platform. Follow the description below. If you have questions and problems during the installation, make use of the [openFrameworks forum](ttps://forum.openframeworks.cc) which contains lots of useful hints and discussions.
@@ -94,6 +90,9 @@ Once you have downloaded openFrameworks, extract the zip file to a folder locati
 - of\_root\_folder/INSTALL.md
 - of\_root\_folder/docs/
 
+Checkout this introduction video on the openFrameworks SDK and its folder structure:
+
+- *Link to the video*
 
 ## Integrated Development Environment
 
@@ -118,12 +117,6 @@ If you are working on **macOS**, you will need to download and install **Xcode**
 If you are working on Windows, you will need to install **MS Visual Studio Community 2017**.   
 - Follow the instructions here https://openframeworks.cc/setup/vs/. 
 - Checkout [this video to get a first impression of how to work with openFrameworks on Windows](https://www.youtube.com/watch?v=DtD007zeztA)
-
-## The openFrameworks SDK
-
-Once your system is setup, checkout this introduction video on the openFrameworks SDK and its folder structure:
-
-- *Link to the video*
 
 # Building a First ofExample
 
