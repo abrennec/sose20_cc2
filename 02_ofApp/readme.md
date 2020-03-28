@@ -12,6 +12,7 @@ Last Update:
 
 ---
 
+- github ignore
 
 # Homework Assignments
 

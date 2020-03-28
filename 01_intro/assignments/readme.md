@@ -27,15 +27,7 @@ In order to work with openFrameworks, you will have to download and unpack the o
 
 
 ## Reading
-- Checkout the ofBook and skim through the first chapters. Take a close look at the openFrameworks folder structure:
-  - https://openframeworks.cc/ofBook/chapters/foreword.html
-  - https://openframeworks.cc/ofBook/chapters/of_philosophy.html
-  - https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html
-  - https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html
-- Get familiar with C++ syntax. Checkout https://wwww.learncpp.com:
-  - Recap the build process with Chapter 0
-  - Skim through Chapter 1, read 1.1, 1.3, 1.4, and 1.5 carefully
-  - Skim through Chapter 2, read 2.1, 2.2, and 2.3
+How does a function declaration look like? What is a function definition?
 
 ## Practical Exercises 
 - Check out the openFrameworks examples and build them. Identify two examples that you like. What do you like about them in particular?
