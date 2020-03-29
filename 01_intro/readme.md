@@ -25,8 +25,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
     - [Windows and Visual Studio](#windows-and-visual-studio)
 - [Building a First ofExample](#building-a-first-ofexample)
   - [The C++ Build Process](#the-c-build-process)
-      - [Advanced Side Notes](#advanced-side-notes)
-    - [Compiler and Linker Errors](#compiler-and-linker-errors)
+  - [Errors during Building](#errors-during-building)
 - [Reading Material](#reading-material)
 
 ---
@@ -180,12 +179,11 @@ Before any build process can be executed, however, source code has to be written
 
 ***NOTE**: In the context of triggering a build and thus executing the compilation,  in your IDE you might find the term **target**. This refers to the platform for which the compilation is going to generate machine code for.*
 
-#### Advanced Side Notes
 Executables are sets of instructions that tell the computer how to operate. Therefore, the instructions have to be written in machine code. Machine code is a very low-level programming language with each instruction set being composed of bits like, for example, "10110000 01100001". These instruction sets are different per platform and in particular per CPU.
 
 Each platform's operating system comes with a small program called **loader**. When executing the binary, i.e., by double-clicking it, the loader loads the binary file into the platform's random access memory (RAM) and the platform's CPU executes the machine code instructions.
 
-### Compiler and Linker Errors
+## Errors during Building
 
 During the build process, the IDE evaluates the source code, object code and final machine code continuously. If an expression, statement or definition cannot be successfully processed, the IDE will stop the build process and throw an **compile-time error**. Such an error is usually triggered during the compilation or the linking step of the build process. 
 

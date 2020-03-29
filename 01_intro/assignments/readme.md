@@ -11,29 +11,39 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 # Assignments
 
+## 1 Learning Materials and Resources
 
-Processing vs openFrameworks -- differences
+- Work your way through the [script](../readme.md).
+- Checkout the cc2 repository and get familiar with the resources provided.
 
-Zach Lieberman
-- https://www.theverge.com/2019/5/10/18564182/zach-lieberman-interactive-art-animation-movement-openframeworks-art-club
-- https://www.youtube.com/watch?v=bmztlO9_Wvo
+## 2 Setup 
 
+- Follow the instructions in the [script](../readme.md) and setup your development environment including an IDE and openFrameworks.
 
-## 1 Resources
-Checkout the openFrameworks website and get familiar with the resources provided: https://openframeworks.cc
+## 2 Practical Exercises 
 
-## 2 Setup
-In order to work with openFrameworks, you will have to download and unpack the openFrameworks SDK for your platform (see 2.1). Also, you have to download and install a dedicated integrated development environment (IDE) for your platform (see 2.2) that will allow you to compile, build and run the native applications on your platform. Please note, there are several options to build openFrameworks applications. During this course, only two of them will be primarily supported: macOS together with XCode and MS Windows together with MS Visual Studio Community 2017. If you want to work on a different platform or with a different IDE, you have to check out the openFrameworks forum for further support. 
-
-
-## Reading
-How does a function declaration look like? What is a function definition?
-
-## Practical Exercises 
-- Check out the openFrameworks examples and build them. Identify two examples that you like. What do you like about them in particular?
-- Do a little freestyle research on creative coding projects that were implemented using openFrameworks. Identify one or two projects that you like and bring them to the next session.
+### 2.1
+- Check out the openFrameworks examples folders and build a couple of the examples.
+- Identify an example that you like. 
+  - What do you like about them? 
+  - What makes them artistically or technically interesting for you?
+  - Note down a few keywords in the Wiki on your group page.
 
 
-# Howto
+### 2.2
 
-Assignments will be given at the end of each class. If the assignments comprise written or coded homework, please create a folder named <my_last_name>, add your solutions to this folder and upload the folder to the assignments folder of the corresponding session.
+Go to the blending example:
+
+```
+ofRoot/examples/graphics/blendingExample
+```
+
+- Open the solution, build the example, and check out the app.
+- Review the source code and try to understand what is happening.
+- Go to the [openFrameworks documentation](https://openframeworks.cc/documentation/) and checkout the graphics section for additional information, e.g., look for the "ofEnableBlendMode()" documentation.
+- Now add a colorized circle and rectangle to the app. 
+  - Where do you have to define this code?
+  - Ckeckout the following functions:
+    - ofDrawCircle
+    - ofDrawRectangle
+    - ofSetColor
