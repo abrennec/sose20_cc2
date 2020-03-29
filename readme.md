@@ -8,8 +8,6 @@ date: Summer term 20
 
 Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University Babelsberg *KONRAD WOLF*
 
-Last Update: 
-
 ---
 
 - [Overview of the Course](#overview-of-the-course)
@@ -20,10 +18,14 @@ Last Update:
   - [Learning Objectives](#learning-objectives)
   - [Grading](#grading)
 - [Communication & Materials](#communication--materials)
-  - [Assignments](#assignments)
+  - [Assignments & Uploads](#assignments--uploads)
 - [Further Readings](#further-readings)
   - [Books](#books)
+    - [Creative Coding](#creative-coding)
+    - [C/C++](#cc)
+    - [Software Design](#software-design)
   - [Online Resources](#online-resources)
+    - [openFrameworks Courses](#openframeworks-courses)
 
 ---
 
@@ -46,25 +48,33 @@ This course builds on the concepts presented in ‘Creative Coding I’ and intr
 - to explore object-orientation and realtime development with C++
 - to get familiar with using a software development kits
 
+Moreover, the course will present different techniques and technologies of graphics, image and audio processing. They will gradually be incorporated into the artistic programming exercises.
+
 openFrameworks is comprised of a huge body of example projects as well as additional functionality (ofxAddons) that we will explore during the course.
 
-We will get to know the overarching topic of the course **interaction and interfaces** in larger and smaller projects. As an artistic starting point, we will deal with topics such as poetry, imagery or music and develop a digital representation and/or interpretation using openFrameworks.
+We will get to know the overarching topic of the course **interaction and interfaces** in larger and smaller projects. As an artistic starting point, we will deal with imagery or music and develop a digital representation and/or interpretation using openFrameworks.
 
 ## Method of Instruction
 
-This course will start as an online course which requires an increased amount of personal work and participation in the development of problem solutions. You will have to work through materials and assignments on your own. There will be slots for discussions twice a week. Make sure that you are prepared when bringing your questions to those slots. Make use of the Github team as well as openFrameworks forum when you are stuck and post your questions there. This term, we have to work together as a group more than usually and everyone is invited to help out.
+This course will start as an online course which requires an increased amount of personal work and participation in the development of problem solutions. You will have to work through materials and assignments on your own. There will be slots for discussions twice a week. Make sure that you are prepared when bringing your questions to those slots. 
 
-On Mondays, new learning material and assignments will be published. We will meet online to check-in briefly and discuss open questions. On Wednesdays, we will have a check-in meeting for questions. All assignments will be given a dedicated deadline. In general, please upload any code assignments to the assignment's folder on GitHub and put your research solutions to the GitHub Wiki. You will work in groups of two. Every group has to do a little research on one artistic and on one technical topic and share it with the class in one of the meetings and on the Wiki. At the end of the lecture, a final exercise will be assigned that will be an individually chosen task.
+Make use of the **Github team** as well as openFrameworks forum when you are stuck and post your questions there. If you cannot find a solution, get in touch with your tutors.
+
+On **Mondays**, new learning material and assignments will be published. We will meet online to check-in briefly and discuss open questions. 
+
+On **Wednesdays**, we will have a check-in meeting for questions. All assignments will be given a dedicated deadline. In general, please upload any code assignments to the assignment's folder on GitHub and put your research solutions to the GitHub Wiki. 
+
+You will work in groups of two. Every group has to present the homework assignments alternately and share it with the class in one of the meetings and on the Wiki. At the end of the lecture, a final exercise will be assigned that will be an individually chosen task.
 
 
 ## Syllabus
 
 1. Introduction, Technical Setup, and Build Process (2)
-2. ofApp and C++ Development Basics (1)
-3. Object-oriented Programming Concepts with C++ (2)
-4. Image Represenations (2)
-5. Memory Management (2)
-6. Interactive Sound Objects (2)
+2. C++ development basics: Building a first ofApp (1)
+3. Object-oriented Programming Concepts with C++: Animated objects (2)
+4. Image represenations (2)
+5. Memory management and user interaction (2)
+6. Audio processing and interactive sound objects (2)
 7. OpenCV (2)
 8. Final Exercise (2)
 9. Final Exercise (1)
@@ -73,30 +83,33 @@ On Mondays, new learning material and assignments will be published. We will mee
 
 ## Learning Objectives
 
-- Extending your programming skills towards software design
-- Object-oriented analysis and design
-- Understanding and working with a high-level programming language like C++
 - Understanding and working with a complex SDK like openFrameworks
-- Expressing your artistic ideas by the means of C++ and openFrameworks
+- Developing, compiling and building your own C++ applications
+- Object-oriented software design with C++
+- Applying different computational techniques in an artistic sketch
+- Expressing and reflecting on your artistic ideas with openFrameworks
 
 
 ## Grading
 
 ### Breakdown <!-- omit in toc -->
 
-* 20% - Participation in group discussions, Wiki updates and critiques 
-* 50% - Homework assignments 
-* 30% - Final exercise
+* 30% - Homework assignments
+  * Programming exercises
+  * Wiki updates and critiques
+* 70% - Final exercise
+  * The final exercise will be a programming exercise that targets the development of an openFrameworks application. The type of application can be chosen individually. The application must reflect learned concepts  and promote
+    * Object-oriented design
+    * At least two different topics from the course
 
 Team work (2 persons per team) and pair programming is encouraged.
   
 ### Grading criteria <!-- omit in toc -->
 
-* Preparation of research topics
-* Assignment points
-* Final Exercise
-  * Craftsmanship in terms of concept and system design as well as the technical reflection of the solution
-  * Engineering effort, code organization, code quality and clarity
+* An application sketch that can be build, launched, and run
+* Engineering effort, clarity of code organization and code quality
+* Technical and creative reflection
+
 
 ---
 
@@ -110,10 +123,83 @@ As a communication platform, we will use [GitHub.com](https://github.com/) to sh
 
 The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, dos and don'ts, useful links, results of homework assignments, and so on. The team will be used for discussion, comments, notes and any important announcements.
 
+To stay tuned with the materials, clone the main repo:
 
-## Assignments
+```
+git clone https://github.com/ctechfilmuniversity/sose20_cc2
 
-If the assignments comprise written or coded homework, please create a folder named <my_last_name>, add your solutions and upload the folder to the assignments folder of the corresponding session. 
+```
+
+
+## Assignments & Uploads
+
+If the assignments comprise **written tasks**, **critiques**, or **research**, use the GitHub Wiki and the group pages for the group you are assigned to.
+
+If the assignments comprise **programming sketches**, inside of the assignments folder please create a folder named <my_last_name>, add your code folder and upload the folder to the assignments folder of the corresponding session like so:
+
+```
+01_intro/assignments/brennecke/mySketch
+                                bin/
+                                src/
+                                readme.md
+                                addons.make
+                                config.make
+```
+
+Make sure that you do not upload any IDE-based project files. To do so, add a **.gitignore** file to your main folder. This should not be uploaded. An example configuration might look like this:
+
+```
+# Example .gitignore file
+# Configuration for C++ development
+
+# Prerequisites
+*.d
+*~
+
+/*/.DS_Store
+.DS_Store
+.gitignore
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Directories
+obj/
+.vs/
+
+# IDE project files
+*.sln
+*.vcxproj*
+*.xcodeproj/
+*.code-workspace
+*.xcconfig
+*.vscode
+*.plist
+
+```
 
 
 ---
@@ -122,7 +208,7 @@ If the assignments comprise written or coded homework, please create a folder na
 
 ## Books 
 
-### Creative Coding <!-- omit in toc -->
+### Creative Coding 
 
 - Denis Perevalov, Igor Tatrnikov (2015): openFrameworks Essentials. Packt Publishing. Birmingham, UK.
 - Denis Perevalov (2013): Mastering openFrameworks: Creative Coding Demystified. Packt Publishing. Birmingham, UK.
@@ -130,14 +216,14 @@ If the assignments comprise written or coded homework, please create a folder na
 - Ira Greenberg (2007): Processing: Creative Coding & Computational Art. Berkley, CA: Friends of ED/Apress Press.
 - Bill Manaris & Andrews R. Brown (2014): Making Music with Computers. New York, NY: Chapman & Hall / CRC Press.
 
-### C/C++  <!-- omit in toc -->
+### C/C++  
 
 - Bjarne Stroustrup (2013): The C++ Programming Language. Upper Saddle River, NJ: Pearson Education, Inc.
 - Bjarne Stroustrup (2014): Programming. Principles & Practices Using C++. Upper Saddle River, NJ: Addison-Wesley.
 - Scott Meyers („Effective C++“ series, advanced)
 - Herb Sutter („Exceptional C++“ series, really advanced)
 
-### Software Design <!-- omit in toc -->
+### Software Design 
 
 - Grady Booch (1994): Object-oriented Analysis and Design. Addison-Wesley. NY, USA.
 - Robert C. Martin (2009): Clean Code. Prentice Hall. NY, USA.
@@ -146,6 +232,7 @@ If the assignments comprise written or coded homework, please create a folder na
 
 ## Online Resources
 
+### References, Tutorials, Community <!-- omit in toc -->
 - [learncpp](http://www.learncpp.com) -- Very good resource for beginners and experienced developers!
 - [cplusplus](http://www.cplusplus.com/) -- Very good reference site with many examples.
 - [cppreference](http://www.cppreference.com/) -- Advanced, very good reference site.
@@ -153,3 +240,11 @@ If the assignments comprise written or coded homework, please create a folder na
 - [ofBook](https://github.com/openframeworks/ofBook/tree/master/chapters) -- Very good starting point for openFrameworks.
 - [openFrameworks](https://openframeworks.cc/) -- All about openFrameworks.
 - [openFrameworks Forum](http://forum.openframeworks.cc/) -- Communication tool for openFrameworks.
+
+### openFrameworks Courses 
+There are several excellent openFrameworks courses available on GitHub, for example:
+
+- Zach Lieberman: https://github.com/ofZach/RTP_SFPC_FALL19
+- Tyler Henry: https://github.com/tyhenry/dt_openframeworks_2018
+- Dan Wilcox: https://github.com/danomatika/CreativeCodingExamples
+- We are no Computer: https://github.com/wearenocomputer/workshop

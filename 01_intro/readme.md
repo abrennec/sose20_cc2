@@ -22,11 +22,11 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
     - [macOS and XCode](#macos-and-xcode)
     - [Windows and Visual Studio](#windows-and-visual-studio)
 - [Building a First ofExample](#building-a-first-ofexample)
-- [The Build Process](#the-build-process)
+  - [The Build Process](#the-build-process)
   - [Compiled vs interpreted Languages](#compiled-vs-interpreted-languages)
   - [Components of the Build Process](#components-of-the-build-process)
   - [Compiler and Linker Errors](#compiler-and-linker-errors)
-  - [Reading Material](#reading-material)
+- [Reading Material](#reading-material)
 - [Additional Learning Ressources](#additional-learning-ressources)
 
 ---
@@ -92,7 +92,8 @@ Once you have downloaded openFrameworks, extract the zip file to a folder locati
 
 Checkout this introduction video on the openFrameworks SDK and its folder structure:
 
-- *Link to the video*
+
+[![openFrameworks folder structure](assets/screencast.png)](XXX)
 
 ## Integrated Development Environment
 
@@ -129,10 +130,11 @@ It is important to understand that you have to build the example applications wi
 
 The project files contain all of the necessary information required to build an application. They heavily rely on the openFrameworks folder structure because they search the folders for all of the necessary files and information required to compile, link, and build the application. Any change to the folder structure should therefore be considered carefully as it might break the build process. Once you have opened the project file in the IDE, trigger the build process.
 
-- *Link to the video*
+Check out this video for an overview:
 
+[![building an ofExample](assets/screencast.png)](XXX)
 
-# The Build Process
+## The Build Process
 
 The build process takes care of turning **source code** into **executable software programs** also referred to as **executables** or **binary files**. 
 
@@ -176,20 +178,21 @@ compiler error code is usually very helpful to identify and fix the compiler err
 usually refer to missing implementation details of the code   like, i.e., missing function definitions or libraries (path errors).
 
 Examples presented.
-## Reading Material
 
-- https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/
-- https://www.tutorialspoint.com/compiler_design/compiler_design_overview.htm
 
-- Checkout the ofBook and skim through the first chapters. Take a close look at the openFrameworks folder structure:
-  - https://openframeworks.cc/ofBook/chapters/foreword.html
-  - https://openframeworks.cc/ofBook/chapters/of_philosophy.html
+# Reading Material
+
+- Checkout the **ofBook** and skim through the first chapters. In particular, look into the C++ basics and recap the openFrameworks folder structure:
   - https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html
   - https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html
-- Get familiar with C++ syntax. Checkout https://wwww.learncpp.com:
-  - Recap the build process with Chapter 0
-  - Skim through Chapter 1, read 1.1, 1.3, 1.4, and 1.5 carefully
-  - Skim through Chapter 2, read 2.1, 2.2, and 2.3
+
+
+- Get familiar with **C++ syntax** and checkout https://wwww.learncpp.com
+- Recap the build process with Chapter 0
+    - https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/
+
+- Skim through Chapter 1, **read 1.1, 1.3, 1.4, and 1.5 carefully**
+- Skim through Chapter 2, **read 2.1, 2.2, and 2.3**
 
 # Additional Learning Ressources
 
