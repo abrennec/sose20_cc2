@@ -36,17 +36,15 @@ Last Update:
 - Module 5 | 3 SWS | 4 ECTS
 - 18 sessions in total
 
-`
-The course will be held online until further notice.  
-During the time of online lectures, we will use the lecture hours for updates, discussions and consultation times.
+**NOTE**: The course will be held online until further notice. During the time of online lectures, we will use the lecture hours for updates, discussions and consultation times.
 
 ## Course Description 
 
 This course builds on the concepts presented in ‘Creative Coding I’ and introduces the software development toolkit [openFrameworks](http://openframeworks.cc). openFrameworks is a creative coding toolkit dedicated to realtime development written in C++. We will specifically use it
 
-- to introduce the C++ programming language & corresponding build processes,
-- to explore object-orientation and realtime development with C++,
-- to get familiar with software and library design.
+- to introduce the C++ programming language & corresponding build processes
+- to explore object-orientation and realtime development with C++
+- to get familiar with using a software development kits
 
 openFrameworks is comprised of a huge body of example projects as well as additional functionality (ofxAddons) that we will explore during the course.
 
