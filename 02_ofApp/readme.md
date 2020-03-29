@@ -12,7 +12,10 @@ Last Update:
 
 ---
 
-- github ignore
+- sine wave examples
+- move something around
+- get used to the documentation
+- find out about a function inside of the code
 
 # Homework Assignments
 
