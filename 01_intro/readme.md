@@ -34,9 +34,8 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 - Getting an overview of openFrameworks
 - Setting up an integrated development environment
-- Building a first openFrameworks app
+- Building and modfying a first openFrameworks app
 - Getting a first impression of C++ syntax
-- Breaking and changing some code
 
 # What is openFrameworks?
 
