@@ -101,7 +101,7 @@ Once you have downloaded openFrameworks, extract the zip file to a folder locati
 Checkout this introduction video on the openFrameworks SDK and its folder structure:
 
 
-[![openFrameworks folder structure](assets/screencast.png)](XXX)
+[![openFrameworks folder structure](assets/screencast.png)](https://owncloud.gwdg.de/index.php/apps/files/?dir=/Lehre/cc2_videos&fileid=873434179#/files_mediaviewer/of_folder_structure.mp4)
 
 ## Integrated Development Environment
 

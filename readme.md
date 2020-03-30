@@ -64,7 +64,8 @@ On **Mondays**, new learning material and assignments will be published. We will
 
 On **Wednesdays**, we will have a check-in meeting for questions. All assignments will be given a dedicated deadline. In general, please upload any code assignments to the assignment's folder on GitHub and put your research solutions to the GitHub Wiki. 
 
-You will work in groups of two. Every group has to present the homework assignments alternately and share it with the class in one of the meetings and on the Wiki. At the end of the lecture, a final exercise will be assigned that will be an individually chosen task.
+**Note**: Group work is encouraged but might not be applicable due to the current situation. This will be a point for discussion in the first online session.
+
 
 
 ## Syllabus
@@ -98,9 +99,10 @@ You will work in groups of two. Every group has to present the homework assignme
   * Programming exercises
   * Wiki updates and critiques
 * 70% - Final exercise
-  * The final exercise will be a programming exercise that targets the development of an openFrameworks application. The type of application can be chosen individually. The application must reflect learned concepts  and promote
+  * The final exercise will be a programming exercise of an openFrameworks application. The type of application can be chosen individually. However, the application must include/address:
     * Object-oriented design
     * At least two different topics from the course
+    * An artistic idea that can be freely chosen 
 
 Team work (2 persons per team) and pair programming is encouraged.
   
