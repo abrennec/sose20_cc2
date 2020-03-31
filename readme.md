@@ -123,7 +123,7 @@ As a communication platform, we will use [GitHub.com](https://github.com/) to sh
 - [GitHub Wiki (public)](https://github.com/ctechfilmuniversity/sose20_cc2/wiki)
 - [GitHub team (public)](https://github.com/orgs/ctechfilmuniversity/teams/sose20_cc2)
 
-The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, dos and don'ts, useful links, results of homework assignments, and so on. The team will be used for discussion, comments, notes and any important announcements.
+The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, dos and don'ts, useful links, and so on. The team will be used for discussion, comments, notes and any important announcements.
 
 To stay tuned with the materials, clone the main repo:
 
@@ -135,9 +135,7 @@ git clone https://github.com/ctechfilmuniversity/sose20_cc2
 
 ## Assignments & Uploads
 
-If the assignments comprise **written tasks**, **critiques**, or **research**, use the GitHub Wiki and the group pages for the group you are assigned to.
-
-If the assignments comprise **programming sketches**, inside of the assignments folder please create a folder named <my_last_name>, add your code folder and upload the folder to the assignments folder of the corresponding session like so:
+Please upload your assignments and exercise results to the assignments folder of the corresponding session, i.e., "01_intro". To do so, go to the assignments folder and create a folder. Name it <my_last_name> and put your results into that folder, for example, like so:
 
 ```
 01_intro/assignments/brennecke/mySketch
@@ -148,7 +146,7 @@ If the assignments comprise **programming sketches**, inside of the assignments 
                                 config.make
 ```
 
-Make sure that you do not upload any IDE-based project files. To do so, add a **.gitignore** file to your main folder. This should not be uploaded. An example configuration might look like this:
+Make sure that you do not upload any IDE-based project files. To do so, add a **.gitignore** file to your local sose20_cc2 repository. This should not be uploaded. An example configuration might look like this:
 
 ```
 # Example .gitignore file
