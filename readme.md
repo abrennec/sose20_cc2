@@ -38,7 +38,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 - Module 5 | 3 SWS | 4 ECTS
 - 18 sessions in total
 
-**NOTE**: The course will be held online until further notice. During the time of online lectures, we will use the lecture hours for updates, discussions and consultation times.
+`=> N O T E => The course will be held online until further notice. During the time of online lectures, we will use the lecture hours for updates, discussions and consultation times.`
 
 ## Course Description 
 
