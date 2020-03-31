@@ -140,7 +140,7 @@ The project files contain all of the necessary information required to build an 
 
 Check out this video for an overview:
 
-[![building an ofExample](assets/screencast.png)](XXX)
+[![building an ofExample](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/HHNJ7KAatV4l8mo)
 
 ## The C++ Build Process
 
