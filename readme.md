@@ -18,7 +18,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Learning Objectives](#learning-objectives)
   - [Grading](#grading)
 - [Communication & Materials](#communication--materials)
-  - [Assignments & Uploads](#assignments--uploads)
+  - [Assignments](#assignments)
 - [Further Readings](#further-readings)
   - [Online Resources](#online-resources)
   - [Books](#books)
@@ -116,7 +116,7 @@ For CTech students there will be a grade. The grade will be based on the homewor
 
 * An application sketch that can be build, launched, and run
 * Engineering effort, clarity of code organization and comprehensibility (i.e., code quality)
-* Technical and creative reflection (final exercise)
+* Technical and creative reflection (esp. final exercise)
 
 
 ---
@@ -139,11 +139,15 @@ git clone https://github.com/ctechfilmuniversity/sose20_cc2
 ```
 
 
-## Assignments & Uploads
+## Assignments
 
-Please upload your assignments and exercise results to the assignments folder of the corresponding session, i.e., "01_intro". To do so, go to the assignments folder and create a folder. Name it <my_last_name> and put your results into that folder, for example, like so:
+Please submit your assignments and exercise solutions to the assignments folder of the corresponding session, i.e., "01_intro". To do so, go to the assignments folder and create a folder. Name it <my_last_name> and put your results into that folder, for example, like so:
 
 ```
+For any written assignments:
+01_intro/assignments/brennecke/solution.md
+
+For any programming assignments:
 01_intro/assignments/brennecke/mySketch
                                 bin/
                                 src/
@@ -152,7 +156,7 @@ Please upload your assignments and exercise results to the assignments folder of
                                 config.make
 ```
 
-Make sure that you do not upload any IDE-based project files. To do so, add a **.gitignore** file to your local sose20_cc2 repository. This should not be uploaded. An example configuration might look like this:
+Make sure that you **do not** upload any IDE-based project files. To do so, add a **.gitignore** file to your local sose20_cc2 repository. This should not be uploaded. An example configuration might look like this:
 
 ```
 # Example .gitignore file
