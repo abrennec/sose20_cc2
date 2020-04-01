@@ -20,12 +20,11 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 - [Communication & Materials](#communication--materials)
   - [Assignments & Uploads](#assignments--uploads)
 - [Further Readings](#further-readings)
+  - [Online Resources](#online-resources)
   - [Books](#books)
     - [Creative Coding](#creative-coding)
     - [C/C++](#cc)
     - [Software Design](#software-design)
-  - [Online Resources](#online-resources)
-    - [openFrameworks Courses](#openframeworks-courses)
 
 ---
 
@@ -36,9 +35,12 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 - Mondays and Wednesdays 11:30 h - 13 h
 - Module 5 | 3 SWS | 4 ECTS
-- 18 sessions in total
+- 18 sessions in total 
 
-`=> N O T E => The course will be held online until further notice. During the time of online lectures, we will use the lecture hours for updates, discussions and consultation times.`
+```diff
+- The course will be held online until further notice. 
+- During the time of online lectures, we will use the lecture hours for updates, discussions and consultation times.
+```
 
 ## Course Description 
 
@@ -60,7 +62,7 @@ This course will start as an online course which requires an increased amount of
 
 Make use of the **Github team** as well as openFrameworks forum when you are stuck and post your questions there. If you cannot find a solution, get in touch with your tutors.
 
-On **Mondays**, new learning material and assignments will be published. We will meet online to check-in briefly and discuss open questions. 
+On **Mondays**, new learning material and assignments will be published in the morning. We will meet online to check-in briefly and discuss open questions. 
 
 On **Wednesdays**, we will have a check-in meeting for questions. All assignments will be given a dedicated deadline. In general, please upload any code assignments to the assignment's folder on GitHub and put your research solutions to the GitHub Wiki. 
 
@@ -70,16 +72,20 @@ On **Wednesdays**, we will have a check-in meeting for questions. All assignment
 
 ## Syllabus
 
-1. Introduction, Technical Setup, and Build Process (2)
-2. C++ development basics: Building a first ofApp (1)
-3. Object-oriented Programming Concepts with C++: Animated objects (2)
-4. Image represenations (2)
-5. Memory management and user interaction (2)
-6. Audio processing and interactive sound objects (2)
-7. OpenCV (2)
-8. Final Exercise (2)
-9. Final Exercise (1)
-10. Wrap-up (2)
+```diff 
+- The syllabus might be subject to change depending on how the general progress and on how the online session format works.
+```
+
+1. Week: Introduction, Technical Setup, and Build Process (2)
+2. Week: C++ development basics: Building a first ofApp (1)
+3. Week: Object-oriented Programming Concepts with C++: Animated objects (2)
+4. Week: Image represenations (2)
+5. Week: Memory management and user interaction (2)
+6. Week: Audio processing and interactive sound objects (2)
+7. Week: OpenCV (2)
+8. Week: Final Exercise (2)
+9. Week: Final Exercise (1)
+10. Week: TBD + Wrap-up (2)
 
 
 ## Learning Objectives
@@ -93,24 +99,24 @@ On **Wednesdays**, we will have a check-in meeting for questions. All assignment
 
 ## Grading
 
+For CTech students there will be a grade. The grade will be based on the homework assignments and a final exercises. You need to pass 50% of total homework assignments in order to participate in the final exercise.
+
 ### Breakdown <!-- omit in toc -->
 
-* 30% - Homework assignments
+* 40% - Homework assignments
   * Programming exercises
   * Wiki updates and critiques
-* 70% - Final exercise
+* 60% - Final exercise
   * The final exercise will be a programming exercise of an openFrameworks application. The type of application can be chosen individually. However, the application must include/address:
     * Object-oriented design
     * At least two different topics from the course
     * An artistic idea that can be freely chosen 
 
-Team work (2 persons per team) and pair programming is encouraged.
-  
 ### Grading criteria <!-- omit in toc -->
 
 * An application sketch that can be build, launched, and run
-* Engineering effort, clarity of code organization and code quality
-* Technical and creative reflection
+* Engineering effort, clarity of code organization and comprehensibility (i.e., code quality)
+* Technical and creative reflection (final exercise)
 
 
 ---
@@ -206,6 +212,25 @@ obj/
 
 # Further Readings
 
+## Online Resources
+
+### openFrameworks Courses <!-- omit in toc -->
+There are several excellent openFrameworks courses available on GitHub, for example:
+
+- Zach Lieberman: https://github.com/ofZach/RTP_SFPC_FALL19
+- Tyler Henry: https://github.com/tyhenry/dt_openframeworks_2018
+- Dan Wilcox: https://github.com/danomatika/CreativeCodingExamples
+- We are no Computer: https://github.com/wearenocomputer/workshop
+
+### References, Tutorials, Community <!-- omit in toc -->
+- [learncpp](http://www.learncpp.com) -- Very good resource for beginners and experienced developers!
+- [cplusplus](http://www.cplusplus.com/) -- Very good reference site with many examples.
+- [cppreference](http://www.cppreference.com/) -- Advanced, very good reference site.
+- [fluentcpp](https://www.fluentcpp.com) -- Very good website with a focus on programming design (advanced!).
+- [ofBook](https://github.com/openframeworks/ofBook/tree/master/chapters) -- Very good starting point for openFrameworks.
+- [openFrameworks](https://openframeworks.cc/) -- All about openFrameworks.
+- [openFrameworks Forum](http://forum.openframeworks.cc/) -- Communication tool for openFrameworks.
+
 ## Books 
 
 ### Creative Coding 
@@ -228,23 +253,3 @@ obj/
 - Grady Booch (1994): Object-oriented Analysis and Design. Addison-Wesley. NY, USA.
 - Robert C. Martin (2009): Clean Code. Prentice Hall. NY, USA.
 - Robert C. Martin (2017): Clean Architecture. Prentice Hall. NY, USA.
-
-
-## Online Resources
-
-### References, Tutorials, Community <!-- omit in toc -->
-- [learncpp](http://www.learncpp.com) -- Very good resource for beginners and experienced developers!
-- [cplusplus](http://www.cplusplus.com/) -- Very good reference site with many examples.
-- [cppreference](http://www.cppreference.com/) -- Advanced, very good reference site.
-- [fluentcpp](https://www.fluentcpp.com) -- Very good website with a focus on programming design (advanced!).
-- [ofBook](https://github.com/openframeworks/ofBook/tree/master/chapters) -- Very good starting point for openFrameworks.
-- [openFrameworks](https://openframeworks.cc/) -- All about openFrameworks.
-- [openFrameworks Forum](http://forum.openframeworks.cc/) -- Communication tool for openFrameworks.
-
-### openFrameworks Courses 
-There are several excellent openFrameworks courses available on GitHub, for example:
-
-- Zach Lieberman: https://github.com/ofZach/RTP_SFPC_FALL19
-- Tyler Henry: https://github.com/tyhenry/dt_openframeworks_2018
-- Dan Wilcox: https://github.com/danomatika/CreativeCodingExamples
-- We are no Computer: https://github.com/wearenocomputer/workshop

@@ -11,6 +11,8 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 # Assignments
 
+
+
 ## 1 Learning Materials and Resources
 
 - Work your way through the [script](../readme.md).
