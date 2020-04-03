@@ -43,7 +43,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 ## openFrameworks and Processing
 
-openFrameworks does not come with an integrated development environment right away like Processing does. Instead, openFrameworks comes with a set of **C++ source files** (comprised of header *.h and definition *.cpp files) and system-dependent **pre-compiled libraries** (file extensions *.a on macOS, *.lib on Windows) among other files. These have to be processed as part of a compilation and build process which results in an  openFrameworks application. The resulting application **binary or executable** can be launched by the operating system (OS) as a standalone application and runs independently from the development environment. 
+openFrameworks does not come with an integrated development environment (IDE) right away like Processing does. Instead, openFrameworks comes with a set of **C++ source files** (comprised of header *.h and definition *.cpp files) and system-dependent **pre-compiled libraries** (file extensions *.a on macOS, *.lib on Windows) among other files. These have to be processed as part of a compilation and build process which results in an  openFrameworks application. The resulting application **binary or executable** can be launched by the operating system (OS) as a standalone application and runs independently from the development environment. 
 
 Processing, in contrast, is implemented in Java and thus builds on the Java Virtual Machine. Consequently the resulting application sketch requires the Processing IDE for launching and running the sketch. This can be more convenient in many cases but has its limitations when it comes to real-time applications and time consuming computations in general. Since recently Processing sketches can be exported as standalone applications, too. 
 
@@ -53,7 +53,7 @@ To build an openFrameworks/C++ application, an independent **integrated developm
 - to **compile** and **link** the source files in order 
 - to **build** the application (file extensions *.app on macOS, *.exe on Windows).   
 
-openFrameworks applications can be build with [several IDEs](https://openframeworks.cc/download/), some of them are platform-dependent, i.e., they will execute on one platform only like XCode and Visual Studio. Some of them are cross-platform, i.e., they will execute on multiple platforms like Qt Creator. In both cases, the IDE will build a platform-dependent application, often referred to as **native application**. This application will run on a macOS computer if it was build there but will not run on a Windows computer and vice versa. Platform-dependent IDEs are usually optimized for a specific platform whereas cross-platform IDEs require additional configuration settings in order to build applications for a specific platform. In this course, we will use two platform-dependent IDES,  **XCode** on macOS and **MS Visual Studio Community 2017** on Windows. Both of them are well documented and supported in the openFrameworks community.
+openFrameworks applications can be build with [several IDEs](https://openframeworks.cc/download/), some of them are platform-dependent, i.e., they will execute on one platform only like XCode and Visual Studio Community. Some of them are cross-platform, i.e., they will execute on multiple platforms like Qt Creator. In both cases, the IDE will build a platform-dependent application, often referred to as **native application**. This application will run on a macOS computer if it was build there but will not run on a Windows computer and vice versa. Platform-dependent IDEs are usually optimized for a specific platform whereas cross-platform IDEs require additional configuration settings in order to build applications for a specific platform. In this course, we will use two platform-dependent IDES,  **XCode** on macOS and **MS Visual Studio Community 2017** on Windows. Both of them are well documented and supported in the openFrameworks community.
 
 An advantage of the **platform-dependent** or **native development** with C++ is the ability to create applications that can apply the platform's software and hardware resources directly. macOS and Apple computers come with different implementations for how to use and connect with the operating system and hardware devices than do Microsoft and Windows computers. The same is true for Linux as well as any of the embedded systems. 
 
@@ -100,6 +100,7 @@ Once you have downloaded openFrameworks, extract the zip file to a folder locati
 
 Checkout this introduction video on the openFrameworks SDK and its folder structure:
 
+*Attention: The video may take a couple of minutes to load.*
 
 [![openFrameworks folder structure](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/opsHlLvjIZTYOBs)
 
@@ -139,6 +140,8 @@ It is important to understand that you have to build the example applications wi
 The project files contain all of the necessary information required to build an application. They heavily rely on the openFrameworks folder structure because they search the folders for all of the necessary files and information required to compile, link, and build the application. Any change to the folder structure should therefore be considered carefully as it might break the build process. Once you have opened the project file in the IDE, trigger the build process.
 
 Check out this video for an overview:
+
+*Attention: The video may take a couple of minutes to load.*
 
 [![building an ofExample](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/HHNJ7KAatV4l8mo)
 
