@@ -196,11 +196,13 @@ During the build process, the IDE evaluates the source code, object code and fin
 
 # Reading Material
 
-- Checkout the [ofBook](https://openframeworks.cc/ofBook)
-  - Recap the [openFrameworks folder structure](https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html)
-  - Read the chapter on [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
+**Required**
 
+- [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
+- [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
+- [openFrameworks functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
 
-- Checkout [cpplearn](https://wwww.learncpp.com)
-  - Recap [the build process](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/)
-  - Skim through [Chapters 1 and 2](https://www.learncpp.com) to get an understanding of C++ syntax and checkout sections 1.1 to 1.4 and 2.1 to 2.3 in particular.
+**Recapitulation**
+- [openFrameworks folder structure](https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html)
+- [C++ build process](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/)
+
