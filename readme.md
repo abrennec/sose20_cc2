@@ -126,7 +126,7 @@ For CTech students there will be a grade. The grade will be based on the homewor
 As a communication platform, we will use [GitHub.com](https://github.com/) to share code, lecture materials, comments, and submit homework and project assignments.
 
 - [GitHub repository (public)](https://github.com/ctechfilmuniversity/lecture_creative_coding_2)
-- [GitHub Wiki (public)](hhttps://github.com/ctechfilmuniversity/lecture_creative_coding_2/wiki)
+- [GitHub Wiki (public)](https://github.com/ctechfilmuniversity/lecture_creative_coding_2/wiki)
 - [GitHub team (public)](https://github.com/orgs/ctechfilmuniversity/teams/ss20_cc2)
 
 The repository will be used to share scripts (usually as readme.md) and slides, coding examples, homework and project materials. The Wiki will be maintained by the students to share information that might be useful for everyone, for example, dos and don'ts, useful links, and so on. The team will be used for discussion, comments, notes and any important announcements.
