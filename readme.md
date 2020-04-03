@@ -141,14 +141,14 @@ git clone https://github.com/ctechfilmuniversity/sose20_cc2
 
 ## Assignments
 
-Please submit your assignments and exercise solutions to the assignments folder of the corresponding session, i.e., "01_intro". To do so, go to the assignments folder and create a folder. Name it <my_last_name> and put your results into that folder, for example, like so:
+Please submit your assignments and exercise solutions to the assignments folder of the corresponding session, i.e., "01_intro". To do so, go to the assignments folder and create a folder. Name it **<my_last_name>** and put your results into that folder, for example, like so:
 
 ```
 For any written assignments:
-01_intro/assignments/brennecke/solution.md
+01_intro/assignments/<my_last_name>/solution.md
 
 For any programming assignments:
-01_intro/assignments/brennecke/mySketch
+01_intro/assignments/<my_last_name>/mySketch
                                 bin/
                                 src/
                                 readme.md
