@@ -16,11 +16,15 @@ Zach Lieberman
 - https://www.theverge.com/2019/5/10/18564182/zach-lieberman-interactive-art-animation-movement-openframeworks-art-club
 - https://www.youtube.com/watch?v=bmztlO9_Wvo
 
-
+- sine wave examples
+- move something around
+- get used to the documentation
+- find out about a function inside of the code
 
 what is the difference between update draw setup
 
-
+Loops in Cpp?
+Conditionals in Cpp?
 
 ## 2 Practical Exercises 
 
