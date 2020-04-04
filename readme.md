@@ -134,7 +134,7 @@ The repository will be used to share scripts (usually as readme.md) and slides, 
 To stay tuned with the materials, clone the main repo:
 
 ```
-git clone https://github.com/ctechfilmuniversity/sose20_cc2
+git clone https://github.com/ctechfilmuniversity/lecture_creative_coding_2
 
 ```
 
