@@ -199,7 +199,7 @@ During the build process, the IDE evaluates the source code, object code and fin
 
 # Reading Material
 
-**Required**
+**Recommended**
 
 - [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
 - [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
