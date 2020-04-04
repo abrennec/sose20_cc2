@@ -44,6 +44,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 # C++ Basics
 
+
 C++ is a high-level programming language with a rich set of
 syntactic and semantic elements that support developers in translating and expressing software concepts and ideas directly in code. C++ has a long history and has undergone several improvements in recent years. It is still one of the languages most used today due to the fact that it supports  low-level ( == close to the hardware) as well as a high-level programming (== close to the human) programming at the same time. 
 
