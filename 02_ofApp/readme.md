@@ -511,8 +511,8 @@ Software interfaces describe **what** kind of functionality is available whereas
 
 Revise and Review
 
-- [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
 - [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
+- [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
 - [openFrameworks functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
 
 ## Precap
