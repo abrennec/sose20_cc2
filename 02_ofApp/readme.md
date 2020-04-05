@@ -13,21 +13,24 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 **Table of Contents**
 - [Learning Objectives](#learning-objectives)
 - [C++ Basics](#c-basics)
+  - [Introduction](#introduction)
   - [General Language Aspects](#general-language-aspects)
   - [Types](#types)
     - [Built-in Types](#built-in-types)
     - [User-defined Types](#user-defined-types)
   - [Variables](#variables)
-    - [Initialization & Assignment](#initialization--assignment)
-  - [Statically vs Dynamically Typed](#statically-vs-dynamically-typed)
+    - [Declaration](#declaration)
+    - [Initialization](#initialization)
+    - [Assignment](#assignment)
   - [Functions](#functions)
-    - [Sequential Execution](#sequential-execution)
-    - [Declaration vs Definition](#declaration-vs-definition)
     - [The main Function](#the-main-function)
-  - [Header and Definition Files](#header-and-definition-files)
+    - [Declaration vs Definition](#declaration-vs-definition)
+    - [Sequential Code Execution](#sequential-code-execution)
 - [Building an ofApp](#building-an-ofapp)
   - [ProjectGenerator](#projectgenerator)
   - [The ofApp](#the-ofapp)
+  - [Header and Definition Files](#header-and-definition-files)
+    - [Further Considerations](#further-considerations)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
   - [Precap](#precap)
@@ -44,72 +47,116 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 # C++ Basics
 
+## Introduction
 
-C++ is a high-level programming language with a rich set of
-syntactic and semantic elements that support developers in translating and expressing software concepts and ideas directly in code. C++ has a long history and has undergone several improvements in recent years. It is still one of the languages most used today due to the fact that it supports  low-level ( == close to the hardware) as well as a high-level programming (== close to the human) programming at the same time. 
+C++ is a **high-level programming language** with a rich set of syntactic and semantic elements. In the last 10 years, the feature set of C++ has undergone several changes and the language is being improved on a regular level. The latest revision of C++ officially published by the ISO (International Organization for Standardization) working group is C++17 with C++20 being on its way. Find an overview at [ISO Cpp's current status page](https://isocpp.org/std/status). Whether or not you can use the language features of those revisions depends on the compiler you are using. This again shows how closely the programming language is interlinked with the translation unit that has to turn the high-level language into machine code.
+Luckily when working with openFrameworks the pre-defined project-files ensure that you are using the appropriate compiler (version).
 
-Of course, there are also several critical voices arguing that C++ is hard to learn, not state-of-the-art, and carries along too many concepts due to its long history. Beware that it will be challenging to understand C++ concepts. However, it will allow you to develop a deeper understanding of 
+What makes C++ a long-lasting and successful programming language is the support of low-level ( == close to the hardware) as well as a high-level programming (== close to the human) programming at the same time. C++ is particularly well-known for its support of
+- writing very efficient (real-time) software applications
+- object-oriented programming
+- generic programming
+- software design capacities
+
+Of course, there are also several critical voices arguing that C++ is too hard to learn, not state-of-the-art, and carries along too many concepts due to its long history. There is a truth in these arguments, too. Beware that it will be challenging to understand C++ concepts, to deal with compiler and linker errors and to be truely responsible for what you are doing. However, it will allow you to develop a deeper understanding of 
 
 - how software and hardware interconnect
 - the craft of software development 
 - where modern programming concepts come from.
 
-To put it short, why C++?
-
-- Improve & expand on general knowledge
-
-C++ is particularly well-known for its support of
-- writing very efficient (real-time) 
-- programs object-oriented programming
-- generic programming
-
+Checkout what [Bjarne Stroustrup](http://stroustrup.com), the creator and developer of C++, thinks about what are [five popular myths about C++](https://isocpp.org/blog/2014/12/myths-1).
 
 ## General Language Aspects
 
-Remember from the previous lesson, C++ is a **compiled programming language**. It requires to be translated into machine code before it can actually be executed on a computer in the form of a C++ application binary. This translation was introduced as **C++ build process**. 
-
-In addition to this C++ is also a **statically typed programming language** which means that all data types  provided by the language (and that an be used in a C++ program) have to be defined at compile time. This means that
+Remember from the previous lesson, C++ is a **compiled programming language**. It requires to be translated into machine code before it can actually be executed on a computer in the form of a C++ application binary. This translation was introduced as **C++ build process**. In addition to this C++ is also a **statically typed programming language** which means that all data types provided by the language have to be specified at compile time. This means that
 
 - variables have to be associated with a specific data type and
 - the type of the variable cannot change during the program's life time.
 
-To better understand what is a statically typed language, let's take a look at C++ types first.
+Why is that so? One main reason for this approach is **to allocate the memory required by the variables at compile time** in order **to ensure faster program execution**. Therefore, during compilation the compiler checks whether all associations between data types and variables and values stored in the variables are correct. This way, type errors are  identifed early in the development cycle which can also come in handy to identify conceptual mistakes.
 
-## Types
+In contrast to statically typed language, **dynamically typed languages** such as Javascript or Python do not associate data types with variables. Data types are dynamically defined and checked at run time and variable-type associations can change during program execution. 
+The downside here is that conceptual flaws might enter the code and program execution is usually slower.
+
+
+## Types 
+
+C++ supports **built-in types** like integers, floating point or boolean values and **user-defined types** which can be designed and specified by the programmers. When you start working with data types in C++, consider them as digital representations of man-made concepts. For example, the data type **int** represents the concept of **integers**, i.e., whole numbers. The data type **int&** represents the concept of an *alias* or **reference to an integer**. 
+
+Don't worry if you do not understand reference types right now. We will look at them closely in the upcoming sessions. Also, *please note* that we will not look into all of the available types and combinations of types in order not to overwhelm you right aways. To find out more about C++ types, checkout the online resources provided or [take a first tour of C++](https://isocpp.org/images/uploads/2-Tour-Basics.pdf).
 
 ### Built-in Types
- - basic built-in types:
- 	- **int**:  "integers" represent a whole number like 0, 1, 2, 3, 884675, -2075, etc.
- 	- **float**:  "floats" represent numbers with decimal points like 1.0, 1.1, 1974239.08236, -300.75, etc.
- 	- **bool**:  a "boolean" value can be either **true** or **false**  
 
- 	```c++
- 	int i 	= -100;
- 	float f = 12345.6789;
-    bool b 	= true;
- 	```
+Fundamental built-in types in C++ are types that represent mathematical concepts like numbers, logical operations and language / text concepts:
+
+- **A Boolean type** called **bool** that represents either **true** or **false**  
+- **Integer types** such as **int** that represent whole numbers like -3, -2, -1, 0, 1, 2, 3, ...
+- **Floating point types** such as **float** that represent decimal numbers like -2.0, -1241.14523, 2345124.567435, -20.74, ...
+
+```c++
+int i{-120};
+float f{3.145678};
+bool b{true};
+```
+
+
+The newly introduced type **auto** allows for automatic type deduction. This means, the type of the variable that is defined as being of type auto is automatically deduced from the value assigned to it. The **auto** type can be very helpful to simplify the source code among others. At the same time, [variables of type auto](https://www.learncpp.com/cpp-tutorial/4-8-the-auto-keyword/) have to be initialized upon
+creation.
+
+```c++
+auto i{-120};
+auto f{3.145678};
+auto b{true};
+```
+
+There is a type **void** that represents absence of information, i.e., the concept of **nothingness**. It is mostly used in the context of functions.
+
+```c++
+void myFunctionName () {
+    // this function does not return a value
+}
+```
+
+In addition, C++ provides types that represent concepts of memory allocation, memory access & aliasing. These types are the reason why C++ is considered a language close-to-the-hardware. They are especially important when it comes to real-time programming and memory management and we will take our time in a future session to explore them closely:
+
+- **Reference types** such as **int&**
+- **Pointer types** such as **int\***
+
+```c++
+int size{450};             // variable "size" of type "int" stores a value of "450"
+int& size_alias{size};     // variable "size_alias" of type "reference to int" is exactly the same as "size"
+int* size_ptr{&size};      // variable "size_ptr" of type "pointer to int" stores the address in memory of "size"
+```
+
 
 ### User-defined Types
 
-The possibility to specify user-defined types allows
-to create completely new data types
-to specifically match the application and/or user needs to translate complex concepts into software code
-to improve the readability of complex systems
+User-defined types allow programmers to conceive and develop their own custom types and to translate theoretical concepts into software systems. 
 
-The enumeration type is a user- defined data type that allows to group a list of symbolic constant of type integer
-A variable of type Color functions like a constant integer variable
+The **enumeration type** can be used to group a list of symbolic constants (all of type integer) like so:
 
 ```c++
-enum Color {
+#include <iostream>
 
-    red,
-    yellow,
-    green
+enum Color {    // define an enum called "Color"
+
+    red,        // == 0
+    yellow,     // == 1
+    green       // == 2
 };
+
+// In the main function, create a variable of user-defined type "Color". 
+// Initialize "myColor" with "yellow".
+// Print "myColor" to the command line (which is evoked by calling "std::cout").
+// The command line will print "1".
+int main( ) {
+    
+    Color myColor{yellow};
+    std::cout << "myColor value " << myColor << std::endl;
+}
 ```
 
-The structure type allows to   combine different kinds of data types inside of one struct
-The keyword struct is required to define the data type
+The **structure type** can be used to combine different data types inside of one struct type. Accessing the different types inside a struct can be accomplished with the help of the "." operator:
 
 ```c++
 struct Point {
@@ -117,119 +164,137 @@ struct Point {
     int x;
     int y;
     bool isVisible;
-    Color aColor;
+};
+
+// In the main function, declare a variable "myPoint" of type "Point".
+// Specify the different member variables of "myPoint".
+// Print out the boolean variable's value to the command line.
+int main( ) {
+    
+    Point myPoint;      
+    myPoint.x = 45;
+    myPoint.y = 45;
+    myPoint.isVisible = false;
+
+    std::cout << "Is my point visible? " << myPoint.isVisible << std::endl;
+}
+```
+
+Last but not least, the **class type** adds further functionality to the defining custom types. Among others, it supports
+
+- combination of different data types 
+- integration of member functions 
+- different access levels specified by **public**, **protected**, and **private** 
+
+We will look into classes more closely in the next two sessions. For now, take note that the typical **class prototype** is usually specified in the **header file (*.h)** and contains all of the relevant variable and function **declarations**. The actual implementation 
+is defined in the **definition** or **cpp file (*.cpp)** which usually contains all of the variable and function definitions. 
+
+Exemplary myClass.h:
+```c++
+class myClass {
+
+public:
+    // member functions
+    void setCoordinates(int xCoord, int yCoord);
+    bool getVisibility();
+    // ...
+
+private: 
+    // initialized member variables
+    int x{0};
+    int y{0};
+    bool isVisible{false};
 };
 ```
 
+Exemplary myClass.cpp:
+```cpp
+#include "myClass.h"
 
-Typical class interface of an openFrameworks application class
-The class prototype is usually defined in the header file *.h whereas the actual implementation 
-is defined in the   definition file *.cpp
+//--------------------------------------------------------------
+void myClass::setCoordinates(int xCoord, int yCoord) {
 
-```c++
+    x = xCoord;
+    y = yCoord;
+}
 
+//--------------------------------------------------------------
+bool myClass::getVisibility(){
+
+    return isVisible;
+}
+
+// ...
 ```
 
-## Variables 
+## Variables
 
-### Initialization & Assignment
+Variables are associated with a certain data type in the code.
+There are different forms of variable initialization in C++ that you will find in most C++ source code. Therefore, a brief overview of the most important and commonly used forms of how to assign a value to a variable is presented here:
 
-Variables are associated with a certain data type in the code
+### Declaration
 
-```c++
-float grade {5.0}; int years = 4 + 3; bool test;
-auto grade {5.0}; auto years = 4 + 3; auto test;
-// uniform initialization
-// copy initialization (slower)
-// declaration (better do initialization)
-// error
+**Variable declaration** - The declaration of a variable simply tells the compiler about the existence of a variable. Most compilers automatically assign a random value to a declared variable. This might result in undefined behavior depending on how stable the source code is. It is therefore recommended to always initialize variables.
+
+Declarations of auto variables are not allowed. This is becaues the compiler deduces the actual type of the variable automatically during compile time and based on the value assigned to the variable.
+```cpp
+bool test; 
+auto grade;         // this will result in a compiler error 
+auto grade2 {8};    // this works but is an initialization instead of a declaration
 ```
 
-The newly introduced type auto allows for automatic type deduction — this only works for initializing variables upon
-creation 
+### Initialization
 
-https://www.learncpp.com/cpp-tutorial/4-8-the-auto-keyword/
+Initialization describes the process of specifying the value of a variable upon its creation. **To avoid undefined behavior, always initialize a variable.**
 
-## Statically vs Dynamically Typed
-
+**Uniform initialization** - This is the new way to initialize variables in C++. Upon variable creation, a value is directly stored in its memory.
 ```c++
-int myIntVar = 10;  // the variable myIntVar is now associated
-                    // with the data type "int" 
-                    // (representing an integer)
-float myFloatVar = 25.765;  // the variable myFloatVar is now associated
-                            // with the data type "float" 
-                            // (representing a floating point)
-
-myIntVar = myFloatVar;  // copying the value stored in myFloatVar
-                        // into myIntVar will result in a "type cast";
-                        // as a result, myIntVar will store "25" or "26" 
+float grade {5.0}; 
+auto grade {5.0}; 
 ```
 
+**Copy initialization** - This is the classic way to initialize variables in older C++ versions, it is slower than uniform initalization but still widely used. The variable is created first and in a second step a variable is copied into its memory.
+  
+```cpp
+int years = 4;     
+auto years = 4 + 3; 
+```
 
-Type checking is executed at compile time
-To identify type errors early in the development cycle 
+### Assignment 
 
-To allocate the required memory at compile time
-To ensure faster program execution
-
-In contrast, dynamically typed languages do not associate data types with variables — data types are dynamically defined and checked at run time and variable type associations can change
-This is another reason for why interpreted languages are usually slower in execution than statically typed languages 
-Examples: python, javascript
-
-
-<!-- ### Loops
-
- - _for_ loops run code a set number of times
-
-	```c++
-   	for (int i=0; i<10; i++) { 
-   		// this will run 10 times
-   	}
-	```
-
- - _while_ loops run code until a condition is false
-
- 	```c++
-    bool runLoop = true;
- 	while (runLoop){
- 		// we need to set runLoop false to exit loop
- 		// otherwise, we create an "infinite loop"
-        runLoop = false;
- 	}
- 	``` -->
+**Copy assignments** - When changing the value of a variable, the new value is copied into the variable's slot in memory. 
+```cpp
+auto years {5};
+years = 12;         // copy assignment
+```
 
 ## Functions
 
-Functions are central building blocks of a program that   group statements in logical units & organize the code
-Every C++ program requires a main function for program start Main functions are usually stored in main.cpp
-
-Function name — int add (int x, int y) { ... } 
-Return type — int add (int x, int y) { ... } 
-Parameter (list) — int add (int x, int y) { ... } 
-Function body — int add (int x, int y) { ... }
-
- - _functions_ are blocks of code that can be _called_ later on to run
- 	- functions can take _arguments_ (also called _parameters_) as input -  
- 		these are values you supply the function when you _call_ it
- 	- functions can also _return_ values (or not - its up to you)
+Functions are essential building blocks of a computer program. They group statements into logical units and help organize the code. 
+In C++, a typical function would look like this:
 
 ```c++
+bool myFunction(int x, int y /* .. more or less or none */ ) {
 
+    bool myBoolVariable = true;
+
+    // do something with x and y and myBoolVariable
+    
+    return myBoolVariable;
+}
 ```
 
-### Sequential Execution
+As such, a function is defined by these parts:
 
-### Declaration vs Definition
-
-A function declaration informs the compiler about the existence of the function in the code
-It uses a function prototype that includes function name, return type, parameter list & semicolon but no function body
-The function definition includes the function body and can be specified at a later point
-
-The separation of declaration and definition is an essential aspect of software design as it supports separating interface design and implementation details
-The separation of code into header and definition files applies this approach to source code management and deployment
+* the function name — "bool ***myFunction*** (int x, int y) { ... }"
+* the return type — "***bool*** myFunction (int x, int y) { ... }"
+* the parameter list — "bool myFunction ***(int x, int y)*** { ... }"
+* the function body — "bool myFunction (int x, int y) ***{ ... }***"
 
 
 ### The main Function
+
+The [**main** function](https://en.cppreference.com/w/cpp/language/main_function) is a unique function that every C++ program must have. It is the starting point for every C++ program and is the first function that is being executed when the application binary gets launched. The return value of the **main** function is usually an error code. 
 
 ```c++
 #include <iostream>
@@ -242,22 +307,108 @@ int main () {
 ```
 
 
-## Header and Definition Files
+### Declaration vs Definition
 
-The job of the header file is to declare all of the functionality that is being implemented in the definition file. This has several advantages such as 
-- separating a concept from a specific implementation (where might this be useful?)
-- organizing the source code 
-- categorizing and abstracting functionality
-- what else?
+A **function declaration** informs the compiler about the existence of a function similar to a variable declaration. It is defined by **function prototype** which includes
 
-![header_source_01](assets/header_cpp_01.png)  
-*Source: https://www.learncpp.com/cpp-tutorial/header-files/*
+- the function name, 
+- return type, 
+- parameter list and 
+- semicolon - not to forget -
 
-This is a more complex example that shows how to add functionality to a main.cpp file by including two different header files. The corresponding definition files are not affected by the inclusion. Including different header files will affect the compilation as the additional information will be compiled into the object files. Then, in a next step during linking, the implementation / definition of additional functionality will be linked into the final executable as an additional object file. Compiled languages support the combination and use of different functionalities into one final software program.
+but no function body like so:
 
-![header_source_02](assets/header_cpp_02.png)  
-*Source: https://www.learncpp.com/cpp-tutorial/header-files/*
+```c++
+bool myFunction(int x, int y);
+```
 
+A **function definition** in contrast additionally includes the function body like so: 
+
+```c++
+bool myFunction(int x, int y) {
+
+    bool myBoolVariable = true;
+
+    // do something with x and y and myBoolVariable
+    
+    return myBoolVariable;
+}
+```
+
+### Sequential Code Execution
+
+The separation of function declaration and function definition is primarily due to the [sequential execution of C++ source](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/) code and helps to better organize the code. Programmers can simply list all of the functions used in the programm at the top of the source code (or in the header file) in the form of declarations. This way, the compiler knows exactly what kind of functions will be available before evaluating the function definitions. Check out the following examples for an illustration of the problem.
+
+In the following source code example,  the **main** function initializes two integer variables and calls a function called **add** that adds both values and returns the result. In this code example, everything works fine. The compiler reads the source from top to bottom, knows about the add-function when reaching the function body of the main-function.
+
+```cpp
+// This example will compile fine.
+
+int add(int x, int y)
+{
+    return x + y;
+}
+
+int main()
+{
+    int first{12};
+    int second{45};
+
+    int result = add(first, second);
+
+    return 0;
+}
+
+```
+
+In the following source code example, the compiler will throw an error because when it reaches the main-function, it does not know about the existence of the add-function.
+
+```cpp
+// This example will throw a compiler error!!
+
+int main()
+{
+    int first{12};
+    int second{45};
+
+    int result = add(first, second);
+
+    return 0;
+}
+
+int add(int x, int y)
+{
+    return x + y;
+}
+
+```
+
+
+Finally in the following source code example, everything works fine again. The add-function has been declared at the top of the source code. As a result, the compiler knows about its existence when it reaches the main function and can continue to create object-code.
+
+```cpp
+// This example will compile fine.
+
+int add(int x, int y);  // function declaration
+
+int main()
+{
+    int first{12};
+    int second{45};
+
+    int result = add(first, second);
+
+    return 0;
+}
+
+int add(int x, int y)
+{
+    return x + y;
+}
+
+```
+
+The separation of declaration and definition is thus an essential aspect of source code management and, as you will find out later, of software design.
 
 
 # Building an ofApp
@@ -277,6 +428,53 @@ Every ofApp is by default comprised of three files
 - ofApp.cpp -- The definition file (also simply called Cpp file)
 
 
+## Header and Definition Files
+
+The introduction of header and definition files can be considered a continuation of the separation of declaration and definition described in an earlier section:
+
+- **The header file** is used **to declare all of the functionality** 
+- **The definition file** is used **to define and implement the funtionality**
+
+Apart from code organization this also has the advantage that it allows to separate a concept from a specific implementation. The following example illustrates the approach of using header and definition files. 
+
+```cpp
+#include <iostream>
+
+int add(int x, int y);  // function declaration
+
+int main()
+{
+    int first{12};
+    int second{45};
+
+    int result = add(first, second);
+
+    return 0;
+}
+
+int add(int x, int y)
+{
+    return x + y;
+}
+
+```
+
+This is a more complex example that shows how to add functionality to a main.cpp file by including two different header files. The corresponding definition files are not affected by the inclusion. Including different header files will affect the compilation as the additional information will be compiled into the object files. Then, in a next step during linking, the implementation / definition of additional functionality will be linked into the final executable as an additional object file. Compiled languages support the combination and use of different functionalities into one final software program.
+
+![header_source_02](assets/header_cpp_02.png)  
+*Source: https://www.learncpp.com/cpp-tutorial/header-files/*
+
+
+### Further Considerations
+
+ with a strong aspect on software design
+In particular, header and definition files clearly support to separate 
+
+- software interfaces (e.g., like declarations) from 
+- implementation details (e.g., like definitions)
+
+Software interfaces describe **what** kind of functionality is available whereas implementation details describe **how** the functionality is  implemented. It makes sense to separate both aspects, for example, when you think of OpenGL which provides a common software interface (API) and at the same time comes with different OpenGL implementations (OpenGL libraries/drivers) per platform and graphics card. 
+
 
 # Reading Material
 
@@ -284,13 +482,15 @@ Every ofApp is by default comprised of three files
 
 Revise and Review
 
-- [openFrameworks folder structure](https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html)
-- [C++ build process](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/)
+- [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
+- [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
+- [The main function](https://en.cppreference.com/w/cpp/language/main_function)
+
 
 ## Precap
 
 Prepare and Preview
 
-- [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
-- [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
+
+
 - [openFrameworks functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
