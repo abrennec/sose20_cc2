@@ -18,6 +18,8 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Types](#types)
     - [Built-in Types](#built-in-types)
     - [User-defined Types](#user-defined-types)
+      - [Type enum](#type-enum)
+      - [Type struct](#type-struct)
   - [Variables](#variables)
     - [Declaration](#declaration)
     - [Initialization](#initialization)
@@ -29,7 +31,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 - [Building an ofApp](#building-an-ofapp)
   - [ProjectGenerator](#projectgenerator)
   - [The ofApp](#the-ofapp)
-  - [Header and Definition Files](#header-and-definition-files)
+  - [Header and Definition Files TODO](#header-and-definition-files-todo)
     - [Further Considerations](#further-considerations)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
@@ -109,13 +111,13 @@ auto f{3.145678};
 auto b{true};
 ```
 
-There is a type **void** that represents absence of information, i.e., the concept of **nothingness**. It is mostly used in the context of functions.
+<!-- There is a type **void** that represents absence of information, i.e., the concept of **nothingness**. It is mostly used in the context of functions.
 
 ```c++
 void myFunctionName () {
     // this function does not return a value
 }
-```
+``` -->
 
 In addition, C++ provides types that represent concepts of memory allocation, memory access & aliasing. These types are the reason why C++ is considered a language close-to-the-hardware. They are especially important when it comes to real-time programming and memory management and we will take our time in a future session to explore them closely:
 
@@ -132,11 +134,16 @@ int* size_ptr{&size};      // variable "size_ptr" of type "pointer to int" store
 ### User-defined Types
 
 User-defined types allow programmers to conceive and develop their own custom types and to translate theoretical concepts into software systems. 
-
+Most prominent user-defined type is the [**C++ class**](https://www.learncpp.com/cpp-tutorial/82-classes-and-class-members/). However, there are also other user-defined types worth to check out like the [**enum**](https://www.learncpp.com/cpp-tutorial/45-enumerated-types/), an enumeration type, or [**struct**](https://www.learncpp.com/cpp-tutorial/47-structs/), which allows to combine different data types in one type. 
+<!-- 
+#### Type enum 
 The **enumeration type** can be used to group a list of symbolic constants (all of type integer) like so:
 
 ```c++
-#include <iostream>
+// this preprocessor directive tells the compiler to include
+// the "iostream" header file and its functionality. "iostream" is part
+// of the C++ Standard Library (STL)
+#include <iostream> 
 
 enum Color {    // define an enum called "Color"
 
@@ -155,10 +162,13 @@ int main( ) {
     std::cout << "myColor value " << myColor << std::endl;
 }
 ```
+#### Type struct
 
 The **structure type** can be used to combine different data types inside of one struct type. Accessing the different types inside a struct can be accomplished with the help of the "." operator:
 
 ```c++
+#include <iostream> 
+
 struct Point {
 
     int x;
@@ -178,12 +188,12 @@ int main( ) {
 
     std::cout << "Is my point visible? " << myPoint.isVisible << std::endl;
 }
-```
+``` -->
 
-Last but not least, the **class type** adds further functionality to the defining custom types. Among others, it supports
+The **class type** allows to define custom types by supporting 
 
-- combination of different data types 
-- integration of member functions 
+- a combination of different data types 
+- an integration of member functions 
 - different access levels specified by **public**, **protected**, and **private** 
 
 We will look into classes more closely in the next two sessions. For now, take note that the typical **class prototype** is usually specified in the **header file (*.h)** and contains all of the relevant variable and function **declarations**. The actual implementation 
@@ -194,13 +204,13 @@ Exemplary myClass.h:
 class myClass {
 
 public:
-    // member functions
+    // member functions which describe the functionality of the class
     void setCoordinates(int xCoord, int yCoord);
     bool getVisibility();
     // ...
 
 private: 
-    // initialized member variables
+    // initialized member variables which can be of any type
     int x{0};
     int y{0};
     bool isVisible{false};
@@ -230,7 +240,7 @@ bool myClass::getVisibility(){
 ## Variables
 
 Variables are associated with a certain data type in the code.
-There are different forms of variable initialization in C++ that you will find in most C++ source code. Therefore, a brief overview of the most important and commonly used forms of how to assign a value to a variable is presented here:
+There are different forms of variable initialization in C++ that you will find in most C++ source code. Therefore, a brief overview of the most important and commonly used forms of how to assign a value to a variable is presented in the following.
 
 ### Declaration
 
@@ -415,27 +425,46 @@ The separation of declaration and definition is thus an essential aspect of sour
 
 ## ProjectGenerator
 
-The Project Generator 
-allows you to create your own empty
+The openFrameworks ProjectGenerator is a standalone application that comes with the SDK. Its main purpose is 
+
+- to automatically create new project files for your IDE, 
+- to update existing project files with the current folder structure,
+- to include available addons to the project files.
+
+Check out this screencast to learn how to use the ProjectGenerator:
+
+
+*Attention: The video may take a couple of minutes to load.*
+
+[![openFrameworks folder structure](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/opsHlLvjIZTYOBs)
 
 
 ## The ofApp
 
-Every ofApp is by default comprised of three files
+By default, an ofApp is comprised of three files:
 
-- main.cpp -- This is the starting point for every C++ program!
-- ofApp.h -- The header file
-- ofApp.cpp -- The definition file (also simply called Cpp file)
+- main.cpp 
+- ofApp.h - The header file that stores the software interface of an ofApp
+- ofApp.cpp - The definition file that stores the implementation details of an ofApp
+
+The ofApp is the default application class of openFrameworks that provides you with all of the necessary functionality to create and build an openFrameworks application binary. In this next screencast, we will develop a first custom ofApp application and take a closer look at the different aspects of the ofApp class.
+
+Check out this screencast to learn about creating and building a custom of App:
 
 
-## Header and Definition Files
+*Attention: The video may take a couple of minutes to load.*
 
-The introduction of header and definition files can be considered a continuation of the separation of declaration and definition described in an earlier section:
+[![openFrameworks folder structure](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/opsHlLvjIZTYOBs)
 
-- **The header file** is used **to declare all of the functionality** 
-- **The definition file** is used **to define and implement the funtionality**
 
-Apart from code organization this also has the advantage that it allows to separate a concept from a specific implementation. The following example illustrates the approach of using header and definition files. 
+## Header and Definition Files TODO
+
+The introduction of header and definition files can be considered a continuation of the separation of declaration and definition described in an earlier section.
+
+- **The header file** is used **to declare all of the functionality**. 
+- **The definition file** is used **to define and implement the funtionality**.
+
+Apart from code organization this also has the advantage that it allows to separate a concept from a specific implementation. The following example illustrates the approach of using header and definition files and extends our earlier code example by a class "add". 
 
 ```cpp
 #include <iostream>
@@ -484,13 +513,10 @@ Revise and Review
 
 - [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
 - [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
-- [The main function](https://en.cppreference.com/w/cpp/language/main_function)
-
+- [openFrameworks functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
 
 ## Precap
 
 Prepare and Preview
 
 
-
-- [openFrameworks functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
