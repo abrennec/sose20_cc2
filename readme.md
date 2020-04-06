@@ -16,7 +16,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Method of Instruction](#method-of-instruction)
   - [Syllabus](#syllabus)
   - [Learning Objectives](#learning-objectives)
-  - [Grading](#grading)
+  - [Evaluation and Grading](#evaluation-and-grading)
 - [Communication & Materials](#communication--materials)
   - [Assignments](#assignments)
 - [Further Resources for the Interested Reader](#further-resources-for-the-interested-reader)
@@ -97,16 +97,18 @@ On **Wednesdays**, we will have a check-in meeting for questions. All assignment
 - Expressing and reflecting on your artistic ideas with openFrameworks
 
 
-## Grading
+## Evaluation and Grading
 
-For CTech students there will be a grade. The grade will be based on the homework assignments and a final exercises. You need to pass 50% of total homework assignments in order to participate in the final exercise.
+In order to pass the course, you need to collect 50 assignment points and participate in a final exercise. All solutions have to be submitted to GitHub to be considered for an evaluation.
+
+For CTech students there will be a grade. The grade will be based on the points collected for the homework assignments and the final exercises. 
 
 ### Breakdown <!-- omit in toc -->
 
-* 40% - Homework assignments
+* 60% - Homework assignments
   * Programming exercises
   * Wiki updates and critiques
-* 60% - Final exercise
+* 40% - Final exercise
   * The final exercise will be a programming exercise of an openFrameworks application. The type of application can be chosen individually. However, the application must include/address:
     * Object-oriented design
     * At least two different topics from the course
