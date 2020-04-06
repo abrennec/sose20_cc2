@@ -139,13 +139,17 @@ It is important to understand that you have to build the example applications wi
 - *.**xcodeproject** for XCode  
 - *.**sln** for Visual Studio
 
-The project files contain all of the necessary information required to build an application. They heavily rely on the openFrameworks folder structure because they search the folders for all of the necessary files and information required to compile, link, and build the application. Any change to the folder structure should therefore be considered carefully as it might break the build process. Once you have opened the project file in the IDE, trigger the build process.
+The project files contain all of the necessary information required to build an application. They heavily rely on the openFrameworks folder structure because they search the folders for all of the necessary files and information required to compile, link, and build the application. *Any change to the folder structure should therefore be considered carefully as it might break the build process.* Once you have opened the project file in the IDE, trigger the build process.
 
-Check out this video for an overview:
+Check out this video for an overview on how to build a project **with XCode**:
 
 *Attention: The video may take a couple of minutes to load.*
 
 [![building an ofExample](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/HHNJ7KAatV4l8mo)
+
+Check out this snapshot tutorial for an overview on how to build a project **with Visual Studio Community 2017**:
+
+[![building an ofExample](assets/tutorial.png)](additional_material/visual_studio_community_hints.md)
 
 ## The C++ Build Process
 

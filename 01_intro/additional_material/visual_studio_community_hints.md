@@ -5,6 +5,8 @@ affiliation: Film University Babelsberg KONRAD WOLF
 date: Summer term 20
 ---   -->
 
+Franziska Pätzold | franziska.paetzold@filmuniversitaet.de | Film University Babelsberg *KONRAD WOLF*
+
 # Visual Studio Community Hints
 
 Hi. You are one of the lucky (probably) Windows and Visual Studio Community users. The following hints are referring to Visual Studio Community 2017.
@@ -16,10 +18,11 @@ Have fun!
 ---
 
 **Table of Contents**
-- [Before Getting Started](#Before-Getting-Starte)
-- [How To Start A Solution File](#How-To-Start-A-Solution-File)
-- [The Visual Studio Community UI](#The-Visual-Studio-Community-UI)
-- [Hints for creating new projects](#Hints-for-creating-new-projects)
+- [Visual Studio Community Hints](#visual-studio-community-hints)
+  - [Before Getting Started](#before-getting-started)
+  - [How To Start A Solution File](#how-to-start-a-solution-file)
+  - [The Visual Studio Community UI](#the-visual-studio-community-ui)
+  - [Hints for creating new projects](#hints-for-creating-new-projects)
 
 ---
 
@@ -27,11 +30,11 @@ Have fun!
 
 Please make sure you have the following software packages installed during the installation of Visual Studio Community. 
 
-![software packages](assets/visual_studio_community_hints/UI/2.png)
+![software packages](../assets/visual_studio_community_hints/UI/2.png)
 
 You can either check it or catch the installation up by making use of the Visual Studio Installer:
 
-![installer](assets/visual_studio_community_hints/UI/3.png)
+![installer](../assets/visual_studio_community_hints/UI/3.png)
 
 ## How To Start A Solution File
 
@@ -41,26 +44,26 @@ After you downloaded the  [openFrameworks for Visual Studio package](https://ope
 
 Now you are able to browse through openFrameworks example projects. You can find them under your_oF_download>examples. Choose one of the examples, double click the solution file (.sln) and open it with Visual Studio.
 
-![example_project_path](assets/visual_studio_community_hints/UI/4.png)
+![example_project_path](../assets/visual_studio_community_hints/UI/4.png)
 
 Just press the green arrow/Local Windows Debugger to run the project.
 
-![start](assets/visual_studio_community_hints/UI/6.png)
+![start](../assets/visual_studio_community_hints/UI/6.png)
 
 At this point, the application should have started. Also, that process created you an executable file (.exe) in the projects bin folder. 
 
-![exe](assets/visual_studio_community_hints/UI/7.png)
+![exe](../assets/visual_studio_community_hints/UI/7.png)
 
 
 ## The Visual Studio Community UI
 
 So. Here we are. That's the UI you should see after starting the program. You can open projects under the "File" tab. Or the way that's described above. 
 
-![UI](assets/visual_studio_community_hints/UI/1.png)
+![UI](../assets/visual_studio_community_hints/UI/1.png)
 
 After you opened a project or you created a new one your Visual Studio looks like this:
 
-![project_UI](assets/visual_studio_community_hints/UI/8.png)
+![project_UI](../assets/visual_studio_community_hints/UI/8.png)
 
 - On the upper left, you have your current opened classes. If there is a star behind the file files name (like ofApp.h*) it means you have unsaved changes. Please make sure, you save your changes before you start a new build. 
 
@@ -71,6 +74,10 @@ After you opened a project or you created a new one your Visual Studio looks lik
 - On the lower right you can find the Properties window, I closed it - because I never used it. 
 
 ## Hints for creating new projects
+
+```diff
+- Please note: The creation of new projects will be discussed in detail in session 02. 
+```
 
 Some mistakes are made very often in the beginning, so here are some hints for a better start.
 
