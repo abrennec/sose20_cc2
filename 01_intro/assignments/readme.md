@@ -13,7 +13,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 ## 1 Learning Materials & Resources 
 
-- Work your way through the [script](../readme.md) including the (required!) reading material provided at the end of the script.
+- Work your way through the [script](../readme.md) including the reading material provided at the end of the script.
 - Checkout the cc2 repository and get familiar with the resources provided.
 
 ## 2 Development Setup 
@@ -22,7 +22,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 ## 2 Practical Exercises
 
-### 2.1 Searching the Examples (4 pts)
+### 2.1 Searching the Examples | max. 5 pts
 - Check out the openFrameworks examples folders and build a couple of the examples.
 - Identify an example that you like. 
   - What do you like about them? 
@@ -30,7 +30,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - Note down a few keywords and submit them following the description on the [main page](../../readme.md).
 
 
-### 2.2 Modifying the Examples (6 pts)
+### 2.2 Modifying the Examples | max. 10 pts
 
 Go to the blending example:
 

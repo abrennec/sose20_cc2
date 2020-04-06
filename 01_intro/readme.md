@@ -27,6 +27,8 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [The C++ Build Process](#the-c-build-process)
   - [Errors during Building](#errors-during-building)
 - [Reading Material](#reading-material)
+  - [Recap](#recap)
+  - [Precap](#precap)
 
 ---
 
@@ -199,13 +201,17 @@ During the build process, the IDE evaluates the source code, object code and fin
 
 # Reading Material
 
-**Required**
+## Recap 
+
+Revise and Review
+
+- [openFrameworks folder structure](https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html)
+- [C++ build process](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/)
+
+## Precap
+
+Prepare and Preview
 
 - [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
 - [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
 - [openFrameworks functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
-
-**Recapitulation**
-- [openFrameworks folder structure](https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html)
-- [C++ build process](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/)
-
