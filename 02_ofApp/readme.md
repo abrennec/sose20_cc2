@@ -135,6 +135,45 @@ int* size_ptr{&size};      // variable "size_ptr" of type "pointer to int" store
 
 User-defined types allow programmers to conceive and develop their own custom types and to translate theoretical concepts into software systems. 
 Most prominent user-defined type is the [**C++ class**](https://www.learncpp.com/cpp-tutorial/82-classes-and-class-members/). However, there are also other user-defined types worth to check out like the [**enum**](https://www.learncpp.com/cpp-tutorial/45-enumerated-types/), an enumeration type, or [**struct**](https://www.learncpp.com/cpp-tutorial/47-structs/), which allows to combine different data types in one type. 
+
+```c++
+/*
+The "enumeration" type can be used to group a list 
+of symbolic constants (all of type integer) to make 
+the code more comprehensible when working with lists:
+*/
+enum Color {    // define an enum called "Color"
+
+    red,        // == 0
+    yellow,     // == 1
+    green       // == 2
+};
+
+// ...
+Color myColor{yellow};  // create a variable of type Color
+// ...
+
+
+/* 
+The "structure" type can be used to combine different data
+types inside of one struct type. Accessing the different 
+types inside a struct can be accomplished with the help
+of the "." operator, for example:
+*/
+
+struct Point { 
+
+    int x;
+    int y;
+    bool isVisible;
+};
+
+// ...
+Point myPoint;      // create a variable of type Point
+myPoint.x = 45;     // access its member variables
+// ...
+```
+
 <!-- 
 #### Type enum 
 The **enumeration type** can be used to group a list of symbolic constants (all of type integer) like so:

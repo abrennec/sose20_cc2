@@ -7,6 +7,8 @@ date: Summer term 20
 
 Franziska Pätzold | franziska.paetzold@filmuniversitaet.de | Film University Babelsberg *KONRAD WOLF*
 
+---
+
 # Visual Studio Community Hints
 
 Hi. You are one of the lucky (probably) Windows and Visual Studio Community users. The following hints are referring to Visual Studio Community 2017.
