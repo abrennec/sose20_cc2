@@ -1,3 +1,10 @@
+<!-- ---  
+title: Creative Coding II
+author: Franziska Pätzold
+affiliation: Film University Babelsberg KONRAD WOLF
+date: Summer term 20
+---   -->
+
 # Visual Studio Community Hints
 
 Hi. You are one of the lucky (probably) Windows and Visual Studio Community users. The following hints are referring to Visual Studio Community 2017.
@@ -12,7 +19,6 @@ Have fun!
 - [Before Getting Started](#Before-Getting-Starte)
 - [How To Start A Solution File](#How-To-Start-A-Solution-File)
 - [The Visual Studio Community UI](#The-Visual-Studio-Community-UI)
-- [Debugging](#Debugging)
 - [Hints for creating new projects](#Hints-for-creating-new-projects)
 
 ---
@@ -63,24 +69,6 @@ After you opened a project or you created a new one your Visual Studio looks lik
 - On the lower left, you find the Output window.  It shows you either the current status of your project or your build failed (e.g. like ========== Build: 0 succeeded, 1 failed, 1 up-to-date, 0 skipped ==========), then please find under that window a new window Error list: here you can find your helpful error messages.
 
 - On the lower right you can find the Properties window, I closed it - because I never used it. 
-
-## Debugging
-
-_Hint: Debugging is a process to test your program and find mistakes. If you are not familiar with debugging it's definitely worth it to invest some time in learning about debugging in general. [Here](https://youtu.be/0ebzPwixrJA?t=289) is a video, where debugging is a little more explained in detail at Visual Studio (tip: start the video at 04:50.)_
-
-Your UI will look a little bit different when you are debugging your project. 
-
-![project_UI_debugging](assets/visual_studio_community_hints/UI/9.png)
-
-To enter the debugging mode properly, please:
-
-1. Set a breakpoint with a double click on the grey line next to the line number. (If there appears a red dot, like shown in the last picture, you successfully set a breakpoint.)
-2. Start the debugging mode with the green arrow/Local Windows Debugger. 
-
-Now some debugging tools appear: 
-![debugging_tools](assets/visual_studio_community_hints/UI/10.png)
-You can use them to execute the common debugging commands like "Step into", "Step over", "Step out"...
-Simultaneously you can watch how your variables change in the lower left Autos window. 
 
 ## Hints for creating new projects
 
