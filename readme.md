@@ -19,7 +19,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Grading](#grading)
 - [Communication & Materials](#communication--materials)
   - [Assignments](#assignments)
-- [Further Readings](#further-readings)
+- [Further Resources for the Interested Reader](#further-resources-for-the-interested-reader)
   - [Online Resources](#online-resources)
   - [Books](#books)
     - [Creative Coding](#creative-coding)
@@ -214,7 +214,7 @@ obj/
 
 ---
 
-# Further Readings
+# Further Resources for the Interested Reader
 
 ## Online Resources
 
@@ -237,22 +237,29 @@ There are several excellent openFrameworks courses available on GitHub, for exam
 
 ## Books 
 
+These are all recommendations that will help you dive deeper into creative coding with openFrameworks as well as C++ programming.  
+
 ### Creative Coding 
+
+The following books provide interesting exercises and lots of food for thought on creative coding. Technologically, however, the openFrameworks versions used for the example code are outdated and may not work out-of-the-box.
 
 - Denis Perevalov, Igor Tatrnikov (2015): openFrameworks Essentials. Packt Publishing. Birmingham, UK.
 - Denis Perevalov (2013): Mastering openFrameworks: Creative Coding Demystified. Packt Publishing. Birmingham, UK.
 - Joshua Noble (2009): Programming Interactivity. A Designer’s Guide to Processing, Arduino & openFrameworks. Sebastopol, CA: O’Reilly Media Inc.
 - Ira Greenberg (2007): Processing: Creative Coding & Computational Art. Berkley, CA: Friends of ED/Apress Press.
-- Bill Manaris & Andrews R. Brown (2014): Making Music with Computers. New York, NY: Chapman & Hall / CRC Press.
 
 ### C/C++  
+
+The first two books will give you a solid understanding of everything C++. The last two books I recommend for intermediate and experienced C++ programmers.
 
 - Bjarne Stroustrup (2013): The C++ Programming Language. Upper Saddle River, NJ: Pearson Education, Inc.
 - Bjarne Stroustrup (2014): Programming. Principles & Practices Using C++. Upper Saddle River, NJ: Addison-Wesley.
 - Scott Meyers („Effective C++“ series, advanced)
 - Herb Sutter („Exceptional C++“ series, really advanced)
 
-### Software Design 
+### Software Design
+
+If you want to dive even deeper into software design, these books might be of interest for you.
 
 - Grady Booch (1994): Object-oriented Analysis and Design. Addison-Wesley. NY, USA.
 - Robert C. Martin (2009): Clean Code. Prentice Hall. NY, USA.
