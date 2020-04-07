@@ -503,6 +503,8 @@ To wrap this section up, please not that the separation of declaration and defin
 
 # Building an ofApp
 
+In this section we will put theory to practice. First of all, you will learn about the openFramework ProjectGenerator that will help you generate your own IDE project files. Then we will look into building a new ofApp application. We will also review some of the previously explained concepts.
+
 ## ProjectGenerator
 
 The openFrameworks ProjectGenerator is a standalone application that comes with the SDK. Its main purpose is 
@@ -521,16 +523,13 @@ Check out this screencast to learn how to use the ProjectGenerator:
 
 ## The ofApp
 
-By default, an ofApp is comprised of three files:
+The ofApp is the default application class of openFrameworks that provides you with all of the necessary functionality to create and build an openFrameworks application binary. In this next screencast, we will develop a first custom ofApp application and take a closer look at the different aspects of the ofApp class. By default, an ofApp is comprised of three files:
 
-- main.cpp 
+- main.cpp - This file contains the C++ main() function
 - ofApp.h - The header file that stores the software interface of an ofApp
 - ofApp.cpp - The definition file that stores the implementation details of an ofApp
 
-The ofApp is the default application class of openFrameworks that provides you with all of the necessary functionality to create and build an openFrameworks application binary. In this next screencast, we will develop a first custom ofApp application and take a closer look at the different aspects of the ofApp class.
-
 Check out this screencast to learn about creating and building a custom of App:
-
 
 *Attention: The video may take a couple of minutes to load.*
 
