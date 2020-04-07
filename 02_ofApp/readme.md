@@ -29,7 +29,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 - [Building an ofApp](#building-an-ofapp)
   - [ProjectGenerator](#projectgenerator)
   - [The ofApp](#the-ofapp)
-  - [Header and Definition Files TODO](#header-and-definition-files-todo)
+  - [Header and Definition Files](#header-and-definition-files)
     - [Further Considerations](#further-considerations)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
@@ -536,41 +536,19 @@ Check out this screencast to learn about creating and building a custom of App:
 [![openFrameworks folder structure](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/opsHlLvjIZTYOBs)
 
 
-## Header and Definition Files TODO
+## Header and Definition Files
 
-The introduction of header and definition files can be considered a continuation of the separation of declaration and definition described in an earlier section.
+The introduction of header and definition files can be considered a continuation of the separation of declaration and definition described earlier.
 
-- **The header file** is used **to declare all of the functionality**. 
-- **The definition file** is used **to define and implement the funtionality**.
+- **The header file** is used **to declare** all of the functionality. 
+- **The definition file** is used **to define and implement** all of the funtionality.
 
-Apart from code organization this also has the advantage that it allows to separate a concept from a specific implementation. The following example illustrates the approach of using header and definition files and extends our earlier code example by a class "add". 
-
-```cpp
-#include <iostream>
-
-int add(int x, int y);  // function declaration
-
-int main()
-{
-    int first{12};
-    int second{45};
-
-    int result = add(first, second);
-
-    return 0;
-}
-
-int add(int x, int y)
-{
-    return x + y;
-}
-
-```
-
-This is a more complex example that shows how to add functionality to a main.cpp file by including two different header files. The corresponding definition files are not affected by the inclusion. Including different header files will affect the compilation as the additional information will be compiled into the object files. Then, in a next step during linking, the implementation / definition of additional functionality will be linked into the final executable as an additional object file. Compiled languages support the combination and use of different functionalities into one final software program.
+Apart from code organization this also has the advantage that it allows to separate a concept from a specific implementation as we have seen with the ofApp class. Let us review the idea and how it is related with the general C++ build process with the help of this illustration:
 
 ![header_source_02](assets/header_cpp_02.png)  
 *Source: https://www.learncpp.com/cpp-tutorial/header-files/*
+
+This is a more complex example that shows how to add functionality to a main.cpp file by including two different header files. The corresponding definition files are not affected by the inclusion. Including different header files will affect the compilation as the additional information will be compiled into the object files. Then, in a next step during linking, the implementation / definition of additional functionality will be linked into the final executable as an additional object file. Compiled languages support the combination and use of different functionalities into one final software program.
 
 
 ### Further Considerations
