@@ -26,6 +26,8 @@ what is the difference between update draw setup
 Loops in Cpp?
 Conditionals in Cpp?
 
+What are constants and how does c++ support them?
+
 ## 2 Practical Exercises 
 
 ### 2.1
