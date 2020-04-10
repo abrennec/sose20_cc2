@@ -70,7 +70,7 @@ Checkout what [Bjarne Stroustrup](http://stroustrup.com), the creator and develo
 
 ## General Language Aspects
 
-Remember from the previous lesson, C++ is a **compiled programming language**. It requires to be translated into machine code before it can actually be executed on a computer in the form of a C++ application binary. This translation was introduced as **C++ build process**. In addition to this C++ is also a **statically typed programming language** which means that all data types provided by the language have to be specified at compile time. This means that
+Remember from the previous lesson, C++ is a **compiled programming language**. It requires to be translated into machine code before it can actually be executed on a computer in the form of a C++ application binary. This translation was introduced as [**C++ build process**](https://github.com/ctechfilmuniversity/lecture_creative_coding_2/tree/master/01_intro#the-c-build-process). In addition to this C++ is also a **statically typed programming language** which means that all data types provided by the language have to be specified at compile time. This means that
 
 - variables have to be associated with a specific data type and
 - the type of the variable cannot change during the program's life time.
@@ -527,7 +527,7 @@ int add(int x, int y)
 
 ```
 
-This is a more complex example that shows how to add functionality to a main.cpp file by including two different header files. The corresponding definition files are not affected by the inclusion. Including different header files will affect the compilation as the additional information will be compiled into the object files. Then, in a next step during linking, the implementation / definition of additional functionality will be linked into the final executable as an additional object file. Compiled languages support the combination and use of different functionalities into one final software program.
+This is a more complex example that shows how to add functionality to a main.cpp file by including two different header files. The corresponding definition files are not affected by the inclusion. Including different header files will affect the compilation as the additional information will be compiled into the object files. Then, in a next step during linking, the implementation/definition of additional functionality will be linked into the final executable as an additional object file. Compiled languages support the combination and use of different functionalities into one final software program.
 
 ![header_source_02](assets/header_cpp_02.png)  
 *Source: https://www.learncpp.com/cpp-tutorial/header-files/*
