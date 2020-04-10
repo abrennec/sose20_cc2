@@ -27,6 +27,8 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [The C++ Build Process](#the-c-build-process)
   - [Errors during Building](#errors-during-building)
 - [Reading Material](#reading-material)
+  - [Recap](#recap)
+  - [Precap](#precap)
 
 ---
 
@@ -137,13 +139,17 @@ It is important to understand that you have to build the example applications wi
 - *.**xcodeproject** for XCode  
 - *.**sln** for Visual Studio
 
-The project files contain all of the necessary information required to build an application. They heavily rely on the openFrameworks folder structure because they search the folders for all of the necessary files and information required to compile, link, and build the application. Any change to the folder structure should therefore be considered carefully as it might break the build process. Once you have opened the project file in the IDE, trigger the build process.
+The project files contain all of the necessary information required to build an application. They heavily rely on the openFrameworks folder structure because they search the folders for all of the necessary files and information required to compile, link, and build the application. *Any change to the folder structure should therefore be considered carefully as it might break the build process.* Once you have opened the project file in the IDE, trigger the build process.
 
-Check out this video for an overview:
+Check out this video for an overview on how to build a project **with XCode**:
 
 *Attention: The video may take a couple of minutes to load.*
 
 [![building an ofExample](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/HHNJ7KAatV4l8mo)
+
+Check out this snapshot tutorial for an overview on how to build a project **with Visual Studio Community 2017**:
+
+[![building an ofExample](assets/tutorial.png)](additional_material/visual_studio_community_hints.md)
 
 ## The C++ Build Process
 
@@ -199,13 +205,17 @@ During the build process, the IDE evaluates the source code, object code and fin
 
 # Reading Material
 
-**Required**
+## Recap 
+
+Revise and Review
+
+- [openFrameworks folder structure](https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html)
+- [C++ build process](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/)
+
+## Precap
+
+Prepare and Preview
 
 - [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
 - [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
 - [openFrameworks functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
-
-**Recapitulation**
-- [openFrameworks folder structure](https://openframeworks.cc/ofBook/chapters/setup_and_project_structure.html)
-- [C++ build process](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/)
-
