@@ -472,7 +472,7 @@ int add(int x, int y)
 ```
 
 
-Finally, in the last source code Example 3, everything works fine again. The add(...) function has been declared at the top of the source code. As a result, the compiler knows about its existence when it reaches main() function.
+Finally, in the last source code **Example 3**, everything works fine again. The add(...) function has been declared at the top of the source code. As a result, the compiler knows about its existence when it reaches main() function.
 
 ```cpp
 // Example 3: This example will compile fine.
@@ -543,7 +543,7 @@ The introduction of header and definition files can be considered a continuation
 - **The header file** is used **to declare** all of the functionality. 
 - **The definition file** is used **to define and implement** all of the funtionality.
 
-Apart from code organization this also has the advantage that it allows to separate a concept from a specific implementation as we have seen with the ofApp class. Let us review the idea and how it is related with the general C++ build process with the help of this illustration:
+Apart from code organization this also has the advantage that it allows to separate a concept from a specific implementation as we have seen with the ofApp class. Review the idea and how it is related with the general C++ build process with the help of this illustration:
 
 ![header_source_02](assets/header_cpp_02.png)  
 *Source: https://www.learncpp.com/cpp-tutorial/header-files/*
