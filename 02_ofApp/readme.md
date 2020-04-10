@@ -644,4 +644,5 @@ Revise and Review
 
 Prepare and Preview
 
-
+- [Object-oriented Programming (OOP) & openFrameworks/C++](https://openframeworks.cc/ofBook/chapters/OOPs!.html)
+  - Note that this introduction is not flawless but it gives you a good idea about how OOP works with openFrameworks
