@@ -20,16 +20,19 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
     - [User-defined Types](#user-defined-types)
   - [Variables](#variables)
     - [Declaration](#declaration)
-    - [Initialization](#initialization)
-    - [Assignment](#assignment)
+    - [Definition](#definition)
+      - [Definition by Initialization](#definition-by-initialization)
+      - [Definition by Assignment](#definition-by-assignment)
   - [Functions](#functions)
     - [The main Function](#the-main-function)
-    - [Declaration & Definition](#declaration--definition)
+    - [Declaration](#declaration-1)
+    - [Definition](#definition-1)
     - [Sequential Code Execution](#sequential-code-execution)
+  - [Header and Definition Files](#header-and-definition-files)
 - [Building an ofApp](#building-an-ofapp)
   - [ProjectGenerator](#projectgenerator)
   - [The ofApp](#the-ofapp)
-  - [Header and Definition Files](#header-and-definition-files)
+    - [ofApp - Header and Defintion Files](#ofapp---header-and-defintion-files)
     - [Further Considerations](#further-considerations)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
@@ -320,7 +323,7 @@ There are different forms of variable initialization in C++ that you will find i
 
 ### Declaration
 
-**Variable declaration** - The declaration of a variable simply tells the compiler about the existence of a variable. Most compilers automatically assign a random value to a declared variable. This might result in undefined behavior depending on how stable the source code is. It is therefore recommended to always initialize variables.
+A **variable declaration** informs the compiler about the existence of a variable. Most compilers automatically assign a random value to a declared variable. This might result in undefined behavior depending on how stable the source code is. It is therefore recommended to always initialize variables.
 
 Declarations of auto variables are not allowed. This is becaues the compiler deduces the actual type of the variable automatically during compile time and based on the value assigned to the variable.
 ```cpp
@@ -329,7 +332,12 @@ auto grade;         // this will result in a compile time error
 auto grade2 {8};    // this works but is an initialization instead of a declaration
 ```
 
-### Initialization
+
+### Definition
+
+A **variable definition** is the process of storing an actual value in the variable. In C++, there are basically two ways to define a variable, i.e., initialization and assignment.
+
+#### Definition by Initialization
 
 Initialization describes the process of specifying the value of a variable upon its creation. **To avoid undefined behavior, always initialize a variable.**
 
@@ -346,13 +354,14 @@ int years = 4;
 auto years = 4 + 3; 
 ```
 
-### Assignment 
+#### Definition by Assignment 
 
 **Copy assignments** - When changing the value of a variable, the new value is copied into the variable's slot in memory. 
 ```cpp
 auto years {5};
 years = 12;         // copy assignment
 ```
+
 
 ## Functions
 
@@ -370,12 +379,17 @@ bool myFunction(int x, int y /* .. more or less or none */ ) {
 }
 ```
 
-As such, a function is defined by these parts:
+As such, a function is defined by
 
-* the function name — "bool ***myFunction*** (int x, int y) { ... }"
-* the return type — "***bool*** myFunction (int x, int y) { ... }"
-* the parameter list — "bool myFunction ***(int x, int y)*** { ... }"
-* the function body — "bool myFunction (int x, int y) ***{ ... }***"
+* the function name 
+* the return type
+* the parameter list (which can range from no parameter to multiple parameters)
+* the function body
+
+... as is also illustrated in the following diagram:
+
+![openFrameworks folder structure](assets/function.png)
+*Copyright by Franziska Pätzold*
 
 
 ### The main Function
@@ -393,7 +407,7 @@ int main () {
 ```
 
 
-### Declaration & Definition
+### Declaration
 
 A **function declaration** informs the compiler about the existence of a function similar to a variable declaration. It is defined by **function prototype** which includes
 
@@ -408,6 +422,8 @@ but no function body like so:
 bool myFunction(int x, int y);
 ```
 
+### Definition
+
 A **function definition** in contrast additionally includes the function body like so: 
 
 ```c++
@@ -420,6 +436,18 @@ bool myFunction(int x, int y) {
     return myBoolVariable;
 }
 ```
+Hence, similar to a variable's definition, the function definition provides the actual functionality required when calling the function. By the way, when calling a function the values passed to the function are called **function arguments**. Review the following example:
+
+```cpp
+// ...
+int xVal{50};
+int yVal{40};
+bool result = myFunction(xVal, yVal);
+// ...
+```
+
+The variables xVal and yVal are referred to as the function arguments passed on from the caller to the function. 
+
 
 ### Sequential Code Execution
 
@@ -498,7 +526,45 @@ int add(int x, int y)
 
 To this context let me add another aspect: Review **Example 3** one more time. Imagine the function definition of add(...) would not have been added to the code. It is the declaration alone that is available. In this case, the IDE would not throw a compiler error, but a linker error. Because the actual object code required to execute the add(...) function is not available. 
 
-To wrap this section up, please not that the separation of declaration and definition is an essential aspect of source code management. The use of header and definition files that is common in C++ programming is simply an continuation of this approach to manage large software projects. As such, it is also an integral part of software design.
+## Header and Definition Files
+
+Please not that the separation of declaration and definition described earlier is an essential aspect of source code management as well as software design in C++. The introduction of header (\*.h) and definition (\*.cpp) files can be considered a continuation of this separation. 
+
+- **The header file**  is used **to declare** all of the functionality. 
+- **The definition file**  is used **to define and implement** all of the funtionality.
+
+Referring back to the previous example, you would split the source code into two files, a header file, e.g., add.h and a cpp file, e.g., main.cpp. Then, in order to actually include the declaration of the add-function into main.cpp, at the top of the main.cpp file you have to put the **#include** preprocessor directive. The following code snippets illustrate the approach:
+
+```cpp
+// add.h
+
+int add(int x, int y);
+```
+
+```cpp
+// main.cpp
+
+#include add.h   
+
+int main()
+{
+    int first{12};
+    int second{45};
+
+    int result = add(first, second);
+
+    return 0;
+}
+
+int add(int x, int y)
+{
+    return x + y;
+}
+```
+
+During the build process, the preprocessor searches for these kinds of directives and automatically includes the content of the corresponding header file into the cpp file. Hence, after the preprocessing step, the main.cpp would look exactly like in the code snippet of **Example 3** above.
+
+This approach is used to manage larger software projects and to clearly distinguish between software interface and implementation details. We will look at it closely and by example of ofApp in the next section.
 
 
 # Building an ofApp
@@ -518,7 +584,7 @@ Check out this screencast to learn how to use the ProjectGenerator:
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![openFrameworks folder structure](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/opsHlLvjIZTYOBs)
+[![openFrameworks folder structure](assets/screencast.png)](https://owncloud.gwdg.de)
 
 
 ## The ofApp
@@ -533,34 +599,34 @@ Check out this screencast to learn about creating and building a custom of App:
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![openFrameworks folder structure](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/opsHlLvjIZTYOBs)
+[![openFrameworks folder structure](assets/screencast.png)](https://)
+
+### ofApp - Header and Defintion Files
+
+The follwoing illustration outlines how the different source files required to build an ofApp depend on each other. Read from top to bottom to additionally follow the different steps of the build process:
+
+![header_source_02](assets/ofApp_header_definition.png)  
+*Copyright by Franziska Pätzold*
+
+The following screencast will take a closer look at the different steps and related source files. Also, you will learn about another important preprocessor directive call **#pragma once**:
+
+*Attention: The video may take a couple of minutes to load.*
+
+[![openFrameworks folder structure](assets/screencast.png)](https://)
 
 
-## Header and Definition Files
 
-The introduction of header and definition files can be considered a continuation of the separation of declaration and definition described earlier.
-
-- **The header file** is used **to declare** all of the functionality. 
-- **The definition file** is used **to define and implement** all of the funtionality.
-
-Apart from code organization this also has the advantage that it allows to separate a concept from a specific implementation as we have seen with the ofApp class. Review the idea and how it is related with the general C++ build process with the help of this illustration:
-
-![header_source_02](assets/header_cpp_02.png)  
-*Source: https://www.learncpp.com/cpp-tutorial/header-files/*
-
-This is a more complex example that shows how to add functionality to a main.cpp file by including two different header files. The corresponding definition files are not affected by the inclusion. Including different header files will affect the compilation as the additional information will be compiled into the object files. Then, in a next step during linking, the implementation / definition of additional functionality will be linked into the final executable as an additional object file. Compiled languages support the combination and use of different functionalities into one final software program.
+<!-- The example shows how to add functionality to a main.cpp file by including two different header files. The corresponding definition files are not affected by the inclusion. Including different header files will affect the compilation as the additional information will be compiled into the object files. Then, in a next step during linking, the implementation / definition of additional functionality will be linked into the final executable as an additional object file. Compiled languages support the combination and use of different functionalities into one final software program. -->
 
 
 ### Further Considerations
 
- with a strong aspect on software design
-In particular, header and definition files clearly support to separate 
+Header and definition files clearly support to separate 
 
-- software interfaces (e.g., like declarations) from 
-- implementation details (e.g., like definitions)
+- *the what* - software interfaces (e.g., like declarations) from 
+- *the how* - implementation details (e.g., like definitions).
 
-Software interfaces describe **what** kind of functionality is available whereas implementation details describe **how** the functionality is  implemented. It makes sense to separate both aspects, for example, when you think of OpenGL which provides a common software interface (API) and at the same time comes with different OpenGL implementations (OpenGL libraries/drivers) per platform and graphics card. 
-
+Software interfaces describe **what** kind of functionality is available whereas implementation details describe **how** the functionality is implemented. It makes sense to separate both aspects, for example, when you think of OpenGL which provides a common software interface (API) and at the same time comes with different OpenGL implementations (OpenGL libraries/drivers) per platform and graphics card. The same is true in the context of the openFrameworks SDK.
 
 # Reading Material
 
@@ -571,6 +637,7 @@ Revise and Review
 - [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
 - [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
 - [Variables and Types](http://www.cplusplus.com/doc/tutorial/variables/)
+- [Header and definition files](https://www.learncpp.com/cpp-tutorial/header-files/)
 - [openFrameworks functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
 
 ## Precap
