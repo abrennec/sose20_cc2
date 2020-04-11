@@ -11,27 +11,45 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 # Assignments
 
-## 1 Creative Coding
+_Meaningful_ bullet points are sufficient to answer the questions.
 
-Zach Lieberman is one of the creators and developers of openFrameworks. He works as an artist, developer, educator and posts new sketches on his Instagram on a regular basis. 
+### 1 Creative Coding | 2 pts
 
-Check out [this talk](https://www.youtube.com/watch?v=xx1eeoo_xnY) of Zach Lieberman on the creative career of the future and creative coding. 
+- What does creative coding mean to you?
+- What kind of Art pieces does really appeal to you? Pick one piece and share it with the group through the Wiki at the [Art-Pieces Page](https://github.com/ctechfilmuniversity/lecture_creative_coding_2/wiki/Art-Pieces)
+
+Here is also some inspiration: Zach Lieberman is one of the creators and developers of openFrameworks. He works as an artist, developer, educator and posts new sketches on his Instagram on a regular basis. Check out [this talk](https://www.youtube.com/watch?v=xx1eeoo_xnY) of Zach Lieberman to learn more about his work. 
 
 <!-- - [Interview with Zach Lieberman](https://www.theverge.com/2019/5/10/18564182/zach-lieberman-interactive-art-animation-movement-openframeworks-art-club)
 - [Talk of Zach Lieberman](https://www.youtube.com/watch?v=bmztlO9_Wvo) -->
 
-- How do you relate to the Art works presented?
-- What kind of Art pieces does really appeal to you? Pick one piece and share it with the group.
-- What does creative coding mean for you?
 
+### 2 Interface & Implementation | 2 pt
 
-## 2 Practical Exercises 
+In the script, you learned about software interface and implementation details. Explain briefly what is meant by each of the terms and how they relate to the concepts of  *declaration* and *definition*.
 
-### 2.1 | max. 5 pts
+### 3 ProjectGenerator | 2 pt
 
-### 2.2 | max. 15 pts
+What is the openFrameworks ProjectGenerator and how does it relate to the openFrameworks folder structure and the build process? 
 
-- sine wave examples
-- move something around
-- get used to the documentation
-- find out about a function inside of the code
+### 4 Sine Waves | 4 pts
+
+Check out the code folder in the repository. Inside of it, you'll find openFramworks apps by Zach Liebermann from one of his classes. 
+
+- Build and run the examples, create the project files with the help of the ProjectGenerator. Review and understand the code.
+  - What is ofGetElapsedTimef() function doing?
+  - What is ofMap(..) function doing?
+- Pick at least one of the examples that appeals to you most and change it to your liking. Try some of these modifications:
+  - Work with changes of timing and size.
+  - Change the sin functions.
+  - Add color to the piece and use the sin function to change the color values.
+  - Mix ideas from the examples.
+- Add interaction
+  - Use ofGetMouseX() and / or ofGetMouseY() to integrate mouse feedback into the piece.
+
+### 5 Bonus | 5 pts
+
+This is an advanced exercise if you feel bored with the rest. Integrate all the different sine wave visualizations from 2.2 into one ofApp. 
+- Create a drawing function for each visualization.
+- Make use of ofKeyPressed(..) to switch between the visualizations. 
+- *Hint:* In order to evaluate which drawing function you select, you need to add a **member variable** to the ofApp class. 
