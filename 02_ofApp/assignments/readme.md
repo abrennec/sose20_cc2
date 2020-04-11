@@ -24,7 +24,7 @@ Here is also some inspiration: Zach Lieberman is one of the creators and develop
 - [Talk of Zach Lieberman](https://www.youtube.com/watch?v=bmztlO9_Wvo) -->
 
 
-### 2 Interface & Implementation | 2 pt
+### 2 Interface & Implementation | 1 pt
 
 In the script, you learned about software interface and implementation details. Explain briefly what is meant by each of the terms and how they relate to the concepts of  *declaration* and *definition*.
 
@@ -32,7 +32,7 @@ In the script, you learned about software interface and implementation details. 
 
 What is the openFrameworks ProjectGenerator and how does it relate to the openFrameworks folder structure and the build process? 
 
-### 4 Sine Waves | 4 pts
+### 4 Sine Waves | 5 pts
 
 Check out the code folder in the repository. Inside of it, you'll find openFramworks apps by Zach Liebermann from one of his classes. 
 

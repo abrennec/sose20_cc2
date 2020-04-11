@@ -19,7 +19,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Evaluation and Grading](#evaluation-and-grading)
 - [Communication & Materials](#communication--materials)
   - [Assignments](#assignments)
-- [Further Resources for the Interested Reader](#further-resources-for-the-interested-reader)
+- [Further Resources for the Interested Reader & References](#further-resources-for-the-interested-reader--references)
   - [Online Resources](#online-resources)
   - [Books](#books)
     - [Creative Coding](#creative-coding)
@@ -216,7 +216,7 @@ obj/
 
 ---
 
-# Further Resources for the Interested Reader
+# Further Resources for the Interested Reader & References
 
 ## Online Resources
 

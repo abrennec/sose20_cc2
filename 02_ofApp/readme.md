@@ -102,7 +102,7 @@ myOtherVar = "hello";
 myVar = myOtherVar;     // not working, compile time error
 ```
 
-Meanwhile, a new type specifier *auto* has been introduced to C++. This type specifier supports automatic type deduction. With *auto* you can write code similar to Javascript but you still have to associate the actual data type that is being stored in the variable specified by auto like so:
+Meanwhile, a new type specifier **auto** has been introduced to C++. This type specifier supports *automatic type deduction*. With **auto** you can write code similar to Javascript but you still have to associate the actual data type that is being stored in the variable specified by **auto** like so:
 
 ```cpp
 auto myVar;         // not working, compile time error - this way the 
@@ -300,14 +300,13 @@ Exemplary myClass.cpp:
 ```cpp
 #include "myClass.h"
 
-//--------------------------------------------------------------
+
 void myClass::setCoordinates(int xCoord, int yCoord) {
 
     x = xCoord;
     y = yCoord;
 }
 
-//--------------------------------------------------------------
 bool myClass::getVisibility(){
 
     return isVisible;
@@ -584,7 +583,7 @@ Check out this screencast to learn how to use the ProjectGenerator:
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![openFrameworks folder structure](assets/screencast.png)](https://owncloud.gwdg.de)
+[![ofProjectGenerator](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/mquFo9hIpdorIfY)
 
 
 ## The ofApp
@@ -599,7 +598,7 @@ Check out this screencast to learn about creating and building a custom of App:
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![openFrameworks folder structure](assets/screencast.png)](https://)
+[![ofApp](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/Yw8nExfxIHP5iKx)
 
 ### ofApp - Header and Defintion Files
 
@@ -608,11 +607,14 @@ The follwoing illustration outlines how the different source files required to b
 ![header_source_02](assets/ofApp_header_definition.png)  
 *Copyright by Franziska Pätzold*
 
-The following screencast will take a closer look at the different steps and related source files. Also, you will learn about another important preprocessor directive call **#pragma once**:
+The following screencast (split into two parts) will take a closer look at the different steps and related source files. Also, you will learn about another important preprocessor directive call **#pragma once**:
 
-*Attention: The video may take a couple of minutes to load.*
+*Attention: The videos may take a couple of minutes to load.*
 
-[![openFrameworks folder structure](assets/screencast.png)](https://)
+- [Part 1](https://owncloud.gwdg.de/index.php/s/N3qRuZN3NTNVHEL)
+- [Part 2](https://owncloud.gwdg.de/index.php/s/ZeG8gPKhV0PtiiV)
+
+![ofApp Header and Definition files](assets/screencast.png)
 
 
 
@@ -636,9 +638,10 @@ Revise and Review
 
 - [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
 - [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
+- [Statically vs Dynamically Typed](https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages)
 - [Variables and Types](http://www.cplusplus.com/doc/tutorial/variables/)
-- [Header and definition files](https://www.learncpp.com/cpp-tutorial/header-files/)
-- [openFrameworks functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
+- [Header and Definition Files](https://www.learncpp.com/cpp-tutorial/header-files/)
+- [openFrameworks Functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
 
 ## Precap
 
