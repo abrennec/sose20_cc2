@@ -13,7 +13,8 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 _Meaningful_ bullet points are sufficient to answer the questions.
 
-### 1 Creative Coding | 2 pts
+## 1) Artistic (2 pts)
+### 1.1 Creative Coding
 
 - What does creative coding mean to you?
 - What kind of Art pieces does really appeal to you? Pick one piece and share it with the group through the Wiki at the [Art-Pieces Page](https://github.com/ctechfilmuniversity/lecture_creative_coding_2/wiki/Art-Pieces)
@@ -23,16 +24,25 @@ Here is also some inspiration: Zach Lieberman is one of the creators and develop
 <!-- - [Interview with Zach Lieberman](https://www.theverge.com/2019/5/10/18564182/zach-lieberman-interactive-art-animation-movement-openframeworks-art-club)
 - [Talk of Zach Lieberman](https://www.youtube.com/watch?v=bmztlO9_Wvo) -->
 
+## 2) Recap (4 pts)
+### 2.1 Statically vs Dynamically Typed
 
-### 2 Interface & Implementation | 1 pt
+- What is the difference between statically and dynamically typed languages and what is special about the C++ type specifier **auto**?
 
-In the script, you learned about software interface and implementation details. Explain briefly what is meant by each of the terms and how they relate to the concepts of  *declaration* and *definition*.
+### 2.2 Interface & Implementation
 
-### 3 ProjectGenerator | 2 pt
+- Explain briefly what is meant by each of the terms and how they relate to the concepts of  *declaration* and *definition*.
 
-What is the openFrameworks ProjectGenerator and how does it relate to the openFrameworks folder structure and the build process? 
+### 2.3 ProjectGenerator
 
-### 4 Sine Waves | 5 pts
+- What is the openFrameworks ProjectGenerator? How does it relate to the openFrameworks folder structure and build process? 
+
+### 2.4 pragma once
+
+- What is **pragma once** and in which context do you need it?
+
+## 3 Programming (4 pts)
+### 3.1 Sine Waves
 
 Check out the code folder in the repository. Inside of it, you'll find openFramworks apps by Zach Liebermann from one of his classes. 
 
@@ -47,7 +57,7 @@ Check out the code folder in the repository. Inside of it, you'll find openFramw
 - Add interaction
   - Use ofGetMouseX() and / or ofGetMouseY() to integrate mouse feedback into the piece.
 
-### 5 Bonus | 5 pts
+## Bonus (5 pts)
 
 This is an advanced exercise if you feel bored with the rest. Integrate all the different sine wave visualizations from 2.2 into one ofApp. 
 - Create a drawing function for each visualization.

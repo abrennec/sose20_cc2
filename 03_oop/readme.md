@@ -16,17 +16,29 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 
 - oop
-  - encapsulation
   - abstraction
+    - concept
+    - level of abstraction
+  - encapsulation
+    - access levels
+    - header and definiton
   - inheritance
+    - grouping of functionality
+    - hierarchy
   - polymorphism
-- cpp class
+    - object management
+- oop & cpp class design
   - constructor
   - destructor
   - member variables
   - member functions
   - access levels
-- inheritance
+  - base classes
+  - virtual constructor
+
+
+
+- stl
 
 - fbo
 
@@ -64,6 +76,12 @@ Revise and Review
 
 - [Object-oriented Programming (OOP) & openFrameworks/C++](https://openframeworks.cc/ofBook/chapters/OOPs!.html)
   - Note that this introduction is not flawless but it gives you a good idea about how OOP works with openFrameworks
+- Abstraction and Design Aspects
+  - FluentCpp
+  - Clean Code
+- Standard Library 
+  - Additional Material
+  - learncpp
 
 ## Precap
 
