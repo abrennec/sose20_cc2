@@ -402,7 +402,9 @@ bool myFunction(int x, int y /* .. more or less or none */ ) {
 
 As such, a function is defined by the **function name**,  the **return type**, the **parameter list** (which can range from no parameter to multiple parameters), and the **function body** as is also illustrated in the following diagram:
 
-![openFrameworks folder structure](assets/function.png)
+
+<img src="https://user-images.githubusercontent.com/22836416/79117144-a414b200-7d8a-11ea-860d-709f84f19503.png"  alt="funtion description" width="300"/>
+
 *Copyright by Franziska Pätzold*
 
 
@@ -619,7 +621,9 @@ Check out this screencast to learn about creating and building a custom of App:
 
 The follwoing illustration outlines how the different source files required to build an ofApp depend on each other. Read from top to bottom to additionally follow the different steps of the build process:
 
-![header_source_02](assets/ofApp_header_definition.png)  
+
+<img src="https://user-images.githubusercontent.com/22836416/79117267-f8b82d00-7d8a-11ea-844f-e14bf3e9b593.png"  alt="ofApp header definition" width="500"/>
+
 *Copyright by Franziska Pätzold*
 
 The following screencast (split into two parts) will take a closer look at the different steps and related source files. Also, you will learn about another important preprocessor directive call **#pragma once**:
