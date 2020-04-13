@@ -28,12 +28,12 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
     - [The main Function](#the-main-function)
     - [Declaration](#declaration-1)
     - [Definition](#definition-1)
-    - [Sequential Code Execution](#sequential-code-execution)
+  - [Sequential Code Execution](#sequential-code-execution)
   - [Header and Definition Files](#header-and-definition-files)
 - [Building an ofApp](#building-an-ofapp)
   - [ProjectGenerator](#projectgenerator)
   - [The ofApp](#the-ofapp)
-    - [ofApp - Header and Defintion Files](#ofapp---header-and-defintion-files)
+  - [ofApp - Header and Defintion Files](#ofapp---header-and-defintion-files)
 - [Debugging](#debugging)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
@@ -463,7 +463,7 @@ bool result = myFunction(xVal, yVal);
 The variables xVal and yVal are referred to as the function arguments passed on from the caller to the function. 
 
 
-### Sequential Code Execution
+## Sequential Code Execution
 
 The separation of function declaration and function definition is primarily due to the [sequential execution of C++ source](https://www.learncpp.com/cpp-tutorial/introduction-to-the-compiler-linker-and-libraries/) code. It helps to better organize the code. Programmers can simply list all of the functions used in the programm at the top of the source code (or in the header file) in the form of function declarations. This way, the compiler knows exactly what kind of functions have been defined - or are supposed to be defined - before evaluating the actual function definitions. 
 
@@ -615,7 +615,7 @@ Check out this screencast to learn about creating and building a custom of App:
 
 [![ofApp](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/Yw8nExfxIHP5iKx)
 
-### ofApp - Header and Defintion Files
+## ofApp - Header and Defintion Files
 
 The follwoing illustration outlines how the different source files required to build an ofApp depend on each other. Read from top to bottom to additionally follow the different steps of the build process:
 

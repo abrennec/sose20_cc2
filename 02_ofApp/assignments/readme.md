@@ -61,5 +61,6 @@ Check out the code folder in the repository. Inside of it, you'll find openFramw
 
 This is an advanced exercise if you feel bored with the rest. Integrate all the different sine wave visualizations from 2.2 into one ofApp. 
 - Create a drawing function for each visualization.
-- Make use of ofKeyPressed(..) to switch between the visualizations. 
-- *Hint:* In order to evaluate which drawing function you select, you need to add a **member variable** to the ofApp class. 
+- Make use of ofKeyPressed(..) to switch between the visualizations (refer to the blendingExample from the previous session for more details on how to achieve this).
+- Would it be possible to blend between the visualizations? 
+  - If so, how could you do this?
