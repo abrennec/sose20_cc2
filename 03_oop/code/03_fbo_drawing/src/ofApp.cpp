@@ -1,30 +1,23 @@
-
-
-
 #include "ofApp.h"
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+    
+    fbo.allocate(ofGetWidth(), ofGetHeight());
+    fbo.begin();
+    ofClear(255, 255, 255);
+    fbo.end();
+}
 
-    ofSetCircleResolution(100);
+//--------------------------------------------------------------
+void ofApp::update(){
+
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
-    int myMouseX = ofGetMouseX();
-    int myMouseY = ofGetMouseY();
     
-    // std -> C++ standard library
-    // std::cout -> console output
-    // << operator -> "piping" data to console output
-    // std::endl -> end the output and add a newline 
-    std::cout << "mouse x   " << myMouseX << std::endl;
-    
-    ofBackground(0);
-    ofSetColor(255);
-    ofDrawCircle(myMouseX, myMouseY, 45);
-    
+    fbo.draw(0, 0);
 }
 
 //--------------------------------------------------------------
@@ -33,8 +26,21 @@ void ofApp::keyPressed(int key){
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseDragged(int x, int y, int button){
+void ofApp::keyReleased(int key){
 
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseMoved(int x, int y ){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseDragged(int x, int y, int button){
+    
+    fbo.begin();
+    ofDrawCircle(x, y, 30);
+    fbo.end();
 }
 
 //--------------------------------------------------------------
@@ -44,16 +50,6 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseEntered(int x, int y){
-
-}
-
-//--------------------------------------------------------------
-void ofApp::mouseExited(int x, int y){
 
 }
 

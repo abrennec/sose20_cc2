@@ -25,26 +25,24 @@ Here is also some inspiration: Zach Lieberman is one of the creators and develop
 - [Talk of Zach Lieberman](https://www.youtube.com/watch?v=bmztlO9_Wvo) -->
 
 ## 2) Recap (4 pts)
-### 2.1 Statically vs Dynamically Typed
 
-- What is the difference between statically and dynamically typed languages and what is special about the C++ type specifier **auto**?
+Check out the code folder in the repository. Inside of it, you'll find two erroneous sketches
 
-### 2.2 Interface & Implementation
+- **myRomanticSketch**, which got broken after the screencast and needs fixing; building results in 3 linker errors.
+- **myStridePatternSketch**, which is even worse and contains several compile-time (4 issues need to be fixed) and linker errors (1 issue needs to be fixed).
 
-- Explain briefly what is meant by each of the terms and how they relate to the concepts of  *declaration* and *definition*.
+Your task is to:
 
-### 2.3 ProjectGenerator
+- Import the projects using ProjectGenerator.
+- Build the projects and understand what causes the compiler and linker errors.
+- Fix the issues and run the applications.
 
-- What is the openFrameworks ProjectGenerator? How does it relate to the openFrameworks folder structure and build process? 
+In your assignment folder, push back the fixed source files. Note down in an *.md file what were the issues that needed to be fixed.
 
-### 2.4 pragma once
-
-- What is **pragma once** and in which context do you need it?
-
-## 3 Programming (4 pts)
+## 3) Programming (4 pts)
 ### 3.1 Sine Waves
 
-Check out the code folder in the repository. Inside of it, you'll find openFramworks apps by Zach Liebermann from one of his classes. 
+Check out the code folder in the repository. Inside of it, you'll find openFramworks apps by Zach Liebermann from one of his classes: 01_sine to 04_sine.
 
 - Build and run the examples, create the project files with the help of the ProjectGenerator. Review and understand the code.
   - What is ofGetElapsedTimef() function doing?
