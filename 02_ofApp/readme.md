@@ -21,8 +21,9 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Variables](#variables)
     - [Declaration](#declaration)
     - [Definition](#definition)
-      - [Definition by Initialization](#definition-by-initialization)
-      - [Definition by Assignment](#definition-by-assignment)
+      - [Uniform Initialization](#uniform-initialization)
+      - [Initialization & Assignment](#initialization--assignment)
+      - [Copy Assignment](#copy-assignment)
   - [Functions](#functions)
     - [The main Function](#the-main-function)
     - [Declaration](#declaration-1)
@@ -49,7 +50,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 - Developing a first ofApp
 - Debugging
 
-Time Estimate: This session will approximately take 4-6 hours of time in total including script and assignments. It compensates slightly for the last session that might have taken less than 8 hours. Please send me a note how much time you took for the las
+`Time Estimate: This session will approximately take 6 hours of time in total including script and assignments. It compensates slightly for the last session that might have taken less than 8 hours. Please send me a note how much time it took you to work through the material.`
 
 
 # C++ Basics
@@ -328,7 +329,7 @@ There are different forms of variable initialization in C++ that you will find i
 
 A **variable declaration** informs the compiler about the existence of a variable. Most compilers automatically assign a random value to a declared variable. This might result in undefined behavior depending on how stable the source code is. It is therefore recommended to always initialize variables.
 
-Declarations of auto variables are not allowed. This is becaues the compiler deduces the actual type of the variable automatically during compile time and based on the value assigned to the variable.
+Declarations of **auto** variables are not allowed. This is becaues the compiler deduces the actual type of the variable automatically during compile time and based on the value assigned to the variable.
 ```cpp
 bool test; 
 auto grade;         // this will result in a compile time error 
@@ -338,29 +339,47 @@ auto grade2 {8};    // this works but is an initialization instead of a declarat
 
 ### Definition
 
-A **variable definition** is the process of storing an actual value in the variable. In C++, there are basically two ways to define a variable, i.e., initialization and assignment.
+A **variable definition** is the process of storing an actual value in the variable. In C++, there are basically two ways to define a variable, i.e., initialization and assignment:
 
-#### Definition by Initialization
+- **Initialization** describes the process of specifying the value of a variable upon its creation in a one-step process.
+- **Assignment** assigns a value to a variable that has already been created in a second step, this is a two-step process. 
+ 
+To avoid undefined behavior, always initialize a variable.
 
-Initialization describes the process of specifying the value of a variable upon its creation. **To avoid undefined behavior, always initialize a variable.**
+#### Uniform Initialization
 
-**Uniform initialization** - This is the new way to initialize variables in C++. Upon variable creation, a value is directly stored in its memory.
 ```c++
+
+// Uniform initialization
+// This is the new way to initialize variables in C++. 
+// Upon variable creation, a value is directly stored in its memory.
+
 float grade {5.0}; 
 auto grade {5.0}; 
 ```
 
-**Copy initialization** - This is the classic way to initialize variables in older C++ versions, it is slower than uniform initalization but still widely used. The variable is created first and in a second step a variable is copied into its memory.
+#### Initialization & Assignment
   
 ```cpp
+// Initialization & assignment
+// This is the classic way to initialize variables in 
+// older C++ versions, it is slower than uniform 
+// initalization but still widely used. The variable is 
+// created first and in a second step a variable is 
+// copied into its memory.
+
 int years = 4;     
 auto years = 4 + 3; 
 ```
 
-#### Definition by Assignment 
+#### Copy Assignment 
 
-**Copy assignments** - When changing the value of a variable, the new value is copied into the variable's slot in memory. 
 ```cpp
+
+// Copy assignment -> uses the "="-operator
+// When changing the value of a variable, the new value 
+// is copied into the variable's slot in memory. 
+
 auto years {5};
 years = 12;         // copy assignment
 ```
@@ -382,14 +401,7 @@ bool myFunction(int x, int y /* .. more or less or none */ ) {
 }
 ```
 
-As such, a function is defined by
-
-* the function name 
-* the return type
-* the parameter list (which can range from no parameter to multiple parameters)
-* the function body
-
-... as is also illustrated in the following diagram:
+As such, a function is defined by the **function name**,  the **return type**, the **parameter list** (which can range from no parameter to multiple parameters), and the **function body** as is also illustrated in the following diagram:
 
 ![openFrameworks folder structure](assets/function.png)
 *Copyright by Franziska Pätzold*
