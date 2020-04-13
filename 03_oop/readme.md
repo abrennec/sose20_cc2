@@ -79,7 +79,7 @@ Revise and Review
 - Abstraction and Design Aspects
   - FluentCpp
   - Clean Code
-- Standard Library 
+- [C++ Standard Library](http://www.cppforschool.com/tutorial/libraryfunc.html)
   - Additional Material
   - learncpp
 

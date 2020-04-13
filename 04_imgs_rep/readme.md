@@ -652,14 +652,12 @@ Most important debug functions are
 - **stepping into** a function
 - **stepping out** of a function
 
-Check out this next screencast to learn how to **debug in XCode**. 
+Check out this screencast to learn how to **debug in XCode**:
 
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![debugging](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/C4MdwBTcd9C7zQN)
-
-In the screencast you also learned about how to print information to the console. Check this link to recap how to use the C++ Standard Library and **[std::cout](http://www.cppforschool.com/tutorial/input-output-statement-in-cplusplus.html)**.
+[![debugging](assets/screencast.png)]()
 
 
 Debugging in Visual Studio Community is similar but comes with a slightly different UI. There is additional material available on how to start **debugging with Visual Studio Community** prepared for you in this tutorial:
@@ -673,18 +671,15 @@ Debugging in Visual Studio Community is similar but comes with a slightly differ
 Revise and Review
 
 - [C++ basics](https://openframeworks.cc/ofBook/chapters/cplusplus_basics.html) 
-- [cpplearn.com](https://www.learncpp.com): 
-  - Check chapters 1 & 2 on C++ syntax
-  - Check chapter 3 on debugging
-- [Statically vs Dynamically Typed Languages](https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages)
-- [Variables and Types in C++](http://www.cplusplus.com/doc/tutorial/variables/)
+- [cpplearn.com](https://www.learncpp.com): Skim through chapters 1 & 2, read sections 1.1 to 1.4 and 2.1 to 2.3 carefully.
+- [Statically vs Dynamically Typed](https://stackoverflow.com/questions/1517582/what-is-the-difference-between-statically-typed-and-dynamically-typed-languages)
+- [Variables and Types](http://www.cplusplus.com/doc/tutorial/variables/)
 - [Header and Definition Files](https://www.learncpp.com/cpp-tutorial/header-files/)
 - [openFrameworks Functions: setup, update, and draw](https://openframeworks.cc/ofBook/chapters/how_of_works.html)
-- [C++ std::cout](http://www.cppforschool.com/tutorial/input-output-statement-in-cplusplus.html)
 
 ## Precap
 
 Prepare and Preview
 
-- [Object-oriented Programming (OOP) Intro](http://www.cppforschool.com/tutorial/oop.html)
-
+- [Object-oriented Programming (OOP) & openFrameworks/C++](https://openframeworks.cc/ofBook/chapters/OOPs!.html)
+  - Note that this introduction is not flawless but it gives you a good idea about how OOP works with openFrameworks
