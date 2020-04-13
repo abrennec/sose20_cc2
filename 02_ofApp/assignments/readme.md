@@ -28,7 +28,7 @@ Here is also some inspiration: Zach Lieberman is one of the creators and develop
 
 Check out the code folder in the repository. Inside of it, you'll find two erroneous sketches
 
-- **myRomanticSketch**, which got broken after the screencast and needs fixing; building results in 3 linker errors.
+- **myRomanticSketch**, which got broken after the screencast and needs fixing; building results in 3 linker errors and 1 compiler issue.
 - **myStridePatternSketch**, which is even worse and contains several compile-time (4 issues need to be fixed) and linker errors (1 issue needs to be fixed).
 
 Your task is to:
