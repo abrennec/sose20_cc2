@@ -34,7 +34,6 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [ProjectGenerator](#projectgenerator)
   - [The ofApp](#the-ofapp)
     - [ofApp - Header and Defintion Files](#ofapp---header-and-defintion-files)
-    - [Further Considerations](#further-considerations)
 - [Debugging](#debugging)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
@@ -635,16 +634,6 @@ The following screencast (split into two parts) will take a closer look at the d
 
 
 <!-- The example shows how to add functionality to a main.cpp file by including two different header files. The corresponding definition files are not affected by the inclusion. Including different header files will affect the compilation as the additional information will be compiled into the object files. Then, in a next step during linking, the implementation / definition of additional functionality will be linked into the final executable as an additional object file. Compiled languages support the combination and use of different functionalities into one final software program. -->
-
-
-### Further Considerations
-
-Header and definition files clearly support to separate 
-
-- *the what* - software interfaces (e.g., like declarations) from 
-- *the how* - implementation details (e.g., like definitions).
-
-Software interfaces describe **what** kind of functionality is available whereas implementation details describe **how** the functionality is implemented. It makes sense to separate both aspects, for example, when you think of OpenGL which provides a common software interface (API) and at the same time comes with different OpenGL implementations (OpenGL libraries/drivers) per platform and graphics card. The same is true in the context of the openFrameworks SDK.
 
 # Debugging
 

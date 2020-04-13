@@ -14,7 +14,6 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 # Object-oriented Programming
 
-
 - oop
   - abstraction
     - concept
@@ -37,6 +36,16 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - virtual constructor
 
 
+### Further Considerations
+
+The [separation of header and definition files](http://www.cppforschool.com/tutorial/separate-header-and-implementation-files.html) clearly supports to distinguish between 
+
+- **the what** - software interfaces (e.g., like declarations) from 
+- **the how** - implementation details (e.g., like definitions)
+
+... on a software design level. 
+
+Software interfaces describe **what** kind of functionality is available whereas implementation details describe **how** the functionality is implemented. It makes sense to separate both aspects, for example, when you think of OpenGL which provides a common software interface (API) and at the same time comes with different OpenGL implementations (OpenGL libraries/drivers) per platform and graphics card. The same is true in the context of the openFrameworks SDK.
 
 - stl
 
@@ -63,7 +72,6 @@ buffer is called Frame Buffer Object (FBO). Naturally, in openFrameworks, this b
 -> Homework
 -> slides
 
-# Debugging
 
 
 
@@ -82,6 +90,8 @@ Revise and Review
 - [C++ Standard Library](http://www.cppforschool.com/tutorial/libraryfunc.html)
   - Additional Material
   - learncpp
+
+- [Separation of header and definition files](http://www.cppforschool.com/tutorial/separate-header-and-implementation-files.html)
 
 ## Precap
 
