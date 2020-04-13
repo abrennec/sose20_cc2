@@ -34,6 +34,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [The ofApp](#the-ofapp)
     - [ofApp - Header and Defintion Files](#ofapp---header-and-defintion-files)
     - [Further Considerations](#further-considerations)
+- [Debugging](#debugging)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
   - [Precap](#precap)
@@ -46,6 +47,9 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 - Understanding header and definition files and their relationship
 - Getting to know openFramework's ProjectGenerator
 - Developing a first ofApp
+- Debugging
+
+`Time Estimate: This session will approximately take 4-6 hours of time in total including script and assignments. It compensates slightly for the last session that might have taken less than 8 hours. Please send me a note how much time you needed.`
 
 
 # C++ Basics
@@ -629,6 +633,36 @@ Header and definition files clearly support to separate
 - *the how* - implementation details (e.g., like definitions).
 
 Software interfaces describe **what** kind of functionality is available whereas implementation details describe **how** the functionality is implemented. It makes sense to separate both aspects, for example, when you think of OpenGL which provides a common software interface (API) and at the same time comes with different OpenGL implementations (OpenGL libraries/drivers) per platform and graphics card. The same is true in the context of the openFrameworks SDK.
+
+# Debugging
+
+Debugging is a development process used to analyze the source code during runtime. This can be very helpful to understand 
+
+- How is the sequence of execution of, i.e., functions in the binary?
+- What are the values currently being stored in or assigned to a variable?
+- What kind of objects are being launched and used inside of the application?
+
+In order to debug a application binary, a **debug version** has to be built in contrast to a **release version**.
+
+Most important debug functions are 
+
+- reviewing the **call stack** which represents the sequence of execution of functions
+- **continuing program execution**
+- **stepping over** a statement or expression
+- **stepping into** a function
+- **stepping out** of a function
+
+Check out this screencast to learn how to **debug in XCode**:
+
+
+*Attention: The video may take a couple of minutes to load.*
+
+[![debugging](assets/screencast.png)]()
+
+
+Debugging in Visual Studio Community is similar but comes with a slightly different UI. There is additional material available on how to start **debugging with Visual Studio Community** prepared for you in this tutorial:
+
+[![building an ofExample](assets/tutorial.png)](additional_material/debugging.md)
 
 # Reading Material
 

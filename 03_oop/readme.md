@@ -65,7 +65,7 @@ buffer is called Frame Buffer Object (FBO). Naturally, in openFrameworks, this b
 
 # Debugging
 
-Debugging is a development process used to analyze the source code during runtime. In the screencast on the ofApp presented earlier, you saw how to start the debugging process in XCode. There is additional material available on how to start debugging with Visual Studio Community prepared for you. In both cases you will previously need to build a debug version of your application, as described in the screencast.
+
 
 
 # Reading Material
