@@ -9,9 +9,27 @@ date: Summer term 20
 
 Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University Babelsberg *KONRAD WOLF*
 
----
+---- 
 
-**Table of Contents**
+**Table of Contents**  
+- [Object-oriented Programming (OOP)](#object-oriented-programming-oop)
+  - [General Concepts](#general-concepts)
+  - [Classes and Objects](#classes-and-objects)
+  - [Constructor and Destructor](#constructor-and-destructor)
+  - [Access Levels](#access-levels)
+  - [General Concepts](#general-concepts-1)
+  - [Inheritance](#inheritance)
+  - [Polymorphism](#polymorphism)
+  - [Design Considerations](#design-considerations)
+- [Adding Objects to an ofApp](#adding-objects-to-an-ofapp)
+  - [A Custom Ball Object (and Class)](#a-custom-ball-object-and-class)
+  - [The Frame Buffer Object](#the-frame-buffer-object)
+- [Additional C++ Specifics](#additional-c-specifics)
+  - [C++ Standard Library](#c-standard-library)
+  - [Type Conversion](#type-conversion)
+- [Reading Material](#reading-material)
+  - [Recap](#recap)
+  - [Precap](#precap)
 
 ---
 
@@ -73,23 +91,23 @@ Member variables are defined inside of the class definition to represent the act
 
 
 ## General Concepts
-  - abstraction
-    - concept
-    - level of abstraction
-  - encapsulation
-    - access levels
-    - header and definiton
+- abstraction
+  - concept
+  - level of abstraction
+- encapsulation
+  - access levels
+  - header and definiton
 
 ## Inheritance 
 
-  - inheritance
-    - grouping of functionality
-    - hierarchy
+- inheritance
+  - grouping of functionality
+  - hierarchy
 
 ## Polymorphism 
 
-  - polymorphism
-    - object management
+- polymorphism
+  - object management
 
 
 
@@ -104,11 +122,13 @@ The [separation of header and definition files](http://www.cppforschool.com/tuto
 
 Software interfaces describe **what** kind of functionality is available whereas implementation details describe **how** the functionality is implemented. It makes sense to separate both aspects, for example, when you think of OpenGL which provides a common software interface (API) and at the same time comes with different OpenGL implementations (OpenGL libraries/drivers) per platform and graphics card. The same is true in the context of the openFrameworks SDK.
 
-# The C++ Standard Library
+
+# Adding Objects to an ofApp
+
+## A Custom Ball Object (and Class)
 
 
-
-# opfenFrameworks - The Frame Buffer Object
+## The Frame Buffer Object
 
 openFrameworks Essentials:
 
@@ -126,7 +146,11 @@ buffer is called Frame Buffer Object (FBO). Naturally, in openFrameworks, this b
 - https://github.com/jesusgollonet/ofpennereasing
 
 
-# Type Conversion
+# Additional C++ Specifics
+
+## C++ Standard Library 
+
+## Type Conversion
 
 -> Homework
 -> slides
