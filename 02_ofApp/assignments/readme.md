@@ -55,7 +55,7 @@ Check out the code folder in the repository. Inside of it, you'll find openFramw
   - Add color to the piece and use the sin function to change the color values.
   - Mix ideas from the examples.
 - Add interaction
-  - Use ofGetMouseX() and / or ofGetMouseY() to integrate mouse feedback into the piece.
+  - Use ofGetMouseX() and/or ofGetMouseY() to integrate mouse feedback into the piece.
 
 ## Bonus (5 pts)
 
