@@ -125,11 +125,7 @@ Additionally, classes consist of
 ### Constructor & Destructor
 
 Every class has two special member functions called 
-constructor and destructor. As the name suggests, the constructor is required to **construct** the object and to initialize all of the data members of the class whereas the destructor is required to properly **destroy** the object and its data members when its lifetime ends.
-
-**Please** [refer to this explanation](http://www.cppforschool.com/tutorial/constructor.html) to get a better understanding of the functionality.
-
-Every C++ class must have a constructor as well as a desctructor. This constructor is always called when an object of that class is being instantiated. The destructor is called when the object's lifetime ends.
+constructor and destructor. As the name suggests, the constructor is required to **construct** the object and to initialize all of the data members of the class whereas the destructor is required to properly **destroy** the object and its data members when its lifetime ends. This constructor is always called when an object of that class is being instantiated. The destructor is called when the object's lifetime ends.
 
 #### The default constructor
 
@@ -142,6 +138,10 @@ Every class can also **have (additional) user-defined constructors** which can b
 #### Destructor
 
 Like the constructor, every class must specify a  destructor. If the class does not have an explicit default destructor, **the compiler generates one automatically**. Destructors are particularly important when a class member variable allocates dynamic memory — as we will see soon.
+
+
+**Please** [refer to this explanation](http://www.cppforschool.com/tutorial/constructor.html) to get a better understanding of the constructor and destructor functionality and use.
+
 
 ### Object Instantiation & Member Access
 
@@ -156,7 +156,7 @@ void main () {
 
     myCharacter charObject;
 
-    charObject.draw();
+    charObject.draw();      // calling a public member function
     charObject.height = 10;
     charObject.weight = 67; // compiler error! Why?
 
@@ -170,11 +170,17 @@ Member variable "weight" had been specified as "private" and can not be accessed
 
 #include myCharacter.h
 
+// ...
+
+// This is a member function definition as defined
+// by associating the function name "changeWeight" with
+// the class name "myCharacter::changeWeight".
 void myCharacter::changeWeight (int w) {
 
     weight = w;
 }
 
+// ...
 ```
 
 ---
