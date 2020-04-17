@@ -20,14 +20,14 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
       - [The default constructor](#the-default-constructor)
       - [The user-defined constructor](#the-user-defined-constructor)
       - [Destructor](#destructor)
+    - [Object Instantiation & Member Access](#object-instantiation--member-access)
     - [Access Levels](#access-levels)
       - [Abstraction](#abstraction)
       - [Design Aspects](#design-aspects)
-    - [Object Instantiation & Member Access](#object-instantiation--member-access)
     - [Classes, Header, and Definition Files](#classes-header-and-definition-files)
-- [The Frame Buffer Object](#the-frame-buffer-object)
+  - [Time for Reflection](#time-for-reflection)
 - [Additional C++ Specifics](#additional-c-specifics)
-  - [C++ Standard Library](#c-standard-library)
+  - [C++ Standard Library (STL)](#c-standard-library-stl)
   - [Type Conversion](#type-conversion)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
@@ -98,7 +98,7 @@ Don't worry if you do not understand all of these theories at this point. We wil
 
 Following [the explanation at cplusplus.com](http://www.cplusplus.com/doc/tutorial/classes/), *classes are user-defined data types in C++ and objects are instantiations of classes. If you think of variables, a class would be the variable type whereas the object itself would be the actual variable that can be used in the code.* 
 
-Classes are blueprints of objects. Based on **one** **class** definition **various different object instances** can be created. 
+Classes are blueprints of objects. Based on **a class definition**, **various object instances** can be created. This is just like with any other data type. For example, consider an **integer**. In your code, you can use several variables of type integer. Likewise you can instantiate several objects of type **class** ... or, as you might as well say, you can use several variables of type **class**
 
 ### Class Members
 
@@ -135,35 +135,50 @@ Every C++ class must have a constructor as well as a desctructor. This construct
 
 If the class does not specify a constructor, the **compiler generates a default constructor automatically**. This is the case, for example, in the ofApp class. The default constructor initializes all data members to their default values.
 
-```cpp
-
-TODO
-
-```
-
 #### The user-defined constructor
 
 Every class can also **have (additional) user-defined constructors** which can be used to directly initialize member variables to specific values other than the default values. The function prototypes of the constructors must differ from each other! 
-
-
-```cpp
-
-TODO
-
-```
 
 #### Destructor
 
 Like the constructor, every class must specify a  destructor. If the class does not have an explicit default destructor, **the compiler generates one automatically**. Destructors are particularly important when a class member variable allocates dynamic memory — as we will see soon.
 
+### Object Instantiation & Member Access
+
+Object instantiation is simply done by using the class name as type specifier and by associating a variable with an object instance. Through the variable, all member functions and member variables that are defined as "public" can be accessed using the "." syntax like so:
 
 ```cpp
 
-TODO
+#include myCharacter.h
+
+// for instance, instantiate an object in main function
+void main () {
+
+    myCharacter charObject;
+
+    charObject.draw();
+    charObject.height = 10;
+    charObject.weight = 67; // compiler error! Why?
+
+}
 
 ```
+
+Member variable "weight" had been specified as "private" and can not be accessed from outside of the class. The "weight" variable can only be accessed from inside of the class like so:
+
+```cpp
+
+#include myCharacter.h
+
+void myCharacter::changeWeight (int w) {
+
+    weight = w;
+}
+
+```
+
 ---
-Check out this screencast to learn about class design with C++:
+Check out this screencast to learn about class design and how to work with an object in C++:
 
 *Attention: The video may take a couple of minutes to load.*
 
@@ -173,7 +188,7 @@ Check out this screencast to learn about class design with C++:
 
 ### Access Levels
 
-Access levels helps you define how you want your object be used and how you want the data members and function members be access **from outside of the class**.
+Access levels helps you define how you want your object be used and how you want the data members and function members be accessed **from outside of the class**.
 
 - **Public** Every member variable and/or function defined under public can be accessed from outside of the class. 
 
@@ -203,16 +218,6 @@ Check out this screencast to learn about access levels with C++:
 
 A rule of thumb for good class design is to ensure that  data members are *private* and can be accessed and manipulated by *public* function members. This way, a **solid public interface** can be designed which remains *as is* even when the underlying data members change. Additionally, this way any kind of manipulation of member variable values is restricted to the class only.
 
-
-### Object Instantiation & Member Access
-
-The advantage of object-oriented programming is
-
-- To translate real-world concepts into digital concepts
-- To use several objects of the same class in the ofApp without having to repeat code
-- To configure unique objects following the specification defined in the class
-
-
 ### Classes, Header, and Definition Files
 
 On a software design level, the [separation of header and definition files](http://www.cppforschool.com/tutorial/separate-header-and-implementation-files.html) clearly supports to distinguish between 
@@ -223,32 +228,36 @@ On a software design level, the [separation of header and definition files](http
 
 Software interfaces describe **what** kind of functionality is available whereas implementation details describe **how** the functionality is implemented. It makes sense to separate both aspects, for example, when you think of OpenGL which provides a common software interface (API) and at the same time comes with different OpenGL implementations (OpenGL libraries/drivers) per platform and graphics card. The same is true in the context of the openFrameworks SDK.
 
-# The Frame Buffer Object
+## Time for Reflection
 
-openFrameworks Essentials:
+The advantage of object-oriented programming is
 
-"Redirecting drawing to the offscreen buffer
-The offscreen buffer is a virtual screen in video memory, where we can draw anything just as we can on a real screen. The resultant picture can be used as an image or texture. We can draw it on a real screen, process with shader, or use to texture 3D objects.
-In the OpenGL library, which is used by openFrameworks for drawing, the offscreen
-buffer is called Frame Buffer Object (FBO). Naturally, in openFrameworks, this buffer is maintained by the ofFbo class."
+- To translate real-world concepts into digital concepts.
+- To use several objects of the same class in the ofApp without having to repeat code.
+- To configure unique objects following the specification defined in the class.
 
-- Animation
-- https://openframeworks.cc/ofBook/chapters/animation.html
-- Easing 
-- https://github.com/tyhenry/dt_openframeworks_2018/tree/master/week05
-- http://www.flong.com/texts/code/shapers_exp/
-- https://easings.net
-- https://github.com/jesusgollonet/ofpennereasing
-
+Why?
 
 # Additional C++ Specifics
 
-## C++ Standard Library 
+## C++ Standard Library (STL)
+
+Before you go start with the assignments, I would like you to do a little research and learn about the **C++ Standard Library (STL)**. This library provides additional functionality in the form of 
+
+- data structures
+- algorithms
+
+to C++. You have already encountered STL functionality when learning about **std::cout**  and **std::endl** function calls. 
+ 
+ Please [refer to this overview](http://www.cppforschool.com/tutorial/libraryfunc.html) and read this material to learn about a central data structure, i.e., [std::vector](https://openframeworks.cc/ofBook/chapters/stl_vector.html). Please note, use the material to get a first understanding and introduction to the data structure. To dive deeper, check out [std::vector at learncpp.com](https://www.learncpp.com/cpp-tutorial/6-16-an-introduction-to-stdvector/).
 
 ## Type Conversion
 
--> Homework
--> slides
+In the last session you have learned that C++ is a statically typed language. This means, that a variable is associated with the type it was initialized with and cannot change. However, with **type conversion** variable values can be cast from one type to another type. 
+
+Please [refer to the slides on type conversion](additional_material/type_conversion.pdf) in the *addition_material* folder for an introduction to type conversion. 
+
+Refer to the corresponding chapter at cpplearn.com on [implicit type conversion](https://www.learncpp.com/cpp-tutorial/implicit-type-conversion-coercion/) and [explicit type conversion](https://www.learncpp.com/cpp-tutorial/explicit-type-conversion-casting-and-static-cast/) if you want to dive deeper.
 
 
 # Reading Material
@@ -259,17 +268,11 @@ Revise and Review
 
 - [Object-oriented Programming (OOP) & openFrameworks/C++](https://openframeworks.cc/ofBook/chapters/OOPs!.html)
   - Note that this introduction is not flawless but it gives you a good idea about how OOP works with openFrameworks
-- Abstraction and Design Aspects
-  - FluentCpp
-  - Clean Code
-- [C++ Standard Library](http://www.cppforschool.com/tutorial/libraryfunc.html)
-  - Additional Material
-  - learncpp
-
-- [Separation of header and definition files](http://www.cppforschool.com/tutorial/separate-header-and-implementation-files.html)
+- [A very interesting article on abstraction levels and coding](https://www.fluentcpp.com/2016/12/15/respect-levels-of-abstraction/) (Recommended!)
+- All the links previously added in the script.
 
 ## Precap
 
-Prepare and Preview
+-- relax for now and focus on coding --
 
 
