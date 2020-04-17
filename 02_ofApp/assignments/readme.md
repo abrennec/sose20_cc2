@@ -62,3 +62,11 @@ This is an advanced exercise if you feel bored with the rest. Integrate all the 
 - Make use of ofKeyPressed(..) to switch between the visualizations (refer to the blendingExample from the previous session for more details on how to achieve this).
 - Would it be possible to blend between the visualizations? 
   - If so, how could you do this?
+
+
+
+## Discussion Points
+
+- What is pragma once used for?
+- What is an API ? How is the setup / components in your own words?
+- What is OpenGL ? How is it related to graphics hardware?
