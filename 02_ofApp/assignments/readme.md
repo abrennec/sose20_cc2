@@ -28,7 +28,7 @@ Here is also some inspiration: Zach Lieberman is one of the creators and develop
 
 Check out the code folder in the repository. Inside of it, you'll find two erroneous sketches
 
-- **myRomanticSketch**, which got broken after the screencast and needs fixing; building results in 3 linker errors.
+- **myRomanticSketch**, which got broken after the screencast and needs fixing; building results in 3 linker errors and 1 compiler issue.
 - **myStridePatternSketch**, which is even worse and contains several compile-time (4 issues need to be fixed) and linker errors (1 issue needs to be fixed).
 
 Your task is to:
@@ -62,3 +62,11 @@ This is an advanced exercise if you feel bored with the rest. Integrate all the 
 - Make use of ofKeyPressed(..) to switch between the visualizations (refer to the blendingExample from the previous session for more details on how to achieve this).
 - Would it be possible to blend between the visualizations? 
   - If so, how could you do this?
+
+
+
+## Discussion Points
+
+- What is pragma once used for?
+- What is an API ? How is the setup / components in your own words?
+- What is OpenGL ? How is it related to graphics hardware?
