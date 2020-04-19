@@ -49,30 +49,74 @@ Object-oriented programming (OOP) is a programming paradigm that is based on the
 
 For example, imagine you wanted to draw a small character inside of your ofApp. You could go about this task by applying several function calls to ofDrawCircle, ofDrawRectangle, ofDrawTriangle, and so on in order to draw a character onto the screen. Your draw() function would probably become quite large. Now imagine you wanted to draw a small house as well. You would have to add additional function calls to ofDrawRectangle, for example, extending your draw() function further. The readability of your code would probably suffer and any interaction with the small character would probably be rather tedious to implement as well. 
 
- With OOP you might instead define a user-defined data type, a C++ class, called "myCharacter" and move all of the functionality required to draw and represent your character into the class specification. Then, in ofApp.h, you would simply add a variable of type "myCharacter", instantiate it and call its' drawing routine, for example, like so:
+ With OOP you might instead define a user-defined data type, a C++ class, called "myCharacter" and move all of the functionality required to draw and represent your character into the class specification. The class specification is usually separated between **class declaration** and **class definition** as indicated in the next code example:
+ 
+ ```cpp
+// The class declaration is usually specified in a header 
+// file like "myCharacter.h"
+
+class myCharacter {
+
+    // specify all properties of the character "object"
+    // like size, color, shape, ...
+    // ...
+
+    // specify all functionality of the "object"
+    // that indicates how to use it in the program, e.g.,
+    int drawCharacter();
+    // ...   
+};
+```
 
 ```cpp
+// The class definition is usually specified in a 
+// definition file like "myCharacter.cpp"
+
+# include "myCharacter.h"
+
+// ... 
+
+void myCharacter::drawCharacter() {
+
+    // specify how to draw the character
+}
+
+// ...
+
+```
+
+ Then, in ofApp.h, you would simply add a variable of type "myCharacter", instantiate it and call its' drawing routine, for example, like so:
+
+```cpp
+// ofApp.h
+
+# include "myCharacter.h"
 
 class ofApp : ofBaseApp() {
 
     // ....
     myCharacter happyCreature;      // add a member variable
 }
+```
 
-////
+```cpp
+// ofApp.cpp
 
+// ...
 void ofApp::draw() {
 
     happyCreature.draw();   // call the object's drawing routine
 }
 
+// ... 
 ```
+
 ---
 Check out this screencast to get started with object-oriented programming with C++:
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![oop intro](assets/screencast.png)]()
+[![oop intro](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/ffUVr29ZugAZmgi)
 
 You'll find the [corresponding illustration](additional_material/oop_intro_screencast.pdf) in the additional_material folder.
 
@@ -123,6 +167,23 @@ As you have already seen in the previous screencast, every class is specified by
 
 **Member functions** are defined inside of the class definition to represent all of the functionality to access and manipulate the data members and to interact with the object itself.
 
+ ```cpp
+// The declaration and definition of class members inside
+//  "myCharacter.h" and "myCharacter.cpp"
+
+class myCharacter {
+
+    // specify all properties of the character "object"
+    // like size, color, shape, ...
+    // ...
+
+    // specify all functionality of the "object"
+    // that indicates how to use it in the program, e.g.,
+    int drawCharacter();
+    // ...   
+};
+```
+
 
 Additionally, classes consist of 
 * **constructor & destructor**, specific member functions
@@ -147,7 +208,24 @@ Every class can also **have (additional) user-defined constructors** which can b
 
 #### Destructor
 
-Like the constructor, every class must specify a  destructor. If the class does not have an explicit default destructor, **the compiler generates one automatically**. Destructors are particularly important when a class member variable allocates dynamic memory — as we will see soon.
+Like the constructor, every class must specify a  destructor. If the class does not have an explicit default destructor, **the compiler generates one automatically**. Destructors are particularly important when a class member variable allocates dynamic memory — as we will see later.
+
+ ```cpp
+// The declaration and definition of class members inside
+//  "myCharacter.h" and "myCharacter.cpp"
+
+class myCharacter {
+
+    // specify all properties of the character "object"
+    // like size, color, shape, ...
+    // ...
+
+    // specify all functionality of the "object"
+    // that indicates how to use it in the program, e.g.,
+    int drawCharacter();
+    // ...   
+};
+```
 
 
 **Please** [refer to this explanation](http://www.cppforschool.com/tutorial/constructor.html) to get a better understanding of the constructor and destructor functionality and use.
