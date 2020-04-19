@@ -68,11 +68,13 @@ void ofApp::draw() {
 
 ```
 ---
-Check out this screencast to learn about object-oriented programming with C++:
+Check out this screencast to get started with object-oriented programming with C++:
 
 *Attention: The video may take a couple of minutes to load.*
 
 [![oop intro](assets/screencast.png)]()
+
+You'll find the [corresponding illustration](additional_material/oop_intro_screencast.pdf) in the additional_material folder.
 
 ---
 
@@ -192,11 +194,11 @@ void myCharacter::changeWeight (int w) {
 ```
 
 ---
-Check out this screencast to learn about class design and how to work with an object in C++:
+**Note**: This screencast is going to be recorded in a live session. Check it out once it is uploaded to learn about class design and how to work with an object in C++:
+<!-- 
+*Attention: The video may take a couple of minutes to load.* -->
 
-*Attention: The video may take a couple of minutes to load.*
-
-[![oop intro](assets/screencast.png)]()
+[![oop intro](assets/screencast_live.png)]()
 
 ---
 
@@ -220,11 +222,11 @@ In that regard,
 
 --- 
 
-Check out this screencast to learn about access levels with C++:
+**Note**: This screencast is going to be recorded in a live session. Check it out once it is uploaded to learn  about access levels with C++:
 
-*Attention: The video may take a couple of minutes to load.*
+<!-- *Attention: The video may take a couple of minutes to load.* -->
 
-[![oop intro](assets/screencast.png)]()
+[![oop intro](assets/screencast_live.png)]()
 
 ---
 
