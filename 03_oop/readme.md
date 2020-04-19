@@ -12,6 +12,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 ---- 
 
 **Table of Contents**  
+- [Learning Objectives](#learning-objectives)
 - [Object-oriented Programming (OOP)](#object-oriented-programming-oop)
   - [Theoretical Concepts](#theoretical-concepts)
   - [Classes & Objects](#classes--objects)
@@ -34,6 +35,13 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Precap](#precap)
 
 ---
+
+# Learning Objectives
+
+- Understanding the basics of object-oriented programming 
+- Introducing object-oriented programming with C++
+- Understanding the meaning of classes and objects in C++
+- Getting a first idea of different levels of abstraction 
 
 # Object-oriented Programming (OOP)
 
@@ -84,13 +92,13 @@ There are four main theoretical concepts related to OOP that we will get to know
 - Inheritance
 - Polymorphism 
 
-**Abstraction** is an approch to abstract from a concrete application scenario or example and to derive a general concept that can be applied to different scenarios. 
+**Abstraction** is an approch to hiding complexity and increasing efficiency by using functions and objects to abstract from implementation details and enhancing readability. 
 
-**Encapsulation** is an approach to identify and group together all properties and functionalities that belong to and represent a certain concept in one object.
+**Encapsulation** is an approach to identifying and grouping together all properties, data, and functionalities that belong to and represent a certain concept in one object.
 
-**Inheritance** is an approach to create an object hierarchy in order to share properties and functionality and to specify a hierarchical child-object is-a parent-object relationship. 
+**Inheritance** is an approach to creating an object hierarchy in order to share properties and functionality and to specify a hierarchical child-object is-a parent-object relationship. 
 
-**Polymorphism** is an approach to manage hierarchical groups of objects with the help of pointers and to additionally specify the relationships expressed by the hierarchy.
+**Polymorphism** is an approach to managing hierarchical groups of objects with the help of pointers and to additionally specify the relationships expressed by the hierarchy.
 
 Don't worry if you do not understand all of these theories at this point. We will revisit them during the upcoming sessions again and again.
 
