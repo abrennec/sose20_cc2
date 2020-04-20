@@ -21,12 +21,11 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
       - [The default constructor](#the-default-constructor)
       - [The user-defined constructor](#the-user-defined-constructor)
       - [Destructor](#destructor)
-    - [Object Instantiation & Member Access](#object-instantiation--member-access)
-    - [Access Levels](#access-levels)
-      - [Abstraction](#abstraction)
-      - [Design Aspects](#design-aspects)
+    - [Object Instantiation & Member Access Levels](#object-instantiation--member-access-levels)
+  - [Design Aspects](#design-aspects)
+    - [Abstraction](#abstraction)
     - [Classes, Header, and Definition Files](#classes-header-and-definition-files)
-  - [Time for Reflection](#time-for-reflection)
+    - [Time for Reflection](#time-for-reflection)
 - [Additional C++ Specifics](#additional-c-specifics)
   - [C++ Standard Library (STL)](#c-standard-library-stl)
   - [Type Conversion](#type-conversion)
@@ -47,18 +46,20 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 Object-oriented programming (OOP) is a programming paradigm that is based on the idea of creating and working with objects. An **object** in OOP is a digital entity which represents a certain concept or idea and, in doing so, which groups all functionality and properties required to represent that concept or idea into a user-defined data type called a **class**. 
 
-For example, imagine you wanted to draw a small character inside of your ofApp. You could go about this task by applying several function calls to ofDrawCircle, ofDrawRectangle, ofDrawTriangle, and so on in order to draw a character onto the screen. Your draw() function would probably become quite large. Now imagine you wanted to draw a small house as well. You would have to add additional function calls to ofDrawRectangle, for example, extending your draw() function further. The readability of your code would probably suffer and any interaction with the small character would probably be rather tedious to implement as well. 
+For example, imagine you wanted to draw a simple character inside of your ofApp (or, imagine you wanted to draw a small circle that is animated following a sine wave based movement). You could go about this task by applying several function calls to ofDrawCircle, ofDrawRectangle, ofDrawTriangle, and so on in order to draw a character onto the screen. Your draw() function would probably become quite large. Now imagine you wanted to draw a small house as well. You would have to add additional function calls to ofDrawRectangle, for example, extending your draw() function further. The readability of your code would probably suffer and any interaction with the small character would probably be rather tedious to implement as well. 
 
- With OOP you might instead define a user-defined data type, a C++ class, called "myCharacter" and move all of the functionality required to draw and represent your character into the class specification. The class specification is usually separated between **class declaration** and **class definition** as indicated in the next code example:
+ With OOP you might instead define a **user-defined data type**, a C++ class, called "myCharacter" and move all of the functionality required to draw and represent your character into the class specification. The class specification is usually separated between **class declaration** and **class definition** as indicated in the next code example:
  
  ```cpp
 // The class declaration is usually specified in a header 
 // file like "myCharacter.h"
 
+// The keyword "class" followed by the class name 
+// identifies the new user-defined type
 class myCharacter {
 
     // specify all properties of the character "object"
-    // like size, color, shape, ...
+    // like height, color, shape, ...
     // ...
 
     // specify all functionality of the "object"
@@ -174,12 +175,18 @@ As you have already seen in the previous screencast, every class is specified by
 class myCharacter {
 
     // specify all properties of the character "object"
-    // like size, color, shape, ...
+    // like height, color, shape as member variables
+    int heightOfChar;
+    ofColor colorOfChar;
+    bool shapeIsRound;
     // ...
 
+
     // specify all functionality of the "object"
-    // that indicates how to use it in the program, e.g.,
+    // that indicates how to use it in the program as
+    // member functions
     int drawCharacter();
+    void moveCharacter();
     // ...   
 };
 ```
@@ -198,74 +205,116 @@ Additionally, classes consist of
 Every class has two special member functions called 
 constructor and destructor. As the name suggests, the constructor is required to **construct** the object and to initialize all of the data members of the class whereas the destructor is required to properly **destroy** the object and its data members when its lifetime ends. This constructor is always called when an object of that class is being instantiated. The destructor is called when the object's lifetime ends.
 
-#### The default constructor
-
-If the class does not specify a constructor, the **compiler generates a default constructor automatically**. This is the case, for example, in the ofApp class. The default constructor initializes all data members to their default values.
-
-#### The user-defined constructor
-
-Every class can also **have (additional) user-defined constructors** which can be used to directly initialize member variables to specific values other than the default values. The function prototypes of the constructors must differ from each other! 
-
-#### Destructor
-
-Like the constructor, every class must specify a  destructor. If the class does not have an explicit default destructor, **the compiler generates one automatically**. Destructors are particularly important when a class member variable allocates dynamic memory — as we will see later.
-
  ```cpp
 // The declaration and definition of class members inside
 //  "myCharacter.h" and "myCharacter.cpp"
 
 class myCharacter {
 
-    // specify all properties of the character "object"
-    // like size, color, shape, ...
-    // ...
-
-    // specify all functionality of the "object"
-    // that indicates how to use it in the program, e.g.,
-    int drawCharacter();
+    // class constructor 
+    // default constructor that can be omitted
+    myCharacter();
+    // custom or user-defined constructors
+    myCharacter(int theHeight);     
+    myCharacter(int theHeight, ofColor theColor);
+    myCharacter(int theWidth);      // !! this will result in a compiler error - constructor function prototypes MUST differ
     // ...   
+
+    // class destructor
+    // there is only ONE destructor per class which gets called
+    // when the object runs out of scope / its lifetime ends
+    ~myCharacter();
 };
 ```
 
+#### The default constructor
+
+If the class does not specify a constructor, the **compiler generates a default constructor automatically**. This is the case, for example, in the ofApp class. The default constructor initializes all data members to their default values.
+
+#### The user-defined constructor
+
+Every class can also **have (additional) user-defined constructors** which can be used to directly initialize member variables to specific values other than the default values. The function prototypes of the constructors **must differ** from each other! 
+
+#### Destructor
+
+Like the constructor, every class must specify a  destructor. If the class does not have an explicit default destructor, **the compiler generates one automatically**. Destructors are particularly important when a class member variable allocates dynamic memory — as we will see later. In general, the destructor takes care of cleaning up the object if that is required.
 
 **Please** [refer to this explanation](http://www.cppforschool.com/tutorial/constructor.html) to get a better understanding of the constructor and destructor functionality and use.
 
 
-### Object Instantiation & Member Access
+### Object Instantiation & Member Access Levels
 
-Object instantiation is simply done by using the class name as type specifier and by associating a variable with an object instance. Through the variable, all member functions and member variables that are defined as "public" can be accessed using the "." syntax like so:
+Object instantiation is simply done by using the class name as type specifier and by associating a variable with an object instance. 
+Through the variable, all member functions and member variables that are defined as "public" can be accessed using the "." syntax like so:
 
 ```cpp
-
 #include myCharacter.h
 
 // for instance, instantiate an object in main function
-void main () {
+void someFunction () {
 
-    myCharacter charObject;
+    myCharacter charObject;          // create an object instance
 
-    charObject.draw();      // calling a public member function
-    charObject.height = 10;
-    charObject.weight = 67; // compiler error! Why?
+    charObject.drawCharacter();      // calling a public member function
+    charObject.heightOfChar = 10;
+    charObject.shapeIsRound = false; 
 
 }
 
 ```
 
-Member variable "weight" had been specified as "private" and can not be accessed from outside of the class. The "weight" variable can only be accessed from inside of the class like so:
+However, in the current class specification, none of the above code will work because all of the member functions and variables have been declared **private**. If no further specificaton is given in the class specification, all members will be under private access level. 
+
+**Access levels** help you define how you want your object be used and how you want the data members and function members be accessed **from outside of the class**.
+
+- **Public** Every member variable and/or function defined under public can be accessed from outside of the class. 
+
+- **Protected** Every member variable and/or function defined under protected can be accessed from inside of the class and from inside of the inherited class(es) only — not from outside of the class
+
+- **Private** Every member definition in a class is declared as private by default — if not specified otherwise. Every member variable and/or function defined under private can only be accessed from inside of the class — not from outside of the class
+
+In the following example, public and private access levels have been added to the class specification. This way, in the previous code example only the access of the "shapeIsRound" variable will cause a compiler error.
+
+ ```cpp
+// Adding access levels to the class 
+
+class myCharacter {
+
+// adding public access level to the class in order to
+// actually access it when instantiated
+public:
+    myCharacter();
+    // ... 
+    ~myCharacter();
+
+    int drawCharacter();
+    void moveCharacter();
+
+    int heightOfChar;
+    ofColor colorOfChar;
+
+// adding private access level to restrict the access to certain 
+// data members
+private:
+
+    bool shapeIsRound;
+
+};
+```
+
+Member variable "shapeIsRound" had been specified as "private" and can not be accessed from outside of the class. The "shapeIsRound" variable can only be accessed from inside of the class like so:
 
 ```cpp
-
 #include myCharacter.h
 
 // ...
 
 // This is a member function definition as defined
-// by associating the function name "changeWeight" with
-// the class name "myCharacter::changeWeight".
-void myCharacter::changeWeight (int w) {
+// by associating the function name "drawCharacter" with
+// the class name "myCharacter::drawCharacter".
+void myCharacter::drawCharacter () {
 
-    weight = w;
+    shapeIsRound = w;
 }
 
 // ...
@@ -280,37 +329,20 @@ void myCharacter::changeWeight (int w) {
 
 ---
 
-### Access Levels
 
-Access levels helps you define how you want your object be used and how you want the data members and function members be accessed **from outside of the class**.
+## Design Aspects
 
-- **Public** Every member variable and/or function defined under public can be accessed from outside of the class. 
+A rule of thumb for good class design is to ensure that  data members are *private* and can be accessed and manipulated by *public* function members. This way, a **solid public interface** can be designed which remains *as is* even when the underlying data members change. Additionally, this way any kind of manipulation of member variable values is restricted to the class only.
 
-- **Protected** Every member variable and/or function defined under protected can be accessed from inside of the class and from inside of the inherited class(es) only — not from outside of the class
+### Abstraction
 
-- **Private** Every member definition in a class is declared as private by default — if not specified otherwise. Every member variable and/or function defined under private can only be accessed from inside of the class — not from outside of the class
-
-#### Abstraction
+Object-oriented programming offers a way to group and encapsulate functionality and properties in individual objects. Central benefit of this approach is the reduction of complexity and the introduction of levels of abstractions to the code. All of the implementation details needed to implement the simple character is moved to the object's class definition. In the main routine, i.e., in ofApp in our example, you only have to work with the myCharacter object itself. This makes it easier to understand the code and supports the software design process.
 
 Access levels are a C++ mechanism to support abstraction. 
 In that regard, 
 - The public keyword specifies the interface level of a class
 - The protected keyword specifies the inheritance and hierarchical level
 - The private keyword specifies the implementation details level, i.e., every 
-
---- 
-
-**Note**: This screencast is going to be recorded in a live session. Check it out once it is uploaded to learn  about access levels with C++:
-
-<!-- *Attention: The video may take a couple of minutes to load.* -->
-
-[![oop intro](assets/screencast_live.png)]()
-
----
-
-#### Design Aspects
-
-A rule of thumb for good class design is to ensure that  data members are *private* and can be accessed and manipulated by *public* function members. This way, a **solid public interface** can be designed which remains *as is* even when the underlying data members change. Additionally, this way any kind of manipulation of member variable values is restricted to the class only.
 
 ### Classes, Header, and Definition Files
 
@@ -322,7 +354,7 @@ On a software design level, the [separation of header and definition files](http
 
 Software interfaces describe **what** kind of functionality is available whereas implementation details describe **how** the functionality is implemented. It makes sense to separate both aspects, for example, when you think of OpenGL which provides a common software interface (API) and at the same time comes with different OpenGL implementations (OpenGL libraries/drivers) per platform and graphics card. The same is true in the context of the openFrameworks SDK.
 
-## Time for Reflection
+### Time for Reflection
 
 The advantage of object-oriented programming is
 
