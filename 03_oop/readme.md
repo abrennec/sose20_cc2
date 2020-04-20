@@ -44,7 +44,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 # Object-oriented Programming (OOP)
 
-Object-oriented programming (OOP) is a programming paradigm that is based on the idea of creating and working with objects. An **object** in OOP is a digital entity which represents a certain concept or idea and, in doing so, which groups all functionality and properties required to represent that concept or idea into a user-defined data type called a **class**. 
+Object-oriented programming (OOP) is a programming concept that is based on the idea of creating and working with objects. An **object** in OOP is a digital entity which represents a certain concept or idea and, in doing so, which groups all functionality and properties required to represent that concept or idea into a user-defined data type called a **class**. 
 
 For example, imagine you wanted to draw a simple character inside of your ofApp (or, imagine you wanted to draw a small circle that is animated following a sine wave based movement). You could go about this task by applying several function calls to ofDrawCircle, ofDrawRectangle, ofDrawTriangle, and so on in order to draw a character onto the screen. Your draw() function would probably become quite large. Now imagine you wanted to draw a small house as well. You would have to add additional function calls to ofDrawRectangle, for example, extending your draw() function further. The readability of your code would probably suffer and any interaction with the small character would probably be rather tedious to implement as well. 
 
@@ -123,8 +123,8 @@ You'll find the [corresponding illustration](additional_material/oop_intro_scree
 
 ---
 
-In its essence, OOP is a very straightforward approach to software development which targets to simplify the development process. On a practical level, object-oriented design will help you to better organize your code, to make it more readable and to better categorize individual elements. 
-On a software design level, object-oriented design will help you to reflect on your program from a conceptual point of view and to identify:
+In its essence, OOP is a very straightforward approach to software development which targets to simplify the development process. On a practical level, object-oriented design (OOD) will help you to better organize your code, to make it more readable and to better categorize individual elements. 
+On a software design level, OOD will help you to reflect on your program from a conceptual point of view and to identify:
   - What kind of elements, components, or simply *objects* do you actually need and use?
   - How do they relate to each other?  
   - What kind of properties and what kind of functionality do they represent?
@@ -153,7 +153,7 @@ Don't worry if you do not understand all of these theories at this point. We wil
 
 Following [the explanation at cplusplus.com](http://www.cplusplus.com/doc/tutorial/classes/), *classes are user-defined data types in C++ and objects are instantiations of classes. If you think of variables, a class would be the variable type whereas the object itself would be the actual variable that can be used in the code.* 
 
-Classes are blueprints of objects. Based on **a class definition**, **various object instances** can be created. This is just like with any other data type. For example, consider an **integer**. In your code, you can use several variables of type integer. Likewise you can instantiate several objects of type **class** ... or, as you might as well say, you can use several variables of type **class**
+Classes are blueprints of objects. Based on **a class definition**, **various objects (or instances)** can be created. This is just like with any other data type. For example, consider an **integer**. In your code, you can use several variables of type integer. Likewise you can instantiate several objects of type **class** ... or, as you might as well say, you can use several variables of type **class**.
 
 ### Class Members
 
@@ -164,7 +164,7 @@ As you have already seen in the previous screencast, every class is specified by
 * **Member functions**.
 
 
-**Member variables** are defined inside of the class definition to represent the actual data members and / or data structures required and used by the class.
+**Member variables** are defined inside of the class definition to represent the actual data members and/or data structures required and used by the class.
 
 **Member functions** are defined inside of the class definition to represent all of the functionality to access and manipulate the data members and to interact with the object itself.
 
@@ -222,7 +222,7 @@ class myCharacter {
 
     // class destructor
     // there is only ONE destructor per class which gets called
-    // when the object runs out of scope / its lifetime ends
+    // when the object runs out of scope/its lifetime ends
     ~myCharacter();
 };
 ```
