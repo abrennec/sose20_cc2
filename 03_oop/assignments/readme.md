@@ -93,6 +93,14 @@ See [this explanation](https://github.com/tyhenry/dt_openframeworks_2018/tree/ma
 
 If you have time left - can you add the functionality presented in this example to the screen_grab example in an artistic way?
 
+Checkout these links on easing technique:
+
+- https://easings.net/
+- https://www.joshondesign.com/2013/03/01/improvedEasingEquations
+- http://robertpenner.com/easing/
+
+
+
 ### 5 Bonus - Relaxation | up to 4 pts 
 
 In the code/extra folder there are three beautiful brush examples. Review them and think about an artistic application in one of the previous examples that you have developed or in a new context. Create something beautiful that you like and / or come up with an idea for a sketch that you would like to implement.
