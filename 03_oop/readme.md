@@ -325,9 +325,10 @@ void pet::drawPet () {
  Please review also the following two illustrations which describe the difference between a class type and concrete object graphically:
 
 ![class pet](assets/oop_class.png)
+*Copyright by Franziska Pätzold.*
 
 ![object pet](assets/oop_object.png)
-
+*Copyright by Franziska Pätzold.*
 
 ---
 **Note**: This screencast is going to be recorded in a live session. Check it out once it is uploaded to learn about class design and how to work with an object in C++:
