@@ -50,7 +50,7 @@ For example, imagine you wanted to draw a simple pet character inside of your of
 
 Now imagine you wanted to draw a small house as well, or a second pet. You would have to add additional function calls to ofDrawRectangle, for example, extending your draw() function further. The readability of your code would probably suffer and any interaction with the small pet character would probably be rather tedious to implement as well. 
 
- With OOP you might instead define a **user-defined data type**, a C++ class, called "pet" and move all of the functionality required to draw and represent your pet character into the class specification. The class specification is usually separated between **class declaration** and **class definition** as indicated in the next code example:
+ With OOP you might instead define a **user-defined data type**, a C++ class, called "pet" and move all of the functionality required to draw and represent your pet character into the class definition. The class is usually defined in a header file and groups all member variable and member function declarations. In the corresponding cpp file the member variables and member functions are being defined:
  
  ```cpp
 // The class declaration is usually specified in a header 
@@ -265,7 +265,7 @@ void someFunction () {
 
 ```
 
-However, in the current class specification, none of the above code will work because all of the member functions and variables have been declared **private**. If no further specificaton is given in the class specification, all members will be under private access level. 
+However, in the current class definition, none of the above code will work because all of the member functions and variables have been declared **private**. If no further specificaton is given in the class definition, all members will be under private access level. 
 
 **Access levels** help you define how you want your object be used and how you want the data members and function members be accessed **from outside of the class**.
 
@@ -275,7 +275,7 @@ However, in the current class specification, none of the above code will work be
 
 - **Private** Every member definition in a class is declared as private by default — if not specified otherwise. Every member variable and/or function defined under private can only be accessed from inside of the class — not from outside of the class
 
-In the following example, public and private access levels have been added to the class specification. This way, in the previous code example only the access of the "shapeIsRound" variable will cause a compiler error.
+In the following example, public and private access levels have been added to the class definition. This way, in the previous code example only the access of the "shapeIsRound" variable will cause a compiler error.
 
  ```cpp
 // Adding access levels to the class 
