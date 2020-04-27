@@ -46,57 +46,59 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 Object-oriented programming (OOP) is a programming concept that is based on the idea of creating and working with objects. An **object** in OOP is a digital entity which represents a certain concept or idea and, in doing so, which groups all functionality and properties required to represent that concept or idea into a user-defined data type called a **class**. 
 
-For example, imagine you wanted to draw a simple character inside of your ofApp (or, imagine you wanted to draw a small circle that is animated following a sine wave based movement). You could go about this task by applying several function calls to ofDrawCircle, ofDrawRectangle, ofDrawTriangle, and so on in order to draw a character onto the screen. Your draw() function would probably become quite large. Now imagine you wanted to draw a small house as well. You would have to add additional function calls to ofDrawRectangle, for example, extending your draw() function further. The readability of your code would probably suffer and any interaction with the small character would probably be rather tedious to implement as well. 
+For example, imagine you wanted to draw a simple pet character inside of your ofApp (or, imagine you wanted to draw a small circle that is animated following a sine wave based movement). You could go about this task by applying several function calls to ofDrawCircle, ofDrawRectangle, ofDrawTriangle, and so on in order to draw a pet character onto the screen. Your draw() function would probably become quite large. 
 
- With OOP you might instead define a **user-defined data type**, a C++ class, called "myCharacter" and move all of the functionality required to draw and represent your character into the class specification. The class specification is usually separated between **class declaration** and **class definition** as indicated in the next code example:
+Now imagine you wanted to draw a small house as well, or a second pet. You would have to add additional function calls to ofDrawRectangle, for example, extending your draw() function further. The readability of your code would probably suffer and any interaction with the small pet character would probably be rather tedious to implement as well. 
+
+ With OOP you might instead define a **user-defined data type**, a C++ class, called "pet" and move all of the functionality required to draw and represent your pet character into the class definition. The class is usually defined in a header file and groups all member variable and member function declarations. In the corresponding cpp file the member variables and member functions are being defined:
  
  ```cpp
 // The class declaration is usually specified in a header 
-// file like "myCharacter.h"
+// file like "pet.h"
 
 // The keyword "class" followed by the class name 
 // identifies the new user-defined type
-class myCharacter {
+class pet {
 
-    // specify all properties of the character "object"
+    // specify all properties of the pet character "object"
     // like height, color, shape, ...
     // ...
 
     // specify all functionality of the "object"
     // that indicates how to use it in the program, e.g.,
-    int drawCharacter();
+    int drawPet();
     // ...   
 };
 ```
 
 ```cpp
 // The class definition is usually specified in a 
-// definition file like "myCharacter.cpp"
+// definition file like "pet.cpp"
 
-# include "myCharacter.h"
+# include "pet.h"
 
 // ... 
 
-void myCharacter::drawCharacter() {
+void pet::drawPet() {
 
-    // specify how to draw the character
+    // specify how to draw the pet character
 }
 
 // ...
 
 ```
 
- Then, in ofApp.h, you would simply add a variable of type "myCharacter", instantiate it and call its' drawing routine, for example, like so:
+ Then, in ofApp.h, you would simply add a variable of type "pet", instantiate it and call its' drawing routine, for example, like so:
 
 ```cpp
 // ofApp.h
 
-# include "myCharacter.h"
+# include "pet.h"
 
 class ofApp : ofBaseApp() {
 
     // ....
-    myCharacter happyCreature;      // add a member variable
+    pet happyCreature;      // add a member variable
 }
 ```
 
@@ -153,7 +155,11 @@ Don't worry if you do not understand all of these theories at this point. We wil
 
 Following [the explanation at cplusplus.com](http://www.cplusplus.com/doc/tutorial/classes/), *classes are user-defined data types in C++ and objects are instantiations of classes. If you think of variables, a class would be the variable type whereas the object itself would be the actual variable that can be used in the code.* 
 
+<<<<<<< HEAD
 Classes are blueprints of objects. Based on **a class definition**, **various objects (or instances)** can be created. This is just like with any other data type. For example, consider an **integer**. In your code, you can use several variables of type integer. Likewise you can instantiate several objects of type **class** ... or, as you might as well say, you can use several variables of type **class**.
+=======
+Classes are blueprints of objects. Based on **a class definition**, **various object instances** can be created. This is just like with any other data type. For example, consider an **integer**. In your code, you can use several variables of type integer. Likewise you can instantiate several objects of type **class** ... or, as you might as well say, you can use several variables of type **class**.
+>>>>>>> master
 
 ### Class Members
 
@@ -170,11 +176,11 @@ As you have already seen in the previous screencast, every class is specified by
 
  ```cpp
 // The declaration and definition of class members inside
-//  "myCharacter.h" and "myCharacter.cpp"
+//  "pet.h" and "pet.cpp"
 
-class myCharacter {
+class pet {
 
-    // specify all properties of the character "object"
+    // specify all properties of the pet character "object"
     // like height, color, shape as member variables
     int heightOfChar;
     ofColor colorOfChar;
@@ -185,8 +191,8 @@ class myCharacter {
     // specify all functionality of the "object"
     // that indicates how to use it in the program as
     // member functions
-    int drawCharacter();
-    void moveCharacter();
+    int drawPet();
+    void movePet();
     // ...   
 };
 ```
@@ -207,23 +213,28 @@ constructor and destructor. As the name suggests, the constructor is required to
 
  ```cpp
 // The declaration and definition of class members inside
-//  "myCharacter.h" and "myCharacter.cpp"
+//  "pet.h" and "pet.cpp"
 
-class myCharacter {
+class pet {
 
     // class constructor 
     // default constructor that can be omitted
-    myCharacter();
+    pet();
     // custom or user-defined constructors
-    myCharacter(int theHeight);     
-    myCharacter(int theHeight, ofColor theColor);
-    myCharacter(int theWidth);      // !! this will result in a compiler error - constructor function prototypes MUST differ
+    pet(int theHeight);     
+    pet(int theHeight, ofColor theColor);
+    pet(int theWidth);      // !! this will result in a compiler error - constructor function prototypes MUST differ
     // ...   
 
     // class destructor
     // there is only ONE destructor per class which gets called
+<<<<<<< HEAD
     // when the object runs out of scope/its lifetime ends
     ~myCharacter();
+=======
+    // when the object runs out of scope / its lifetime ends
+    ~pet();
+>>>>>>> master
 };
 ```
 
@@ -248,14 +259,14 @@ Object instantiation is simply done by using the class name as type specifier an
 Through the variable, all member functions and member variables that are defined as "public" can be accessed using the "." syntax like so:
 
 ```cpp
-#include myCharacter.h
+#include pet.h
 
 // for instance, instantiate an object in main function
 void someFunction () {
 
-    myCharacter charObject;          // create an object instance
+    pet charObject;          // create an object instance
 
-    charObject.drawCharacter();      // calling a public member function
+    charObject.drawPet();      // calling a public member function
     charObject.heightOfChar = 10;
     charObject.shapeIsRound = false; 
 
@@ -263,7 +274,7 @@ void someFunction () {
 
 ```
 
-However, in the current class specification, none of the above code will work because all of the member functions and variables have been declared **private**. If no further specificaton is given in the class specification, all members will be under private access level. 
+However, in the current class definition, none of the above code will work because all of the member functions and variables have been declared **private**. If no further specificaton is given in the class definition, all members will be under private access level. 
 
 **Access levels** help you define how you want your object be used and how you want the data members and function members be accessed **from outside of the class**.
 
@@ -273,22 +284,22 @@ However, in the current class specification, none of the above code will work be
 
 - **Private** Every member definition in a class is declared as private by default — if not specified otherwise. Every member variable and/or function defined under private can only be accessed from inside of the class — not from outside of the class
 
-In the following example, public and private access levels have been added to the class specification. This way, in the previous code example only the access of the "shapeIsRound" variable will cause a compiler error.
+In the following example, public and private access levels have been added to the class definition. This way, in the previous code example only the access of the "shapeIsRound" variable will cause a compiler error.
 
  ```cpp
 // Adding access levels to the class 
 
-class myCharacter {
+class pet {
 
 // adding public access level to the class in order to
 // actually access it when instantiated
 public:
-    myCharacter();
+    pet();
     // ... 
-    ~myCharacter();
+    ~pet();
 
-    int drawCharacter();
-    void moveCharacter();
+    int drawPet();
+    void movePet();
 
     int heightOfChar;
     ofColor colorOfChar;
@@ -305,20 +316,28 @@ private:
 Member variable "shapeIsRound" had been specified as "private" and can not be accessed from outside of the class. The "shapeIsRound" variable can only be accessed from inside of the class like so:
 
 ```cpp
-#include myCharacter.h
+#include pet.h
 
 // ...
 
 // This is a member function definition as defined
-// by associating the function name "drawCharacter" with
-// the class name "myCharacter::drawCharacter".
-void myCharacter::drawCharacter () {
+// by associating the function name "drawPet" with
+// the class name "pet::drawPet".
+void pet::drawPet () {
 
     shapeIsRound = w;
 }
 
 // ...
 ```
+
+ Please review also the following two illustrations which describe the difference between a class type and concrete object graphically:
+
+![class pet](assets/oop_class.png)
+*Copyright by Franziska Pätzold.*
+
+![object pet](assets/oop_object.png)
+*Copyright by Franziska Pätzold.*
 
 ---
 **Note**: This screencast is going to be recorded in a live session. Check it out once it is uploaded to learn about class design and how to work with an object in C++:
@@ -336,7 +355,7 @@ A rule of thumb for good class design is to ensure that  data members are *priva
 
 ### Abstraction
 
-Object-oriented programming offers a way to group and encapsulate functionality and properties in individual objects. Central benefit of this approach is the reduction of complexity and the introduction of levels of abstractions to the code. All of the implementation details needed to implement the simple character is moved to the object's class definition. In the main routine, i.e., in ofApp in our example, you only have to work with the myCharacter object itself. This makes it easier to understand the code and supports the software design process.
+Object-oriented programming offers a way to group and encapsulate functionality and properties in individual objects. Central benefit of this approach is the reduction of complexity and the introduction of levels of abstractions to the code. All of the implementation details needed to implement the simple pet character is moved to the object's class definition. In the main routine, i.e., in ofApp in our example, you only have to work with the pet object itself. This makes it easier to understand the code and supports the software design process.
 
 Access levels are a C++ mechanism to support abstraction. 
 In that regard, 
