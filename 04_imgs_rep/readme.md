@@ -54,7 +54,7 @@ Interaction and interfaces  is what we have already touched upon with the first 
 In the context of creative coding and creative technologies, we will now start to involve and invite aspects of interaction and interfaces into the practical exercises and we will aim for developing **our own understanding of interaction and interfaces** during the remainder of this course.
 
 
-In his book **Programming Interactivity** [JNoble2009], Joshua Noble discusses several forms of interaction from the perspective of interaction design and interactive digital art programs. According to him, 
+In his book **Programming Interactivity** [JNoble2009], [Joshua Noble](http://thefactoryfactory.com/#aboutme) discusses several forms of interaction from the perspective of interaction design and interactive digital art programs. According to him, 
 
 > Interaction could be defined as the exchange of information between two or more active participants. The writer and video game designer Chris Crawford describes interaction as “an iterative process of listening, thinking, and speaking between two or more actors.”  Generally, when we’re talking about interaction and programming it’s because one element in the interaction is a computer system of some sort or some control element that a person is trying to get to do something. The person for whom the computer or mechanical system is being designed is called the user, and what the user is using is called the system. There are many different terms floating around today, such as *human computer interaction*, *computer human interaction*, or *experience design*. All mean more or less the same thing: designing a system of some sort that a person can interact with in a way that is meaningful to them. **[JNoble2009, p. 5]**
 
