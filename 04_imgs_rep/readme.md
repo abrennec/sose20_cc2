@@ -15,8 +15,9 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 - [Review \& Preview](#review--preview)
 - [Interaction \& Interfaces](#interaction--interfaces)
 - [Image Representations](#image-representations)
-  - [Graphics Hardware & Processing](#graphics-hardware--processing)
-  - [openFrameworks Classes for Image Handling & Graphics Processing](#openframeworks-classes-for-image-handling--graphics-processing)
+  - [Graphics Hardware](#graphics-hardware)
+  - [openFrameworks Concept](#openframeworks-concept)
+  - [Classes for Image Handling in openFrameworks](#classes-for-image-handling-in-openframeworks)
     - [ofImage](#ofimage)
     - [ofPixel](#ofpixel)
     - [ofTexture](#oftexture)
@@ -77,7 +78,7 @@ Based on that, we will continue finetuning the definitions and will discuss them
 
 # Image Representations 
 
-## Graphics Hardware & Processing
+## Graphics Hardware 
 
 Modern computer hardware usually provides for a special [graphics subsystem](https://www.ntu.edu.sg/home/ehchua/programming/opengl/cg_basicstheory.html) that is responsible for processing, rendering, and displaying **computer generated images**. The subsystem contains a graphics processing unit (GPU) and a corresponding random access memory component dedicated to handling video and graphics data only. Furthermore, the subsystem also takes care of the **frame buffer** which stores all the processed image information at pixel level before they are handed over to the output monitor for display. 
 
@@ -85,6 +86,7 @@ The approach allows the capacities of the central processing unit (CPU) and the 
 ![graphics_processing](assets/graphics_display.png)
 *Image source: https://www.ntu.edu.sg/home/ehchua/programming/opengl/cg_basicstheory.html*
 
+## openFrameworks Concept
 
 In openFrameworks, the separation between general (or CPU-based) calculations, special graphics (or GPU-based) calculations, and all calculations that refer to user input (CPU-based) has been mapped to different functions in ofApp class, respectively:
 
@@ -107,7 +109,7 @@ In the following sections, we will explore the classes and functions povided by 
 and how they are related. Both allow you to adjust the respective parameters. Note that vertical sync depends on the actual refresh rate provided by the output device, i.e., the monitor.
 
 
-## openFrameworks Classes for Image Handling & Graphics Processing
+## Classes for Image Handling in openFrameworks
 
 In openFrameworks, several classes have been introduced that deal with image processing (see also [Varieties of oF Image Containers](https://openframeworks.cc/documentation/application/ofAppRunner/#!show_ofSetVerticalSync)). Most importantly, the following four classes represent the different aspects of image handling and graphics processing at different abstraction levels: 
 
