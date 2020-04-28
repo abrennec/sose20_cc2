@@ -18,9 +18,9 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [Graphics Hardware & Processing](#graphics-hardware--processing)
   - [openFrameworks Classes for Image Handling & Graphics Processing](#openframeworks-classes-for-image-handling--graphics-processing)
     - [ofImage](#ofimage)
-  - [ofPixel](#ofpixel)
-  - [ofTexture](#oftexture)
-  - [ofFbo](#offbo)
+    - [ofPixel](#ofpixel)
+    - [ofTexture](#oftexture)
+    - [ofFbo](#offbo)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
   - [Precap](#precap)
@@ -154,7 +154,7 @@ tex.readToPixels(pix); // now all the pixels from tex are in pix
 In order to keep both objects and the corresponding image data they store in sync, keep in mind to always call the [ofImage update()](https://openframeworks.cc/documentation/graphics/ofImage/#show_update) function after any operation on ofPixels or ofTexture.
 
 
-## ofPixel
+### ofPixel
 
 In [Creative Coding 1](https://github.com/ctechfilmuniversity/ws1920_cc1), you learned about how pixel data is usually stored internally, i.e., in the form of a 1D array. In its most common form, this array is a data structure that represents 8-bit grayscale images or 24-bit color images (8-bit per RGB-channel). **Please** recap the [corresponding CC1 script](https://github.com/ctechfilmuniversity/ws1920_cc1/blob/master/04_processing/cc1_ws1920_04_processing_script.md#introduction) for the details. If you are lacking background knowledge on the different image formats and representations, review the section [Preliminaries on Image Processing](https://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html#preliminariestoimageprocessing) from the ofBook. There you will also find an [illustration on how 24-bit color images](https://openframeworks.cc/ofBook/images/image_processing_computer_vision/images/interleaved_1.png) are stored in interleaved form in a 1D array.
 
@@ -179,7 +179,7 @@ while( i < pix.size()) {
 }
 ```
 
-## ofTexture
+### ofTexture
 
 Textures are usually used in the context of computer generated graphics when 3D objects are connected - or bound - to a texture object in order to raise the visual realism or simply bind an image object to a 3D object. ofTexture represents all of the related operations on GPU level in openFrameworks. 
 
@@ -195,7 +195,7 @@ Additionall, there is more information available on the functionality and use of
 
 **Please** read the remaineder of that section if you would like to learn more about how to use textures in particular in connection with shaders and 3D objects.
 
-## ofFbo
+### ofFbo
 
 Finally, the ofFbo class represents a frame buffer object. To better understand the frame buffer object, let us briefly revisit the rendering pipeline as depicted in the following illustration and as discussed in the [corresponding lecture](https://github.com/ctechfilmuniversity/ws1920_tbag/blob/master/07/TBAG_le07-3DGraphics.pdf) on [Theoretical Background of Audio and Graphics](https://github.com/ctechfilmuniversity/ws1920_tbag):
 
