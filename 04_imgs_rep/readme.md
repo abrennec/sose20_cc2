@@ -17,7 +17,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 - [Image Representations](#image-representations)
   - [Graphics Hardware](#graphics-hardware)
   - [openFrameworks Concept](#openframeworks-concept)
-  - [Classes for Image Handling in openFrameworks](#classes-for-image-handling-in-openframeworks)
+  - [openFrameworks & Image Handling](#openframeworks--image-handling)
     - [ofImage](#ofimage)
     - [ofPixel](#ofpixel)
     - [ofTexture](#oftexture)
@@ -109,7 +109,7 @@ In the following sections, we will explore the classes and functions povided by 
 and how they are related. Both allow you to adjust the respective parameters. Note that vertical sync depends on the actual refresh rate provided by the output device, i.e., the monitor.
 
 
-## Classes for Image Handling in openFrameworks
+## openFrameworks & Image Handling 
 
 In openFrameworks, several classes have been introduced that deal with image processing (see also [Varieties of oF Image Containers](https://openframeworks.cc/documentation/application/ofAppRunner/#!show_ofSetVerticalSync)). Most importantly, the following four classes represent the different aspects of image handling and graphics processing at different abstraction levels: 
 
