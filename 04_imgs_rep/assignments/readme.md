@@ -13,7 +13,7 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 _Meaningful_ bullet points are sufficient to answer the questions - if necessary.
 
-### 1 Interaction | 3 pts
+### 1 Interaction | 2 pts
 
 Please read the first section of the script "Review & Preview" and reflect on the three questions on interaction. Work in a team of at least two or in the group. 
 
@@ -23,7 +23,7 @@ Discuss and consider how images, image manipulations algorithms and/or the objec
 
 Create a dedicated wiki page where you note down the results of your discussions and individual thoughts.
 
-### 2 Screen Grab Img Balls | up to 6 pts
+### 2 Screen Grab Img Balls | up to 8 pts
 
 #### 2.1 Image Manipulation
 
@@ -39,13 +39,15 @@ Create a dedicated wiki page where you note down the results of your discussions
 
 Extend your screen grab project by additional objects and functionality. In the coding examples and the CC1 script you have seen different forms of image and video manipulation. Integrate at least one of the presented "image manipulation" (filtering, analysis, synthesis) methods into your project. Add at least one new object to the project. Add interaction to the project that occurs between the objects you have added. Work on a pixel and on a texture level if possible.
 
-### 4 Pointers and References | 2 pts
+### 4 Pointers and References | 1 pts
 
 Skim through the chapter [Pointers, References, and Arrays](https://www.learncpp.com/cpp-tutorial/67-introduction-to-pointers/). Although we have not touched upon this topic in the script in particular, you will find pointers, arrays, and references in the code examples. Also, we will dig into memory allocation next time. 
 
 Please get a first understanding of what pointers and references in C++ are and **read** sections [6.7 on pointers](https://www.learncpp.com/cpp-tutorial/67-introduction-to-pointers/) and [6.11 on references](https://www.learncpp.com/cpp-tutorial/611-references/).
 
-### 4 Bonus - Relaxation | 2 or 4 pts 
+Note down your questions!
+
+### 4 Bonus - Relaxation | up to 4 pts 
 
 Feel free to pick one of the code examples by ofZach and tyhenry and extend, change, or modify the code to your liking.
 
