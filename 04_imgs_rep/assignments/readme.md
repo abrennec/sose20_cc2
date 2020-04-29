@@ -11,55 +11,42 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 # Assignments
 
-_Meaningful_ bullet points are sufficient to answer the questions.
+_Meaningful_ bullet points are sufficient to answer the questions - if necessary.
 
-## 1) Artistic (2 pts)
-### 1.1 Creative Coding
+### 1 Interaction | 2
 
-- What does creative coding mean to you?
-- What kind of Art pieces does really appeal to you? Pick one piece and share it with the group through the Wiki at the [Art-Pieces Page](https://github.com/ctechfilmuniversity/lecture_creative_coding_2/wiki/Art-Pieces)
+Please read the first section of the script "Review & Preview" and reflect on the three questions on interaction. Work in a team of at least two or in the group. 
 
-Here is also some inspiration: Zach Lieberman is one of the creators and developers of openFrameworks. He works as an artist, developer, educator and posts new sketches on his Instagram on a regular basis. Check out [this talk](https://www.youtube.com/watch?v=xx1eeoo_xnY) of Zach Lieberman to learn more about his work. 
+The main goal of this task is to exchange thoughts and ideas, reflect on your own attitude, interests, and concerns and come up with a first definition of what interaction and interfaces might be.
 
-<!-- - [Interview with Zach Lieberman](https://www.theverge.com/2019/5/10/18564182/zach-lieberman-interactive-art-animation-movement-openframeworks-art-club)
-- [Talk of Zach Lieberman](https://www.youtube.com/watch?v=bmztlO9_Wvo) -->
+Discuss and consider how images, image manipulations algorithms and/or the objects presented in the script can be used as means of interaction or interface.
 
-## 2) Recap (4 pts)
-### 2.1 Statically vs Dynamically Typed
+Create a dedicated wiki page where you note down the results of your discussions and individual thoughts.
 
-- What is the difference between statically and dynamically typed languages and what is special about the C++ type specifier **auto**?
+### 2 Screen Grab Img Balls | up to 8
 
-### 2.2 Interface & Implementation
+#### 2.1 Image Manipulation
 
-- Explain briefly what is meant by each of the terms and how they relate to the concepts of  *declaration* and *definition*.
+- Build and run the code examples by ofZach and tyhenry on image and video manipulation. Check the code to get an understanding of what is happening and how it is implemented.
 
-### 2.3 ProjectGenerator
+- Review the [Creative Coding 1 script on processing, section "images",](https://github.com/ctechfilmuniversity/ws1920_cc1/blob/master/04_processing/cc1_ws1920_04_processing_script.md#images) and check the different image filtering methods presented to get further inspiration.
 
-- What is the openFrameworks ProjectGenerator? How does it relate to the openFrameworks folder structure and build process? 
+#### 2.2 ofFbo
 
-### 2.4 pragma once
+- Build and run the ofFbo examples and get an understanding of how a frame buffer object can be used.
 
-- What is **pragma once** and in which context do you need it?
+#### 2.3 Your Creative Code Project
 
-## 3 Programming (4 pts)
-### 3.1 Sine Waves
+Extend your screen grab project by additional objects and functionality. In the coding examples and the CC1 script you have seen different forms of image and video manipulation. Integrate at least one of the presented "image manipulation" (filtering, analysis, synthesis) methods into your project. Add at least one new object to the project. Add interaction to the project that occurs between the objects you have added. Work on a pixel and on a texture level if possible.
 
-Check out the code folder in the repository. Inside of it, you'll find openFramworks apps by Zach Liebermann from one of his classes. 
+### 4 Pointers and References Preparation | 2 
 
-- Build and run the examples, create the project files with the help of the ProjectGenerator. Review and understand the code.
-  - What is ofGetElapsedTimef() function doing?
-  - What is ofMap(..) function doing?
-- Pick at least one of the examples that appeals to you most and change it to your liking. Try some of these modifications:
-  - Work with changes of timing and size.
-  - Change the sin functions.
-  - Add color to the piece and use the sin function to change the color values.
-  - Mix ideas from the examples.
-- Add interaction
-  - Use ofGetMouseX() and / or ofGetMouseY() to integrate mouse feedback into the piece.
+Skim through the chapter [Pointers, References, and Arrays](https://www.learncpp.com/cpp-tutorial/67-introduction-to-pointers/). Although we have not touched upon this topic in the script in particular, you will find pointers, arrays, and references in the code examples. Also, we will dig into memory allocation next time. 
 
-## Bonus (5 pts)
+Please get a first understanding of what pointers and references in C++ are and **read** sections [6.7 on pointers](https://www.learncpp.com/cpp-tutorial/67-introduction-to-pointers/) and [6.11 on references](https://www.learncpp.com/cpp-tutorial/611-references/).
 
-This is an advanced exercise if you feel bored with the rest. Integrate all the different sine wave visualizations from 2.2 into one ofApp. 
-- Create a drawing function for each visualization.
-- Make use of ofKeyPressed(..) to switch between the visualizations. 
-- *Hint:* In order to evaluate which drawing function you select, you need to add a **member variable** to the ofApp class. 
+### 4 Bonus - Relaxation | up to 3 pts 
+
+Feel free to pick one of the code examples by ofZach and tyhenry and extend, change, or modify the code to your liking.
+
+Also, in the bonus folder is a coding example that uses image information to create a 3D mesh. If this is an area that is interesting for you also in the context of shaders, feel free to explore, modify and adapt the code to your liking.
