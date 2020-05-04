@@ -13,10 +13,9 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 **Table of Contents**
 - [Learning Objectives](#learning-objectives)
 - [Review \& Preview](#review--preview)
-- [Interaction \& Interfaces](#interaction--interfaces)
 - [Image Representations](#image-representations)
   - [Graphics Hardware](#graphics-hardware)
-  - [openFrameworks Concept](#openframeworks-concept)
+  - [openFrameworks Rendering Concept](#openframeworks-rendering-concept)
   - [openFrameworks & Image Handling](#openframeworks--image-handling)
     - [ofImage](#ofimage)
     - [ofPixel](#ofpixel)
@@ -31,11 +30,12 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 # Learning Objectives
 
-- Interaction and interfaces
-- Image representations
-- Frame buffer objects
+- Understanding computer graphics image representations
+- Understanding how openFrameworks represents and supports image and graphics processing
+- Getting to know ofImage, ofPixels and ofTexture objects
+- Undderstanding frame buffer objects and the ofFbo
 
-Time Estimate: This session will approximately take 6-8 hours of time in total including script and assignments. It compensates slightly for the last session that might have taken less than 8 hours. Please send me a note how much time you took for the las
+Time Estimate: This session will approximately take 6-8 hours of time in total including script and assignments.  Please send me a note how much time you took.
 
 # Review \& Preview
 
@@ -45,12 +45,11 @@ In the last three sessions, we covered three fundamental topics required to get 
 - We looked into the basics of the C++ programming language, the platform dependent build process, and how we can actually debug an application and dig into the underlying technological structures. 
 - We looked into the basics of object-oriented programming to get started with reconsidering the development process from the perspective of objects and components in order to improve our code base and system design in terms of structure and abstraction.
 
-From now on, we will look into **specific topics of openFrameworks** such as image representations and manipulations, audio programming, a glance into shader development and the image processing library openCV that can be integrated into openFrameworks in the form of an addon. We will also take a look at memory management with C++ and continuously review the object-oriented programming paradigms. All of these topics, we will review in the light of **interaction and interfaces**, the main theme of this lecture. 
-
-# Interaction \& Interfaces
+From now on, we will look into **specific topics of openFrameworks** such as image representations and manipulations, a glance into meshes and shader development, audio programming, and the image processing library openCV that can be integrated into openFrameworks in the form of an addon. We will also take a look at memory management with C++ and continuously review the object-oriented programming paradigms. All of these topics, we will review in the light of **interaction and interfaces**, the main theme of this lecture. 
 
 Interaction and interfaces  is what we have already touched upon with the first exercises on interactive sine wave drawings as well as with the technical application programming interfaces (APIs) that we briefly discussed. Moreover, we saw a couple of interactive artistic pieces by some of your favorite artists.
 
+<<<<<<< HEAD
 In the context of creative coding and creative technologies, we will now start to involve and invite aspects of interaction and interfaces into the practical exercises and we will aim for developing **our own understanding of interaction and interfaces** during the remainder of this course.
 
 
@@ -63,18 +62,15 @@ Moreover, the following excerpt is part of Noble's discussion of the term **inte
 > The interface is the medium of the communication between the user and the system. It drives a lot of what is possible and what is not possible, what is efficient and what isn’t, and what the tone of the interaction is. If you think about how you talk to someone on the phone versus how you talk to them in person, you’re probably using more hand gestures, facial expressions, and other forms of nonverbal communication in person and being more direct and using your tone of voice more when you are on the phone. What we use to do something affects a lot of how we do that thing. Having a functional, expressive, and attractive interface is very important in creating the means for an interaction to occur. The attractiveness of an interface is an important part of making an interaction pleasant to a use; the colors, text, symmetry, sounds, and graphics are important and are communicative elements that shape a great deal about what a user thinks about your system. **[JNoble2009, p. 9]**
 
 Hence, interaction and interface are closely related concepts. Another essential aspect of the above mentioned discussions on interaction and interface is the term **communication** which could be described as the transfer and exchange of information. 
+=======
+In the context of creative coding and creative technologies, we will now start to involve and invite aspects of interaction and interfaces into the practical exercises and we will aim for developing **our own understanding of interaction and interfaces** during the remainder of this course. This week, you will be asked to approach this topic from three different points of view:
+>>>>>>> master
 
-When reconsidering these concepts and the citations above, what are the main aspects of either interaction and interface? Could you, for example, understand an **interaction** as a formal process description on a technical level? If so, how would you define it?
+- What does interaction and interface mean to you in the context of creative coding?
+- How would you, as an artist / creative technologist, like to interact with the users of your application?
+- How would you, as a user or audience, like to interact with an artistic piece?
 
-In contrast, could you, for example, understand an **interface** as a clear specification of how the interaction has to be executed in the first place? What is your take on this interpretation? 
-
- Considering creative coding and (interactive) digital art, the first part of the homework assignments will revolve around these definitions and terms. Central task will be to come up with an individual or personal definition of interaction, interfaces and communication seen through the eyes of 
-
-- a creative technologist and how you would like to develop/design an application
-- an artist and how you would like to interact with an audience
-- an audience and how do you perceive interaction in an artistic piece, e.g., made by your favorite artists
-
-Based on that, we will continue finetuning the definitions and will discuss them against the background of the upcoming topics.
+The introduction and use of visual objects as means of interaction is usually straightforward. Therefore, we will start our investigation with digital image representations in a first step.
 
 # Image Representations 
 
@@ -86,7 +82,7 @@ The approach allows the capacities of the central processing unit (CPU) and the 
 ![graphics_processing](assets/graphics_display.png)
 *Image source: https://www.ntu.edu.sg/home/ehchua/programming/opengl/cg_basicstheory.html*
 
-## openFrameworks Concept
+## openFrameworks Rendering Concept
 
 In openFrameworks, the separation between general (or CPU-based) calculations, special graphics (or GPU-based) calculations, and all calculations that refer to user input (CPU-based) has been mapped to different functions in ofApp class, respectively:
 
@@ -176,16 +172,25 @@ ofPixels pix;
 // put some stuff in the pixels
 int i = 0;
 while( i < pix.size()) {
-    char c = pix[i];
+
+    // the char data type can hold variables ranging 
+    // from 0-255 and thus fits perfectly when dealing 
+    // with color values;
+    // the "[ ]" brackets are used to access the color 
+    // value that is stored in the pixel pointer at 
+    // position or index "i"
+    char c = pix[i]; 
     i++;
 }
 ```
+
+In order to get a deeper understanding of how arrays can be used in C++, please refer to [Chapter P of learncpp.com](https://www.learncpp.com). 
 
 ### ofTexture
 
 Textures are usually used in the context of computer generated graphics when 3D objects are connected - or bound - to a texture object in order to raise the visual realism or simply bind an image object to a 3D object. ofTexture represents all of the related operations on GPU level in openFrameworks. 
 
-In the ofBook, information on texture objects can be found in the above mentioned section on [Preliminaries on Image Processing](https://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html#preliminariestoimageprocessing): 
+In the ofBook, information on texture objects can be found in the above mentioned section on [ofBook, Preliminaries on Image Processing](https://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html#preliminariestoimageprocessing): 
 
 >  This container stores image data in the texture memory of your computer's graphics card (GPU). Many other classes, including ofImage, ofxCvImage, ofVideoPlayer, ofVideoGrabber, ofFbo, and ofKinect, maintain an internal ofTexture object to render their data to the screen.
 
@@ -210,7 +215,7 @@ Since the frame buffer is generally hardwired with the rendering pipeline and gr
 
  Essentially, an FBO is an additional buffer object that can be used to store rendered graphics and images. FBOs are also referred to as off-screen buffers as they allow you to draw inside of them without having to display the results to the screen immediately. We will review the FBO in a couple of coding examples. Before, please read the following explanations of frame buffer objects.
 
-[Preliminaries on Image Processing](https://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html#preliminariestoimageprocessing):
+[ofBook, Preliminaries on Image Processing](https://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html#preliminariestoimageprocessing):
 
 >  This is a GPU "frame buffer object", a container for textures and an optional depth buffer. It can be loosely understood as another renderer—a canvas to which you can draw 3D or 2D scenes—whose resulting pixels can themselves be treated like an image. Ultimately the ofFBO is an object stored on the graphics card that represents a rendered drawing pass.
 
@@ -232,19 +237,20 @@ Since the frame buffer is generally hardwired with the rendering pipeline and gr
 
 Revise and Review
 
-- [Preliminaries to Image Processing with openFrameworks](https://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html#preliminariestoimageprocessing)
-- [Textures in openFramworks](https://openframeworks.cc/ofBook/chapters/openGL.html#textures)
+- [ofBook, Preliminaries to Image Processing with openFrameworks](https://openframeworks.cc/ofBook/chapters/image_processing_computer_vision.html#preliminariestoimageprocessing)
+- [ofBook, Textures in openFramworks](https://openframeworks.cc/ofBook/chapters/openGL.html#textures)
 - [Image and Texture Processing with OpenGL](https://www.ntu.edu.sg/home/ehchua/programming/opengl/cg_basicstheory.html)
+- [Pointers, References, and Arrays](https://www.learncpp.com/cpp-tutorial/67-introduction-to-pointers/)
+
 
 ## Precap
 
 Prepare and Preview
 
-- [Graphics](https://openframeworks.cc/ofBook/chapters/openGL.html)
-- Memory Allocation
+- [ofBook, Graphics](https://openframeworks.cc/ofBook/chapters/openGL.html)
+- [ofBook, Memory in C++](https://openframeworks.cc/ofBook/chapters/memory.html)
 
 ## References
 
-- [JNoble2009] Joshua Noble (2009): Programming Interactivity. A Designer’s Guide to Processing, Arduino & openFrameworks. Sebastopol, CA: O’Reilly Media Inc.
 - [DPIT2015] Denis Perevalov, Igor Tatrnikov (2015): openFrameworks Essentials. Packt Publishing. Birmingham, UK.
 - [DPere2013] Denis Perevalov (2013): Mastering openFrameworks: Creative Coding Demystified. Packt Publishing. Birmingham, UK.
