@@ -81,7 +81,7 @@ Check out this screencast to get started with object-oriented programming with C
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![oop intro](assets/screencast.png)]()
+[![variables_memory](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/kUHhYq7tWW0hg6i)
 
 You'll find the [corresponding slides](additional_material/01_local_variables_memory.pdf) in the additional_material folder.
 
@@ -92,18 +92,20 @@ Check out this screencast to get started with object-oriented programming with C
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![oop intro](assets/screencast.png)]()
+[![refs ptrs](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/8phkTrdnzZYeiaA)
 
 You'll find the [corresponding slides](additional_material/02_references_pointers.pdf) in the additional_material folder.
 
 
 ## Pointers & Memory
 
+> To be uploaded
+
 Check out this screencast to get started with object-oriented programming with C++:
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![oop intro](assets/screencast.png)]()
+[![ptrs memory](assets/screencast.png)]()
 
 You'll find the [corresponding slides](additional_material/03_pointers_and_memory.pdf) in the additional_material folder.
 
@@ -111,11 +113,13 @@ You'll find the [corresponding slides](additional_material/03_pointers_and_memor
 
 ## Smart Pointers
 
+> To be uploaded
+
 Check out this screencast to get started with object-oriented programming with C++:
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![oop intro](assets/screencast.png)]()
+[![smart pointers](assets/screencast.png)]()
 
 You'll find the [corresponding slides](additional_material/04_smart_pointers.pdf) in the additional_material folder.
 

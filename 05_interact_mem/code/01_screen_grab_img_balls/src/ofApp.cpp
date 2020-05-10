@@ -84,7 +84,7 @@ void ofApp::draw(){
     drawPixelOverlay(alpha);
     
     
-    // TODO: Move this functionality into the cgObjectManager object, no?
+    // TODO: Move this functionality into the cgObjectManager object.
     {
         if (!stopRotating)
             texturedPlane.rotateDeg(0.25, 0,1,0);   // spin 3D quad mesh
@@ -96,9 +96,12 @@ void ofApp::draw(){
         ofTranslate(webCam.getWidth()/2.0, webCam.getHeight()/2.0);
         ofSetColor(255, alpha);
         
-        webCam.getTexture().bind();
-        texturedPlane.draw();        // draw shader on quad surface
-        webCam.getTexture().unbind();
+        // TODO: You have to "bind()" and "unbind()" the texture to
+        // TODO: and from the plane. How could that work?
+        
+        // ... texture binding
+        texturedPlane.draw();        // draw the plane gemoetry
+        // ... texture unbinding
 
         ofPopMatrix();
     }
@@ -137,7 +140,7 @@ void ofApp::setupCamera() {
     // created into which the video grabber / webcam draws
     webCam.setup(640,480);
     
-    // NOTE: Some useless local variables just for educational purposes
+    // TODO: Checkout the following function calls.
     
     // This function call rertrieves the orginial ofTexture object
     // of the video grabber and copies it to the grabTex variable.
@@ -180,14 +183,20 @@ void ofApp::setupTextureQuad() {
     
     // Specify the resolution of the plane object based on the webCam resolution
     // and specify the number of texture coordinates required (2 x 2)
-    texturedPlane.set(webCam.getWidth(), webCam.getHeight(), 2, 2);
     
+    // TODO: adapt the function call
+    texturedPlane.set(320 , 240, 2, 2);
+    
+    
+    // TODO: Ensure that the texture coordinates are calculated.
+    // TODO: The functions at the bottom take care of that. Use one of them.
     // Calculate the texture coordinates for the plane.
     // Be careful, texture coordinates sometimes do not have their origin
     // in the top,left corner of the screen but at the bottom, right corner
     // of the screen resulting in a flipped image.
-    texturedPlane.mapTexCoords(webCam.getWidth(),webCam.getHeight(), 0,0);
-    //texturedPlane.mapTexCoordsFromTexture(webCam.getTexture());
+    
+    //texturedPlane.mapTexCoords( ??? );
+    //texturedPlane.mapTexCoordsFromTexture( ??? );
 }
 
 

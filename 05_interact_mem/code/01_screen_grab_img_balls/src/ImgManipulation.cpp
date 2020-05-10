@@ -17,7 +17,9 @@ void ImageManipulation::processImage(const ofImage& image) {
     for (int i = 0; i < imageWidth; ++i){
         for (int j = 0; j < imageHeight; ++j){
             
-            float brightness = pixels.getColor(i,j).getBrightness();
+            // TODO: Check out ofPixel's functionality in order to
+            // TODO: implement a pixel manipulation.
+            //float brightness = pixels.getColor(i,j).getBrightness();
             
             // TODO: Your processing code could come here.
         }

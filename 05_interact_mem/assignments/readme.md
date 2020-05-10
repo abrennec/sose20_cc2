@@ -13,11 +13,13 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 _Meaningful_ bullet points are sufficient to answer the questions - if necessary.
 
-### 1 Interaction | 1 pts
+NOTE: The programming part of task 2 (2.3) from the last work sheet will be integrated into this worksheet.
+
+### 1 Interaction | 2 pts
 
 Please read the first section of the script on interaction. With your team, review your findings and identify potential correspondences and differences. Highlight them in the WIKI.
 
-### 2 Screen Grab Img Balls Revisited | up to 14 pts
+### 2 Screen Grab Img Balls Revisited | up to 18 pts
 
 #### 2.1 Understand Function Parameters and References
 
@@ -31,7 +33,13 @@ As a first exercise:
 
 Pass by reference and pass by value are two approaches to defining the handing over of an argument to a function. This is achieved by specifying the function parameters either to support pass by reference or pass by value. What is meant by each approach? When would you use either of them?
 
-#### 2.3 Image Manipulation
+#### 2.3 Texture Mapping
+
+In the code, an ofPrimitvePlane, a computer generated geometry, is being rotated. Map the webCam image or any other image onto the geometry. 
+
+Therefore, you have to use an ofTexture object. Texture objects specify how the texture image can actually be drawn onto a geometry by specifying texture coordinates. These coordinates can then be connected with the object coordinates. Checkout [this section on textures in the ofBook](https://openframeworks.cc/ofBook/chapters/openGL.html#textures) to learn more about texture binding and texture mapping and check the code for the corresponding function calls.
+
+#### 2.4 Image Manipulation
 
 In the application retrieve two images: One image is the screenGrab image that captures the latest position of the ball objects. Another image is either captured from the webCam or an ofImage of your liking. 
 
@@ -41,17 +49,8 @@ Think about whether you want to display it in the form of a blending operation, 
 
 What would be the benefit of using an fbo?
 
-#### 2.4 Object Orientation
+#### 2.5 Object Orientation
 
 Re-factor the code. Add two new classes to the code. One class is intended to handling all the image manipulation operations. The other class is intended to manage all of the computer generated objects, i.e., the balls as well as the plane object. The ofApp should work as an application interface only that receives information from the user or from the operating system and hands it over to the specialized objects.
 
 Keep reference types in mind, in particular in conjunction with the keyword **const**. What is the difference between **const** and **constexpr** in this context?
-
-#### 2.5 Interaction (bonus like) | 2 additional pts
-
-Identify and note down two ideas for either 
-
-- two interaction concepts or 
-- one interaction and one interface concept 
-
-that you would like to implement in the screen grab img example. If you have enough time left, implement your idea. If you have not enough time left, add your idea in the form of comments into the code.
