@@ -80,6 +80,10 @@ void ofApp::draw(){
     // ("Mastering openFrameworks", p.90).
     ofSetColor(255, alpha);
     
+    
+    webCam.draw(0, 500, 500, 200);
+    
+    
     // TODO: Move this functionality into the imgManipulation object.
     drawPixelOverlay(alpha);
     
@@ -87,9 +91,9 @@ void ofApp::draw(){
     // TODO: Move this functionality into the cgObjectManager object.
     {
         if (!stopRotating)
-            texturedPlane.rotateDeg(0.25, 0,1,0);   // spin 3D quad mesh
+            planeObject.rotateDeg(0.25, 0,1,0);   // spin 3D quad mesh
         
-        // NOTE: The texturedPlane object has its origin at the center.
+        // NOTE: The planeObject object has its origin at the center.
         // Therefore we need to translate the object in order to align
         // it with the fbo view.
         ofPushMatrix();
@@ -99,9 +103,7 @@ void ofApp::draw(){
         // TODO: You have to "bind()" and "unbind()" the texture to
         // TODO: and from the plane. How could that work?
         
-        // ... texture binding
-        texturedPlane.draw();        // draw the plane gemoetry
-        // ... texture unbinding
+        planeObject.draw();        // draw the plane gemoetry
 
         ofPopMatrix();
     }
@@ -172,7 +174,7 @@ void ofApp::setupCamera() {
 //--------------------------------------------------------------
 void ofApp::setupTextureQuad() {
     
-    // TODO: The texturedQuad is also a CG object and should be
+    // TODO: The planeObject is also a CG object and should be
     // TODO: moved into the cgObjectManager class.
     
     // We want to rotate an image. This is only possible if we map
@@ -185,7 +187,7 @@ void ofApp::setupTextureQuad() {
     // and specify the number of texture coordinates required (2 x 2)
     
     // TODO: adapt the function call
-    texturedPlane.set(320 , 240, 2, 2);
+    planeObject.set(320 , 240, 2, 2);
     
     
     // TODO: Ensure that the texture coordinates are calculated.
@@ -195,8 +197,8 @@ void ofApp::setupTextureQuad() {
     // in the top,left corner of the screen but at the bottom, right corner
     // of the screen resulting in a flipped image.
     
-    //texturedPlane.mapTexCoords( ??? );
-    //texturedPlane.mapTexCoordsFromTexture( ??? );
+    // checkout the function mapTexCoords( ??? );
+    // checkout the function mapTexCoordsFromTexture( ??? );
 }
 
 

@@ -41,7 +41,7 @@ private:
     // functionality that we need in this example, i.e., access to
     // ofPixel and ofTexture.
     ofVideoGrabber webCam;
-    ofPlanePrimitive texturedPlane;
+    ofPlanePrimitive planeObject;
 	
     // TODO: Turn this member variable into a local variable
     // TODO: and adapt the affected functions.
