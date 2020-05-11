@@ -134,12 +134,16 @@ Revise and Review
 - [Memory in C++](https://openframeworks.cc/ofBook/chapters/memory.html)
 - [C++ Pointers](http://www.cplusplus.com/doc/tutorial/pointers/)
 - [C++ Pointers and References](https://www.ntu.edu.sg/home/ehchua/programming/cpp/cp4_PointerReference.html)
+- [Graphics, Textures, CG Objects in openFrameworks](https://openframeworks.cc/ofBook/chapters/openGL.html)
 
 ## Precap
 
 Prepare and Preview
 
-- [Sound and openFrameworks](https://openframeworks.cc/ofBook/chapters/sound.html)
+> TBD how we proceed
+
+- [Shaders](https://openframeworks.cc/ofBook/chapters/shaders.html)
+- [OOP Inheritance](https://openframeworks.cc/ofBook/chapters/OOPs!.html)
 
 ## References
 
