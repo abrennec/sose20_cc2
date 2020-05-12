@@ -99,13 +99,11 @@ You'll find the [corresponding slides](additional_material/02_references_pointer
 
 ## Pointers & Memory
 
-> To be uploaded
-
 Check out this screencast to get started with object-oriented programming with C++:
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![ptrs memory](assets/screencast.png)]()
+[![ptrs memory](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/E1OWRTpvxdwnirS)
 
 You'll find the [corresponding slides](additional_material/03_pointers_and_memory.pdf) in the additional_material folder.
 
@@ -113,13 +111,11 @@ You'll find the [corresponding slides](additional_material/03_pointers_and_memor
 
 ## Smart Pointers
 
-> To be uploaded
-
 Check out this screencast to get started with object-oriented programming with C++:
 
 *Attention: The video may take a couple of minutes to load.*
 
-[![smart pointers](assets/screencast.png)]()
+[![smart pointers](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/2R4H1MWn7Veiwe7)
 
 You'll find the [corresponding slides](additional_material/04_smart_pointers.pdf) in the additional_material folder.
 
