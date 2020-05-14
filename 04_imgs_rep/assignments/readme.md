@@ -23,7 +23,7 @@ Discuss and consider how images, image manipulations algorithms and/or the objec
 
 Create a dedicated wiki page where you note down the results of your discussions and individual thoughts.
 
-### 2 Screen Grab Img Balls | up to 8 pts
+### 2 Screen Grab Img Balls | up to 3 (was 8) pts
 
 #### 2.1 Image Manipulation
 
@@ -35,7 +35,9 @@ Create a dedicated wiki page where you note down the results of your discussions
 
 - Build and run the ofFbo examples and get an understanding of how a frame buffer object can be used.
 
-#### 2.3 Your Creative Code Project
+#### *2.3 Your Creative Code Project*
+
+> Note that this task will be reworked and integrated into the next worksheet.
 
 Extend your screen grab project by additional objects and functionality. In the coding examples and the CC1 script you have seen different forms of image and video manipulation. Integrate at least one of the presented "image manipulation" (filtering, analysis, synthesis) methods into your project. Add at least one new object to the project. Add interaction to the project that occurs between the objects you have added. Work on a pixel and on a texture level if possible.
 
