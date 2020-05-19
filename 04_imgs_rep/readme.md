@@ -49,22 +49,7 @@ From now on, we will look into **specific topics of openFrameworks** such as ima
 
 Interaction and interfaces  is what we have already touched upon with the first exercises on interactive sine wave drawings as well as with the technical application programming interfaces (APIs) that we briefly discussed. Moreover, we saw a couple of interactive artistic pieces by some of your favorite artists.
 
-<<<<<<< HEAD
-In the context of creative coding and creative technologies, we will now start to involve and invite aspects of interaction and interfaces into the practical exercises and we will aim for developing **our own understanding of interaction and interfaces** during the remainder of this course.
-
-
-In his book **Programming Interactivity** [JNoble2009], [Joshua Noble](http://thefactoryfactory.com/#aboutme) discusses several forms of interaction from the perspective of interaction design and interactive digital art programs. According to him, 
-
-> Interaction could be defined as the exchange of information between two or more active participants. The writer and video game designer Chris Crawford describes interaction as “an iterative process of listening, thinking, and speaking between two or more actors.”  Generally, when we’re talking about interaction and programming it’s because one element in the interaction is a computer system of some sort or some control element that a person is trying to get to do something. The person for whom the computer or mechanical system is being designed is called the user, and what the user is using is called the system. There are many different terms floating around today, such as *human computer interaction*, *computer human interaction*, or *experience design*. All mean more or less the same thing: designing a system of some sort that a person can interact with in a way that is meaningful to them. **[JNoble2009, p. 5]**
-
-
-Moreover, the following excerpt is part of Noble's discussion of the term **interface**:
-> The interface is the medium of the communication between the user and the system. It drives a lot of what is possible and what is not possible, what is efficient and what isn’t, and what the tone of the interaction is. If you think about how you talk to someone on the phone versus how you talk to them in person, you’re probably using more hand gestures, facial expressions, and other forms of nonverbal communication in person and being more direct and using your tone of voice more when you are on the phone. What we use to do something affects a lot of how we do that thing. Having a functional, expressive, and attractive interface is very important in creating the means for an interaction to occur. The attractiveness of an interface is an important part of making an interaction pleasant to a use; the colors, text, symmetry, sounds, and graphics are important and are communicative elements that shape a great deal about what a user thinks about your system. **[JNoble2009, p. 9]**
-
-Hence, interaction and interface are closely related concepts. Another essential aspect of the above mentioned discussions on interaction and interface is the term **communication** which could be described as the transfer and exchange of information. 
-=======
 In the context of creative coding and creative technologies, we will now start to involve and invite aspects of interaction and interfaces into the practical exercises and we will aim for developing **our own understanding of interaction and interfaces** during the remainder of this course. This week, you will be asked to approach this topic from three different points of view:
->>>>>>> master
 
 - What does interaction and interface mean to you in the context of creative coding?
 - How would you, as an artist / creative technologist, like to interact with the users of your application?
