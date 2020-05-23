@@ -3,7 +3,6 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 
-
 }
 
 //--------------------------------------------------------------
@@ -19,6 +18,13 @@ void ofApp::draw(){
     
     triangle.draw();
     
+    drawVertexInteraction();
+
+}
+
+//--------------------------------------------------------------
+void ofApp::drawVertexInteraction() {
+    
     if (inVertexProximity) {
         
         ofSetColor(255, 0,0);
@@ -26,7 +32,6 @@ void ofApp::draw(){
         ofNoFill();
         ofDrawCircle(ofGetMouseX(), ofGetMouseY(), 45);
     }
-
 }
 
 //--------------------------------------------------------------

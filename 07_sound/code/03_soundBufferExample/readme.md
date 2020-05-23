@@ -1,0 +1,1 @@
+This example has been taken (and slightly adapted) from the **openFrameworks examples/sound** section (last access 28 May '19).

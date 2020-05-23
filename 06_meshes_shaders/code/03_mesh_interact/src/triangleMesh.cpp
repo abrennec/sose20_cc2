@@ -29,6 +29,8 @@ triangleMesh::triangleMesh(){
     myMesh.addTexCoord(myTexture.getCoordFromPercent(0,1));
     myMesh.addTexCoord(myTexture.getCoordFromPercent(1,1));
     
+    
+    // order is important!
     myMesh.addIndex(0); // indicate a line from vertex 0 to 1 (top to left)
     myMesh.addIndex(1); // indicate a line from vertex 1 to 2 (left to right)
     myMesh.addIndex(2); // indicate a line from vertex 2 to 0 (right to top)
@@ -42,12 +44,13 @@ void triangleMesh::update(){
 
 //--------------------------------------------------------------
 void triangleMesh::draw(){
-    
+        
     myTexture.bind();
     myMesh.draw();
     myTexture.unbind();
     
-    //myTexture.draw(200, 200, 100, 100);
+    //myMesh.drawVertices();
+    myMesh.drawWireframe();
 }
 
 //--------------------------------------------------------------
