@@ -17,20 +17,41 @@ NOTE: The programming part of task 2 (2.3) from the last work sheet will be inte
 
 ### 1 Shader Mask Implementation 8 pts
 
+This task is assigned in two alternativ formats, 1.1 complex coding task, 1.2 concept and coding mix. Do not hesitate to mix both approaches!
+
+#### 1.1 Spotlight Texture Shader Implementation (8 pts)
+
+##### 1.1.1 App-side Implementation
+
 In the code example screen_grab_tex_shader in the CGObjectManager class, implement the function 
 
 - void createSpotlightTexture(const ofImage& screenImg)
 
 Checkout the function for more details and make sure that you understand the code to accomplish this task.
 
+##### 1.1.2 Shader Fix
 
-### 2 Shader fixes 4 pts
+Once you process the textures with the shader program, you will notice that the result looks different from the image manipulation solution. Try to fix the calculation of the shader mask in the fragment shader. 
 
-Once you process the textures with the shader program, you will notice that the result looks different from the image manipulation solution. Try to fix the mask calculation in the shader.
+If you cannot solve the issue, comment the code: What goes wrong and what needs to be done theoretically to fix the issue?
 
-### 3 Refactoring 3 pts
+#### 1.2 Shader Concept & Shader Exercise (8 pts)
 
-The application sketch is ok, but not too good of a code design. Come up with 3 or more improvements that will increase the readability and comprehensibility of the code. Implement at least one improvement. Feel free to add additional improvements as comments to the code.
+##### 1.2.1 Spotlight Texture Shader Concept
+
+If task 1.1 is too complex and you cannot solve the implementation, comment the code in function *void createSpotlightTexture(const ofImage& screenImg)*:
+- What needs to be done inside of the function in order to create the spotlight texture? Give a rough outline.
+- Which objects and functions will you have to use therefore? 
+- At which point exactly have you been stuck in the implementation?
+
+#### 1.2.2 Shader Texture Tests
+
+Select the code example 04_mesh_shader_intro and play around with it. Understand the code and adapt the application to your liking. For example, change the image, change the texture, change the shader, change the mesh, and change the interaction. Try to move the mesh as a whole. Turn the application into an individual creative coding sketch.
+
+
+### Bonus - Refactoring 5 pts
+
+Review the screen_grab_tex_shader application in terms of code design. Come up with up to 5 improvements that will increase the readability and comprehensibility of the code. Add your code improvement requests as comments to the code and implement one improvement.
 
 --- 
 
