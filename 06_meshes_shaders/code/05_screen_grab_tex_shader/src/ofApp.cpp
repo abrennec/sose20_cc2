@@ -42,6 +42,7 @@ void ofApp::draw(){
     imgManip.grabAndSaveScreenImg(screenImage, savePicture);
     imgManip.createSpotlightImage(screenImage.getPixels(), webCam.getPixels());
     
+    // TODO: Specify this function!
     cgObjectMgrPtr->createSpotlightTexture(screenImage);
     
     float alpha = createAlphaRectOverlay();

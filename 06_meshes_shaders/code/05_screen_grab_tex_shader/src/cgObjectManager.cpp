@@ -109,19 +109,18 @@ void CGObjectManager::updatePlaneObject() {
     
     // Check if the texture has already been set. If not,
     // do not execute the subsequent calls.
-    if (!webCamTexture.isAllocated())
-        return;
+    if (!webCamTexture.isAllocated()) return;
     
     
     fbo.begin();
 
     planeObjectWebCam.rotateDeg(0.25, 0,1,0);   // spin 3D quad mesh
     
-    // NOTE: The texturedPlane object has its origin at the center.
+    // NOTE: The planeObjectWebCam object has its origin at the center.
     // Therefore we need to translate the object in order to align
     // it with the fbo view.
     ofPushMatrix();
-    ofTranslate(webCamTexture.getWidth()/2.0, webCamTexture.getHeight()/2.0);
+    ofTranslate(planeObjectWebCam.getWidth()/2.0, planeObjectWebCam.getHeight()/2.0);
     ofSetColor(255);
     
     webCamTexture.bind();
@@ -143,18 +142,22 @@ void CGObjectManager::setWebCamTexture(const ofTexture& tex) {
 
 void CGObjectManager::createSpotlightTexture(const ofImage& screenImg) {
     
-    // TODO: Align the resolutions of both textures.
+    if (!webCamTexture.isAllocated()) return;
     
-    // TODO: Make sure that the function is only executed further
-    // TODO: when the textures are allocated (check isAllocated() for this purpose).
+    // TODO: Take care of resizing the images and creating the required texture objects.
+    // TODO: Hint: Checkout the ofTexture "allocate" function in combination with ofPixels.
+
+    // Make use of the fboSpotlight and draw into it. You might want to use ofClear(...).
+    fboSpotlight.begin();
     
-    // TODO: Make use of the fboSpotlight and draw into it.
-    // TODO: You might want to use ofClear(...).
     
     // TODO: Take care of positioning the planeObjectSpotlight correctly.
     
     // TODO: Take care of binding and using the textures in the shader.
     
     // TODO: Don't forget to draw the actual vertices (plane object).
+    
+    
+    fboSpotlight.end();
     
 }
