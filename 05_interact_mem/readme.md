@@ -18,6 +18,9 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
   - [References & Pointers](#references--pointers)
   - [Pointers & Memory](#pointers--memory)
   - [Smart Pointers](#smart-pointers)
+- [How to Approach Object Oriented Development](#how-to-approach-object-oriented-development)
+  - [How to start development?](#how-to-start-development)
+  - [How to start actual coding?](#how-to-start-actual-coding)
 - [Reading Material](#reading-material)
   - [Recap](#recap)
   - [Precap](#precap)
@@ -119,6 +122,24 @@ Check out this screencast to get started with object-oriented programming with C
 
 You'll find the [corresponding slides](additional_material/04_smart_pointers.pdf) in the additional_material folder.
 
+# How to Approach Object Oriented Development
+
+In correspondence with assignment *3 Screen Grab Img Balls Revisited*, you can watch and work along two screencasts on how to approach the assignment and object oriented programming with C++ in general on a conceptual level as well as on a more practical level starting from scratch:
+
+## How to start development?
+
+*Attention: The videos may take a couple of minutes to load.*
+[![howto start concept](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/Og7McR59CmUxPAx)
+
+You'll find the [corresponding notes](additional_material/howto_start_dev.pdf) in the additional_material folder.
+
+## How to start actual coding?
+
+*Attention: The videos may take a couple of minutes to load.*
+
+[![howto start code](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/9Y6ftlHQhp3H22J)
+
+You'll find the corresponding code example in the **code/03_screen_grab_from_scratch/** folder.
 
 
 # Reading Material
