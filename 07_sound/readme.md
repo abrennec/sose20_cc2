@@ -29,23 +29,23 @@ Last Update: 03.06.19
 
 **Table of Contents**
 - [Learning Objectives](#learning-objectives)
-- [Sound](#sound)
-  - [Sound and Audio Processing](#sound-and-audio-processing)
-    - [General Signal Flow](#general-signal-flow)
-    - [Audio Buffers](#audio-buffers)
-    - [Digital Sound Generation](#digital-sound-generation)
-      - [Harmonic sounds](#harmonic-sounds)
-      - [Inharmonic sounds](#inharmonic-sounds)
-  - [openFrameworks and Sound](#openframeworks-and-sound)
-    - [ofSoundBuffer](#ofsoundbuffer)
-    - [ofSoundStream](#ofsoundstream)
-      - [Specifying ofSoundStream](#specifying-ofsoundstream)
-      - [Advanced Implementation Details](#advanced-implementation-details)
-    - [ofSoundBaseTypes](#ofsoundbasetypes)
-  - [openFrameworks Examples](#openframeworks-examples)
-    - [Audio In Example](#audio-in-example)
-    - [Audio Out Example](#audio-out-example)
-  - [Bibliography](#bibliography)
+- [Overview](#overview)
+- [Sound and Audio Processing](#sound-and-audio-processing)
+  - [General Signal Flow](#general-signal-flow)
+  - [Audio Buffers](#audio-buffers)
+  - [Digital Sound Generation](#digital-sound-generation)
+    - [Harmonic sounds](#harmonic-sounds)
+    - [Inharmonic sounds](#inharmonic-sounds)
+- [openFrameworks and Sound](#openframeworks-and-sound)
+  - [ofSoundBuffer](#ofsoundbuffer)
+  - [ofSoundStream](#ofsoundstream)
+    - [Specifying ofSoundStream](#specifying-ofsoundstream)
+    - [Advanced Implementation Details](#advanced-implementation-details)
+  - [ofSoundBaseTypes](#ofsoundbasetypes)
+- [openFrameworks Examples](#openframeworks-examples)
+  - [Audio In Example](#audio-in-example)
+  - [Audio Out Example](#audio-out-example)
+- [Bibliography](#bibliography)
   - [Recap](#recap)
   - [Precap](#precap)
 
@@ -60,7 +60,7 @@ Last Update: 03.06.19
 
 --- 
 
-# Sound
+# Overview
 
 This session will be dedicated to sound generation with openFrameworks. To do so, we will follow three steps:
 
@@ -69,7 +69,7 @@ This session will be dedicated to sound generation with openFrameworks. To do so
 - Third we will explore two examples for generating audio and for capturing audio.
 
 
-## Sound and Audio Processing
+# Sound and Audio Processing
 
 When you start working with digital sound and audio programming concepts, you will need to basically understand three aspects:
 
@@ -77,7 +77,7 @@ When you start working with digital sound and audio programming concepts, you wi
 - What kind of data (structure) is used to represent sound?
 - How can you actually create this kind of data manually? 
 
-### General Signal Flow
+## General Signal Flow
 
 The general signal flow is described in the following illustration:
 
@@ -91,24 +91,24 @@ In an analog fashion to processing incoming audio, you might create and process 
 
 As you can see, the integration of audio devices and the generation and processing of audio data is conceptually very similar to the integration of graphics devices and the generation and processing of graphics data.
 
-### Audio Buffers
+## Audio Buffers
 
 An audio buffer simply contains floating point values that describe the sound wave's amplitude at a specific point in time as specified with the help of the index. The values range from -1.0 to 1.0 with 0.0 representing silence as illustrated in the following Figure:
 
 ![audiobuffer](assets/audiobuffer.png)
 
 
-### Digital Sound Generation
+## Digital Sound Generation
 
 When we are talking about **digital sound generation** (or *synthesis*) in its simplest form, we often refer to creating and combining simple sine wave representations of sound. As you may remember, one sine can represent one (non-natural yet pure) tone. Mathematically, a sine wave can be described as follows:
 
 ```cpp
-y = A * sin ( 2 π f t + ø)
+y = A * sin ( 2πf * t + ø)
 
 A - Amplitude
 
 f - frequency
-2πf - the angular frequency
+2πf - the angular frequency (2*π*f)
 
 t - time "index"
 
@@ -118,40 +118,40 @@ t - time "index"
 In order to create more complex or natural sounds, sine waves can be combined to create harmonic or inharmonic sound waves. 
 When combining sine waves to create either form of a sound wave, take care of the Amplitude values! Any values >= +/- 1.0 will result in distorted cracks and pops.
 
-#### Harmonic sounds
+### Harmonic sounds
 
 To create harmonic sounds, first specify a sine wave at a **fundamental frequency**. Then create a complex sound by adding sine waves to this fundamental frequency that are defined by **integer multiples** of the fundamental frequency. The resulting sounds will be perceived as **harmonic**.
 
 
 ```cpp
-fundamental = A * sin ( 2 π f t )
+fundamental = A * sin ( 2πf * t + ø)
 
-complex = A * sin ( 2 π f t )
-          + A * sin ( 2 * 2 π f t )
-          + A * sin ( 3 * 2 π f t )
-          + A * sin ( 4 * 2 π f t )
+complex = A * sin ( 2πf * t + ø)
+          + A * sin ( 2 * 2πf * t + ø)
+          + A * sin ( 3 * 2πf * t + ø)
+          + A * sin ( 4 * 2πf * t + ø)
 ...
 ```
 
-#### Inharmonic sounds
+### Inharmonic sounds
 
 To create inharmonic sounds, again specify a sine wave at a **fundamental frequency**. Then create a complex sound by adding sine waves to this fundamental frequency that are defined by **non-integer multiples** of the fundamental frequency. The resulting sounds will be perceived as **harmonic**.
 
 
 ```cpp
-fundamental = A * sin ( 2 π f t )
+fundamental = A * sin ( 2πf * t + ø)
 
-complex = A * sin ( 2 π f t )
-          + A * sin ( 2.453 * 2 π f t )
-          + A * sin ( 1.343 * 2 π f t )
-          + A * sin ( 4.56342 * 2 π f t )
+complex = A * sin ( 2πf * t + ø)
+          + A * sin ( 2.453 * 2πf * t + ø)
+          + A * sin ( 1.343 * 2πf * t + ø)
+          + A * sin ( 4.56342 * 2πf * t + ø)
 ...
 ```
 
 This way of generating complex synthetic sounds is fundamental of any further synthesis process. 
 
 
-## openFrameworks and Sound
+# openFrameworks and Sound
 
 The openFrameworks SDK has dedicated components for audio and sound processing located in the “sound” folder of the SDK. Most important concepts to understand how openFrameworks handles sound and audio processing are defined in these three classes:
 
@@ -159,7 +159,7 @@ The openFrameworks SDK has dedicated components for audio and sound processing l
 - ofSoundStream
 - ofSoundBaseTypes
 
-### ofSoundBuffer
+## ofSoundBuffer
 
 The **ofSoundBuffer** class is the main class that defines an audio buffer object including parameters like buffer data, channels, frames, sampleRate, etc. and functionality like getSample(), fillWithTone(...), etc.
 It is used to hold the real audio data which is implemented as an array of interleaved floating point samples. In order to process the audio data correctly, it is of utmost importance to understand, set and evaluate the following two parameteres:
@@ -180,14 +180,14 @@ The following Figure illustrates the concept of channel and frame that are appli
 
 As you can see, an audio buffer always only contains a small portion of (continuously processed) audio data that it hands over from or to the sound card to or from the application. The size of the audio buffer, the **buffer size**, often depends on the CPU power and needs to be chosen carefully in order to avoid latency issues, dropouts our crackles. Usually, the buffer size varies between 512 to 1024 samples.
 
-### ofSoundStream
+## ofSoundStream
 
 The **ofSoundStream** class defines a sound stream object which takes care of how the overall **stream of sound** that is entering the ofApp (i.e., for recording) and/or is leaving the ofApp (i.e., for play back) can be processed. Therefore, the sound stream object
 implements how openFrameworks connects with the audio input and output devices, i.e., the microphone and speaker devices that are connected to the computer via audio interface or soundcard. 
 
 As you will remember from the beginning of the lecture, hardware devices come with a corresponding driver software which serves as an application programming interface (API). The API can then be used to drive (or access or simply use) the hardware. This is also true in the case of audio. Hence the ofSoundStream class establishes a connection between the openFrameworks application and the (harwdware) driver software (i.e., the API of the soundcard driver) which in turn takes care of sending incoming audio to the ofApp or sending outgoing audio to the speakers for playback. 
 
-#### Specifying ofSoundStream
+### Specifying ofSoundStream
 
 You as an application developer will hardly use the ofSoundStream object directly though. Instead, you will specify how the sound stream should be set up, what buffer size you will process, how many audio channels you want to use, etc. In order to specify the sound stream, you will use the following class and functions:
 
@@ -197,7 +197,7 @@ You as an application developer will hardly use the ofSoundStream object directl
 
 The latter are defined in ofBaseApp and are automatically called whenever the system receives sound from the soundcard or before the app sends sound out to the soundcard. Both methods require the function ofSoundStreamSetup( ofSoundStreamSettings& ) to be called in advance.
 
-#### Advanced Implementation Details
+### Advanced Implementation Details
 
 openFrameworks itself does not handle the connection to a specific driver API however. Instead, it makes use of an external audio library called RTAudio library. RTAudio library is developed at McGill University and takes care of easily providing access to various different audio interface driver API's. For example, RTAudio library is an API that can handle OSX Core Audio, ALSA, Asio4all, and many more. Hence, calling the ofSoundStreamSetup function actually starts the RTAudio library and triggers the setup of a sound stream.
 
@@ -209,7 +209,7 @@ Finally, during compilation the compiler defines the sound stream API to be used
 - See also https://openframeworks.cc/documentation/sound/ofSoundStream/
 
 
-### ofSoundBaseTypes
+## ofSoundBaseTypes
 
 The ofSoundBaseTypes header file provides a collection of different objects that can be used to actually set up and integrate audio processing into an ofApp. The classes and the way they are implemented require an advanced understanding of class design (for example, inheritance used to describe class hierarchies) and use several advanced techniques like C++ templates (used for generic programming). 
 
@@ -231,28 +231,28 @@ The following classes are part of the ofSoundBaseTypes:
   - Supports simple playback of audio files.
 
 
-## openFrameworks Examples
+# openFrameworks Examples
 
 Here, the following two screencast will show you how openFrameworks supports the processing of incoming audio as well as the generation and playing back of manually generated audio.
 
-### Audio In Example
+## Audio In Example
 
 *Attention: The videos may take a couple of minutes to load.*
 
-[![howto start code](assets/screencast.png)]()
+[![audio in](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/0ym6pV8gyjfMojz)
 
 
 
-### Audio Out Example
+## Audio Out Example
 
 *Attention: The videos may take a couple of minutes to load.*
 
-[![howto start code](assets/screencast.png)]()
+[![audio out](assets/screencast.png)](https://owncloud.gwdg.de/index.php/s/GDGkw2DtMdK3ota)
 
 
 --- 
 
-## Bibliography
+# Bibliography
 
 ## Recap 
 
