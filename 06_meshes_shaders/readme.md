@@ -8,21 +8,7 @@ date: Summer term 20
 
 Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University Babelsberg *KONRAD WOLF*
 
-Last Update: 2020/05/19
-
----
-
-<!-- ---  
-title: Creative Coding II
-author: Angela Brennecke
-affiliation: Film University Babelsberg KONRAD WOLF
-date: Summer term 19
----   -->
-**Creative Coding II - Summerterm 19**
-
-Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | [Filmuniversitaet Babelsberg KONRAD WOLF](https://www.filmuniversitaet.de)
-
-Last Update: 03.06.19
+Last Update: 2020/05/29
 
 
 ---
@@ -298,14 +284,16 @@ In order to find out about the OpenGL version supported on your platform, you ca
 Basically, you will work with three different types of variable type qualifiers: 
 
 - **Attributes**
-  - These variable types can change once per vertex and correspond to the OpenGL's attribute settings
-  - Examples: gl_Color, gl_Normal, gl_Vertex, gl_MultiTexCoord0, ...
+  - Attribute variables are specifed and processed per vertex. They correspond to the internal OpenGL attribute settings. 
+  - In openFrameworks, you can specify vertices by using the ofMesh class. The specified values are then handed over to the underlying OpenGL library for further processing which uses its pre-defined attribute variables to store the values internally and hands those over to the shader. 
+  - Examples: gl_Vertex, gl_Color, gl_MultiTexCoord0, gl_Normal, ...
 - **Uniform**
-  - These variables values are defined for the entire primitive and set through corresponding OpenGL calls
-  - Examples: gl_ProjectionMatrix, gl_ModelViewMatrix, gl_NormalMatrix, ...
+  - Uniform variables can be specified in the application (i.e., ofApp) and can be handed over to the shader program (ofShader) directly (compared to how attributes are processed, for instance). They are used to, for example, to hand over information interactively from the application to the shader program.
+  - Univorm variables are applied to the entire primitive that is being processed.
+  - Examples: User defined variables as well as dedicated OpenGL uniforms like gl_ProjectionMatrix, gl_ModelViewMatrix, gl_NormalMatrix, ...
 - **Varying**
-  - These variables are exchanged between (or link) shaders
-  - There are two sets of varying variables, one for the vertex and one for the fragment language
+  - Varying variables can be used to exchange data between the shaders themselves; i.e., you can specify a varying variable in the vertex shader and retrieve the information inside of the fragment shader for further processing.
+  - There are two sets of varying variables, one for the vertex and one for the fragment shader.
   - Examples: gl_Color, gl_TexCoord\[\], gl_FrontColor, ...
 Variable type qualifiers can be used inside of your ofApp and be handed over to the shader programs for an execution on the GPU.
 

@@ -13,19 +13,26 @@ Prof. Dr. Angela Brennecke | a.brennecke@filmuniversitaet.de | Film University B
 
 _Meaningful_ bullet points are sufficient to answer the questions - if necessary.
 
-NOTE: The programming part of task 2 (2.3) from the last work sheet will be integrated into this worksheet.
+This work sheet contains two alternative tasks that you can choose, A or B.
 
-### 1 Shader Mask Implementation 8 pts
+### Alternative A:
 
-This task is assigned in two alternativ formats, 1.1 complex coding task, 1.2 concept and coding mix. Do not hesitate to mix both approaches!
+#### 1 Shader and Meshes | 6 pts
 
-#### 1.1 Spotlight Texture Shader Implementation (8 pts)
+Review the shader intro example and understand the code. 
 
-##### 1.1.1 App-side Implementation
+- Play around with the fragment shader values to create a different visual result.
+- Play around with the vertex shader and create a different outline of the mesh.
+- Change the mesh and by adding one or more coordinates. Adjust the texture coordinates appropriately. 
+- Add another form of interaction to the application, i.e., move the whole mesh around instead of only its vertices.
 
-In the code example screen_grab_tex_shader in the CGObjectManager class, implement the function 
+#### 2 Shader Mask in screen_grab | 4 pts
+If task 1.1 is too complex and you cannot solve the implementation, comment the code in function *void createSpotlightTexture(const ofImage& screenImg)*:
+- What needs to be done inside of the function in order to create the spotlight texture? Give a rough outline.
+- Which objects and functions will you have to use therefore? 
+- At which point exactly have you been stuck in the implementation?
 
-- void createSpotlightTexture(const ofImage& screenImg)
+--- 
 
 > Alternative wording: I the code example screen_grab_tex_shader you can find the CGObjectManager class. It contains pseudocode for a function called
 
@@ -37,7 +44,7 @@ In the code example screen_grab_tex_shader in the CGObjectManager class, impleme
 
 > ein vorher/nachher Bild, je achdem wie die lösung aussehen soll wäre super 
 
-##### 1.1.2 Shader Fix
+#### 1 Spotlight Texture Shader Implementation | 10 pts
 
 Once you process the textures with the shader program, you will notice that the result looks different from the image manipulation solution.
 
@@ -45,11 +52,11 @@ Once you process the textures with the shader program, you will notice that the 
 
 Try to fix the calculation of the shader mask in the fragment shader. 
 
-If you cannot solve the issue, comment the code: What goes wrong and what needs to be done theoretically to fix the issue?
+##### 1.1 Spotlight Texture Shader Implementation
 
-#### 1.2 Shader Concept & Shader Exercise (8 pts)
+In the code example screen_grab_tex_shader in the CGObjectManager class, implement the function 
 
-##### 1.2.1 Spotlight Texture Shader Concept
+- void createSpotlightTexture(const ofImage& screenImg)
 
 If task 1.1 is too complex and you cannot solve the implementation, 
 > unglückliche Formulierung
@@ -60,13 +67,15 @@ comment the code in function *void createSpotlightTexture(const ofImage& screenI
 - At which point exactly have you been stuck in the implementation?
 > Verständnis der Aufgabenstellung
 
-#### 1.2.2 Shader Texture Tests
+##### 1.2 Shader Fix
 
-Select the code example 04_mesh_shader_intro and play around with it. Understand the code and adapt the application to your liking. For example, change the image, change the texture, change the shader, change the mesh, and change the interaction. Try to move the mesh as a whole. Turn the application into an individual creative coding sketch.
+Once you process the textures with the shader program, you will notice that the result looks different from the image manipulation solution. Try to fix the calculation of the shader mask in the fragment shader. 
+
+If you cannot solve the issue, comment the code: What goes wrong and what needs to be done theoretically to fix the issue?
 
 > ok, das habe ich nicht gemacht, vielleicht hätte ich erst alle codebeispiele lesen müssen um die Aufgaben zu verstehen
 
-### Bonus - Refactoring 5 pts
+### Bonus - Refactoring | 5 pts
 
 Review the screen_grab_tex_shader application in terms of code design. Come up with up to 5 improvements that will increase the readability and comprehensibility of the code. Add your code improvement requests as comments to the code and implement one improvement.
 
