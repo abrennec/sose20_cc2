@@ -20,7 +20,7 @@ Read the script on sound and audio processing with openFrameworks. Think about t
 
 ### Inheritance | 4 pts
 
-Find two examples of class inheritance in openFrameworks. Review the ofBaseClass. Where do the audioIn and audioOut functions come from?
+Find two examples of class inheritance in the openFrameworks SDK. As a starting point, you could review the relationship between ofApp and ofBaseApp class. Furthermore, find out to what class the audioIn and audioOut functions belong to. Why can these be used inside of ofApp?
 
 ### Final Exercise | 3 pts
 
