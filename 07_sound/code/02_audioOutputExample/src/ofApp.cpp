@@ -170,6 +170,7 @@ void ofApp::keyReleased  (int key){
 void ofApp::mouseMoved(int x, int y ){
 	int width = ofGetWidth();
 	pan = (float)x / (float)width;
+    
 	float height = (float)ofGetHeight();
 	float heightPct = ((height-y) / height);
 	targetFrequency = 2000.0f * heightPct;
@@ -220,6 +221,7 @@ void ofApp::audioOut(ofSoundBuffer & buffer){
 		phase -= TWO_PI;
 	}
     
+    // y = A * sin ( 2 π f * t )
     
     // -----------
     // NOTE: Check and understand the following loop

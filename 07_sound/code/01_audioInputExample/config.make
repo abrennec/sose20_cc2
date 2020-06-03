@@ -6,9 +6,9 @@
 ################################################################################
 # OF ROOT
 #   The location of your root openFrameworks installation
-#       (default) OF_ROOT = ../../../../../../../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release/../../../../../../../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release/../../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release 
+#       (default) OF_ROOT = ../../../../../../../../../openFrameworks/of_v0.11.0_osx_release/../../../../../../../../../openFrameworks/of_v0.11.0_osx_release/../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release/../../../../../../../../../openFrameworks/of_v0.11.0_osx_release/../../../../../../../../../openFrameworks/of_v0.11.0_osx_release/../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release/../../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release 
 ################################################################################
-# OF_ROOT = ../../../../../../../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release/../../../../../../../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release/../../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release
+# OF_ROOT = ../../../../../../../../../openFrameworks/of_v0.11.0_osx_release/../../../../../../../../../openFrameworks/of_v0.11.0_osx_release/../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release/../../../../../../../../../openFrameworks/of_v0.11.0_osx_release/../../../../../../../../../openFrameworks/of_v0.11.0_osx_release/../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release/../../Develop/SDKs/openFrameworks/of_v0.10.1_osx_release
 
 ################################################################################
 # PROJECT ROOT
