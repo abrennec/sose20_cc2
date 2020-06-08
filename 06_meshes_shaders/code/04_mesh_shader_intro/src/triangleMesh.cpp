@@ -5,7 +5,7 @@ triangleMesh::triangleMesh(){
 
     //shader.load("shaders/0_simple_vert.glsl", "shaders/0_simple_frag.glsl");
     //shader.load("shaders/1_uniform_vert.glsl", "shaders/1_uniform_frag.glsl");
-    //shader.load("shaders/2_varying_vert.glsl", "shaders/2_varying_frag.glsl");
+    shader.load("shaders/2_varying_vert.glsl", "shaders/2_varying_frag.glsl");
     //shader.load("shaders/3_texture_vert.glsl", "shaders/3_texture_frag.glsl");
     //shader.load("shaders/4_texture_mask_vert.glsl", "shaders/4_texture_mask_frag.glsl");
     
@@ -25,10 +25,10 @@ void triangleMesh::update(){
 //--------------------------------------------------------------
 void triangleMesh::draw(){
 
-    noShaderDraw();
+    //noShaderDraw();
 //    simpleShaderDraw();
 //    uniformShaderDraw();
-//    varyingShaderDraw();
+    varyingShaderDraw();
 //    textureShaderDraw();
 //    textureMaskShaderDraw();
       
@@ -114,7 +114,7 @@ void triangleMesh::simpleShaderDraw() {
 
     // These calls have no effect because the shader takes care
     // of the drawing and does not yet use any texture.
-    myTexture.bind();
+ //   myTexture.bind();
     
     shader.begin();
 
@@ -122,7 +122,7 @@ void triangleMesh::simpleShaderDraw() {
 
     shader.end();
     
-    myTexture.unbind();
+  //  myTexture.unbind();
 
 }
 
@@ -138,6 +138,7 @@ void triangleMesh::uniformShaderDraw() {
     // you could turn them into member variables and use them to
     // interactively change them.
     glm::vec4 color{0.75, 0.5, 0.75, 1.0};
+    
     glm::vec4 scale{1.0, 0.75, 0.75, 1.0};
 
     // Specify the variables as uniform variables inside the shader
@@ -170,6 +171,8 @@ void triangleMesh::varyingShaderDraw() {
     // object so the shader is aware of there existence and values.
     shader.setUniform4f("scale", scale);
     shader.setUniform4f("color", color);
+    shader.setUniform1f("appWidth", ofGetWidth());
+    shader.setUniform1f("appHeight", ofGetHeight());
 
     myMesh.draw(); // draws the mesh "filled" with color
 
@@ -229,6 +232,7 @@ void triangleMesh::textureMaskShaderDraw() {
     // set a uniform texture variable called "texture1", hand over the
     // texture object and inform the shader about the texture's position > 0.
     shader.setUniformTexture("texture1", myTextureMask, 1);
+    //shader.setUniformTexture("texture2", myTextureMask2, 2);
 
     myMesh.draw();
 
