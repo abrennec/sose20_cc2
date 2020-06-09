@@ -16,8 +16,12 @@ Last Update: 05/31/20
 - [Learning Objectives](#learning-objectives)
 - [Relationships in Object-Oriented Programming](#relationships-in-object-oriented-programming)
 - [Inheritance](#inheritance)
-    - [Inheritance and Object Construction](#inheritance-and-object-construction)
     - [Inheritance and Access Levels](#inheritance-and-access-levels)
+      - [Public Access](#public-access)
+      - [Protected Access](#protected-access)
+      - [Private Access](#private-access)
+    - [Inheritance in Object Relationships](#inheritance-in-object-relationships)
+    - [Inheritance and Object Construction](#inheritance-and-object-construction)
     - [Polymorphism](#polymorphism)
     - [Overriding Functions](#overriding-functions)
     - [Virtual Functions](#virtual-functions)
@@ -60,42 +64,57 @@ Inheritance models the **is-a** relationship between objects as illustrated in t
 
 ![inheritance](assets/inheritance.png)
 
-As you can see on the left, the shape class serves as base class from which more specific classes are inherited, all of them **being a** certain kind of shape. The same is true for the right side: The fruit class specifies the general features of a fruit, whatever this might be, and has two specific fruits inherit these features, i.e., apple and banana. In C++, inheritance is expressed by the use of the ":" following the base class that is being derived from, as illustrated below:
+As you can see on the left, the shape class serves as base class from which more specific classes are inherited, all of them **being a** certain kind of shape. The same is true for the right side: The fruit class specifies the general features of a fruit, whatever this might be, and has two specific fruits inherit these features, i.e., apple and banana. In C++, inheritance is expressed by the use of the ":" following the base class that is being derived from. 
+
+The following code examples illustrate a base class called "fruit" and its derived specialized fruit types/classes, i.e., "apple" and "banana":
 
 ```cpp
-
 // base class fruit
 class fruit
 {
 public:
     // constructors
-    fruit();                        // default
-    fruit(std::string theName);     // user-defined
-
+    fruit();
+    fruit(std::string theName);
+    
+    std::string printType();
+    std::string printColor();
+    std::string printMyOrigin();
+    
 protected:
-    void printName();
-    void printColor();
+    
+    // Any member variable declared under protected access
+    // can be used inside of this class as well as inside 
+    // of any derived classes as well! These functions cannot
+    // be access from outside of the classes or objects.
+    std::string overseas();
     
 private:
-
-    void overseas();
+    
     std::string myName;
+    std::string myColor;
 };
 
+```
 
+```cpp
 // Derived class apple
 class apple : public fruit
 {
-    
 public:
+   
+    apple();
 
-    apple(); // default constructor
+    std::string printColor();
+
     
 private:
-
+    
+    std::string myColor;
 };
+```
 
-
+```cpp
 // Derived class banana
 class banana : public fruit
 {
@@ -107,36 +126,87 @@ private:
     // no private declarations yet
 };
 ```
+The children of fruit derive all functionality that has been specified in fruit and can access their parent's or base class functionality based on the access level definitions. 
 
-The derived classes inherit all functionality from the base class. However, the derived class can only access functionality specifed under **public** and **protected**, see the following code example:
+### Inheritance and Access Levels
+
+Derived classes can fully access all public member functions and data of their base classes. To further specify object hierarchies, the protected access level exists. Functionality defined under protected access can be accessed only from within the class itself and its children.
+
+#### Public Access 
+
+The derived classes inherit all functionality from the base class. However, the derived class can only access functionality specifed under **public**. 
+
+In the following code example, the different functions of the fruit class hierarchy are drawn to the screen using ofApp's draw() function:
 
 ```cpp
-#include "fruit.h"
-#include "banana.h"
-#include "apple.h"
+void ofApp::draw(){
 
-int main()
-{
-    // Instantiate 4 objects of the same object family
-    fruit aFruit;                       // default constructor
-    fruit anotherFruit{"anotherFruit"}; // user-defined constructor
-    apple anApple;
-    banana aBanana;
+    fruit aSpecialFruit{"frutta_speciale_d\'_italia"}; 
     
-    // Call class functions upon the objects
-    aFruit.printName();
-    anotherFruit.printName();
-    aFruit.overseas();
-    
-    // Since apple and banana are children of fruit, they can access and use 
-    // the same functionality - as long as it is defined under public or protected.
-    anApple.printName();    // the derived classes inherit the
-    aBanana.printName();    // base class function printName()
-    aBanana.overseas();     // Compile-time error! Private access level
-
-    return 0;
+    ofDrawBitmapString( aSpecialFruit.printType(), 20, 50);
+    ofDrawBitmapString( aFruit.printType(), 20, 75);
+    ofDrawBitmapString( anApple.printType(), 20, 100);
+    ofDrawBitmapString( aBanana.printType(), 20, 125);
 }
 ```
+
+#### Protected Access 
+
+All functions specified under **protected** can be used inside of the class where it is specified in as well as in any derived class just like any other function. The following code examples illustrate use of proteced access.
+
+Inside of the fruit class, the function overseas() has been declared
+under protected. It can be used within fruit class just like any 
+other function:
+
+```cpp
+// Definition of overseas() function inside of fruit class:
+std::string fruit::overseas() {
+
+    return (".. I am from a land down under ..");
+}
+
+// Use of overseas() function inside of fruit class:
+std::string fruit::printMyOrigin() {
+
+    return ( "FRUIT's origin is " + overseas() );
+}
+
+```
+
+Inside of the derived class *apple* we define a public function that 
+accesses and uses the *derived* overseas() function:
+
+```cpp
+std::string apple::appleComesFrom() {
+    
+    // overseas() is declared as a protected function in the base class
+    // consequently we can use it here.
+    return (overseas() + ".. and that is italia");
+}
+```
+
+The draw() function could now be extended as follows:
+
+```cpp
+void ofApp::draw(){
+
+    fruit aSpecialFruit{"frutta_speciale_d\'_italia"}; 
+    
+    ofDrawBitmapString( aSpecialFruit.printType(), 20, 50);
+    ofDrawBitmapString( aFruit.printType(), 20, 75);
+    ofDrawBitmapString( anApple.printType(), 20, 100);
+    ofDrawBitmapString( aBanana.printType(), 20, 125);
+
+    ofDrawBitmapString( anApple.appleComesFrom(), 20, 175);
+}
+```
+
+#### Private Access
+
+Member variables declared as private can only be access from within the class / object that they were specified in.
+
+### Inheritance in Object Relationships
+
 
 While **object composition** creates new objects *by combining and connecting other objects*, **inheritance** creates new objects by directly **acquiring attributes and functionality of other objects and extending or specializing** them.
 
@@ -144,19 +214,22 @@ As such, inheritance typically models hierarchical relationships that **show a p
 - **base class**
 - **derived class**
   
-The derived class inherits all attributes and functionality of its base class — without access to private base members. An important aspect of inheritance is the sequence of construction: 
+The derived class inherits all attributes and functionality of its base class — without access to private base members. See the following Figure for an illustration:
+
+![inheritance](assets/vererbung_v1_ohne_code.png)
+*Copyright: Franziska Paetzold*
+
+The *Animal* class is a base class that provides two public member variables and two member functions. All of them are inherited by the derived classes and can be used and accessed by the objects *Wild Animal* and *Pet*. In addition, the derived classes define their own specific member variables and functions which can only be used and accessed by themselves.
 
 ### Inheritance and Object Construction
+
+In this context, an important aspect of inheritance is the sequence of construction:
 
 - **The base class constructor will always be called prior to the derived class constructor!**
 
 If not called explicitly by the derived class, the default constructor of the base class will be called. This can result in unexpected behavior which is why you should always explicitly call the base class constructor. For a detailed explanation, see this article:
 
 - https://www.learncpp.com/cpp-tutorial/114-constructors-and-initialization-of-derived-classes/
-
-### Inheritance and Access Levels
-
-Derived classes can fully access all public member functions and data of their base classes. To further specify object hierarchies, the protected access level exists. Functionality defined under protected access can be accessed only from with the class itself and its children (see the fruit example above).
 
 ### Polymorphism 
 
@@ -196,18 +269,31 @@ class apple : public fruit
 {
     
 public:
+   
+    apple();
 
-    apple(); // default constructor
+    void printColor();
+
     
-protected: 
-    void printColor(); // in the cpp file, specify a specific function of class apple    
-
 private:
+    
+    std::string myColor;
 
 };
 ```
 
-In the main function, the pointer of type base class tries to resolve the function call.
+```cpp
+// In apple's cpp file, specify printColor in apple.
+// by overriding fruit's printColor function.
+
+void apple::printColor() {
+
+    std::cout << "myColor is: " << myColor << std::endl;
+}
+
+```
+
+In the ofApp draw() function, the pointer of type base class tries to resolve the function call.
 ```cpp
 #include "fruit.h"
 #include "apple.h"
@@ -219,14 +305,13 @@ int main()
     apple anApple;
 
     fruit* aFruit = &anApple;
-    aFruit->printName();
-    aFruit->printColor();   // ???  Output error ???
+    aFruit->printName();        // !!! This will not print apple's color!!!
     
     return 0;
 }
 ```
 
-When the derived class overrides a base class function like in this example, the pointer of type base class cannot resolve the specific function call that belongs to the derived class. With the help of specifying a function as **virtual** the relationship can be resolved.
+When the derived class overrides a base class function like in this example, **the pointer of type base class cannot resolve the specific function call** that belongs to the derived class. With the help of specifying a function as **virtual** the relationship can be resolved.
 
 ### Virtual Functions
 
