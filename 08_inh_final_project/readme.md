@@ -105,8 +105,6 @@ public:
    
     apple();
 
-    std::string printColor();
-
     
 private:
     
