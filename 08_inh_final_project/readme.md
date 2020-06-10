@@ -378,6 +378,7 @@ To dive deeper into the concepts of polymorphism and how they can enhance the ma
   * At least two different topics from the course
   * An artistic idea that can be freely chosen 
 
+
 --- 
 
 ## Bibliography
