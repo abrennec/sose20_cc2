@@ -26,9 +26,15 @@ Find two examples of class inheritance in the openFrameworks SDK. As a starting 
 
 Start thinking about a final exercise. The requirements are listed in the script. Feel free to come up with an individual idea. Please note that I really would like you to use this exercise as an option to experiment and explore what you have learned in this course. Do not worry if you think your ideas are too small or too big. With the final exercise, I would like you to enjoy the development. So, find some **suggestions** below and please wrap your head around them as well as the content we have addressed throughout the course. Come up with your own idea and interests.
 
+---
+
+# Final Exercise | not optional!
+
 The scope of the final exercise should be similar to the screenGrab refactoring and image processing task; it should not exceed this assignment! Rather, part of the final exercise should also be a phase of inspiration and concept design. 
 
 Find my suggestions below as a starting point.
+
+**Also please note: The final exercise should ideally be presented on the CTech github pages or in your personal portfolios. Therefore, please provide an animated GIF or MP4 screencapture of the result together with a short documentation (based on the documentation template).**
 
 #### Suggestion #1 - Screengrab Continued
 
