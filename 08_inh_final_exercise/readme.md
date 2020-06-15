@@ -25,7 +25,7 @@ Last Update: 05/31/20
     - [Polymorphism](#polymorphism)
     - [Overriding Functions](#overriding-functions)
     - [Virtual Functions](#virtual-functions)
-- [Final Project](#final-project)
+- [Final Exercise](#final-exercise)
   - [Bibliography](#bibliography)
   - [Recap](#recap)
 
@@ -371,7 +371,7 @@ To dive deeper into the concepts of polymorphism and how they can enhance the ma
 
 ---
 
-# Final Project
+# Final Exercise
 
 * The final exercise will be a programming exercise of an openFrameworks application. The type of application can be chosen individually. However, the application must include/address:
   * Object-oriented design
